@@ -262,6 +262,10 @@
             // Re-initialize icons after changing attributes
             lucide.createIcons();
         }
+    </script>
+</body>
+</html>
+
         // Button functionality
         function subscribeToPodcast() {
             // You can customize these URLs to your actual podcast platforms
