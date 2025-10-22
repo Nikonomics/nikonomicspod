@@ -5,6 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Resources - Nikonomics</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom font stack with Futura as primary */
+        .font-futura {
+            font-family: 'Futura Now Headline CN XBlack', 'Futura', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 900;
+        }
+        
+        .font-futura-bold {
+            font-family: 'Futura Now Headline CN XBlack', 'Futura', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 800;
+        }
+        
+        .font-futura-medium {
+            font-family: 'Futura Now Headline CN XBlack', 'Futura', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 600;
+        }
+        
+        /* Apply to key elements */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Futura Now Headline CN XBlack', 'Futura', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        /* Enhanced typography matching Framer site */
+        .text-refined {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            letter-spacing: -0.01em;
+        }
+        
+        .text-refined-bold {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 600;
+            line-height: 1.5;
+            letter-spacing: -0.02em;
+        }
+        
+        .text-refined-heavy {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 700;
+            line-height: 1.4;
+            letter-spacing: -0.03em;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -24,7 +71,7 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="container">
-                <h2>Free Resources for Small Business Success</h2>
+                <h2 class="font-futura">Free Resources for Small Business Success</h2>
                 <p>Access our collection of tools, guides, and templates designed to help you build and grow your business.</p>
             </div>
         </section>
@@ -32,7 +79,7 @@
         <!-- Resources Grid -->
         <section class="resources">
             <div class="container">
-                <h3>Browse by Category</h3>
+                <h3 class="font-futura">Browse by Category</h3>
                 <div class="category-grid">
                     <div class="category-card">
                         <h4>🛠️ Tools & Calculators</h4>
@@ -66,7 +113,7 @@
         <!-- Featured Resources -->
         <section class="featured">
             <div class="container">
-                <h3>Most Popular Resources</h3>
+                <h3 class="font-futura">Most Popular Resources</h3>
                 <div class="resource-grid">
                     <div class="resource-card featured-resource">
                         <div class="featured-badge">🔥 NEW</div>
@@ -96,12 +143,12 @@
         <!-- Newsletter Signup -->
         <section class="newsletter">
             <div class="container">
-                <h3>Get New Resources First</h3>
+                <h3 class="font-futura">Get New Resources First</h3>
                 <p>Subscribe to our newsletter and be the first to access new tools and guides</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Enter your email" required>
-                    <button type="submit" class="btn-primary">Subscribe</button>
-                </form>
+                <div class="newsletter-form">
+                    <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+                    <iframe src="https://subscribe-forms.beehiiv.com/95178567-1e86-4ed9-87c2-9dec4ee17e17" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width: 560px; height: 315px; margin: 0 auto; max-width: 100%; display: block;"></iframe>
+                </div>
             </div>
         </section>
     </main>

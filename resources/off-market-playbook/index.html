@@ -6,6 +6,63 @@
     <title>The Off-Market Acquisition Playbook - Nikonomics</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom font stack with Futura as primary */
+        .font-futura {
+            font-family: 'Futura Now Headline CN XBlack', 'Futura', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 900;
+        }
+        
+        .font-futura-bold {
+            font-family: 'Futura Now Headline CN XBlack', 'Futura', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 800;
+        }
+        
+        .font-futura-medium {
+            font-family: 'Futura Now Headline CN XBlack', 'Futura', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 600;
+        }
+        
+        /* Apply to key elements */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Futura Now Headline CN XBlack', 'Futura', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        /* Enhanced typography matching Framer site */
+        .text-refined {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            letter-spacing: -0.01em;
+        }
+        
+        .text-refined-bold {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 600;
+            line-height: 1.5;
+            letter-spacing: -0.02em;
+        }
+        
+        .text-refined-heavy {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 700;
+            line-height: 1.4;
+            letter-spacing: -0.03em;
+        }
+        
+        .font-heading {
+            font-family: 'Futura Now Headline CN XBlack', 'Futura', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 900;
+        }
+        
+        .font-subheading {
+            font-family: 'Futura Now Headline CN XBlack', 'Futura', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 700;
+        }
+    </style>
     <script>
         function toggleSection(sectionNumber) {
             const section = document.getElementById("section-" + sectionNumber);
@@ -114,7 +171,7 @@
         });
     </script>
 </head>
-<body class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-12 px-4">
+    <body class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 px-4">
     <!-- Navigation Header -->
     <div class="max-w-4xl mx-auto mb-6">
         <div class="bg-white rounded-lg shadow-lg p-4 flex items-center justify-between">
@@ -124,22 +181,19 @@
                     Back to Resources
                 </button>
                 <div class="text-gray-600">|</div>
-                <a href="https://nikonomicspod.com" class="text-blue-600 hover:text-blue-800 font-medium">Nikonomics Home</a>
-            </div>
-            <div class="text-sm text-gray-500">
-                Exclusive Lead Magnet
+                <a href="https://nikonomicspod.com" class="text-[#0098EE] hover:text-[#004C76] font-medium">Nikonomics Home</a>
             </div>
         </div>
     </div>
     <div class="max-w-4xl mx-auto">
         <!-- Header -->
         <div class="bg-white rounded-2xl shadow-2xl overflow-hidden mb-8">
-            <div class="bg-gradient-to-r from-blue-600 to-indigo-700 p-8 text-white">
+            <div class="bg-gradient-to-r from-[#003452] to-[#004C76] p-8 text-white">
                 <div class="flex items-center gap-3 mb-4">
                     <i data-lucide="trending-up" class="w-10 h-10"></i>
-                    <h1 class="text-3xl font-bold">The Off-Market Acquisition Playbook</h1>
+                    <h1 class="text-3xl font-bold font-futura">The Off-Market Acquisition Playbook</h1>
                 </div>
-                <p class="text-lg text-blue-100">
+                <p class="text-lg text-white/90">
                     Your Complete Guide to Finding & Closing 7-Figure Healthcare Businesses Before the Competition Even Knows They Exist
                 </p>
                 <div class="mt-6 bg-white/10 backdrop-blur rounded-lg p-4">
@@ -148,15 +202,15 @@
             </div>
 
             <!-- Why This Matters -->
-            <div class="p-8 bg-gradient-to-b from-amber-50 to-white border-b-4 border-amber-400">
+            <div class="p-8 bg-gradient-to-b from-[#F2F5F5] to-white border-b-4 border-[#FFC900]">
                 <div class="flex items-start gap-4">
-                    <i data-lucide="alert-circle" class="w-8 h-8 text-amber-600 flex-shrink-0 mt-1"></i>
+                    <i data-lucide="alert-circle" class="w-8 h-8 text-[#FFC900] flex-shrink-0 mt-1"></i>
                     <div>
-                        <h2 class="text-2xl font-bold text-gray-900 mb-3">Why 87% of First-Time Buyers Fail</h2>
-                        <p class="text-gray-700 leading-relaxed mb-4">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-3 font-futura">Why 87% of First-Time Buyers Fail</h2>
+                        <p class="text-gray-700 mb-4 text-refined">
                             Most entrepreneurs waste 6-12 months competing for the same 200 overpriced listings on BizBuySell. They end up paying 30-40% premiums in bidding wars, or worse—walking away empty-handed after burning through their budget on brokers and advisors.
                         </p>
-                        <p class="text-gray-700 leading-relaxed font-semibold">
+                        <p class="text-gray-700 text-refined-heavy">
                             The solution? Stop competing. Start prospecting where no one else is looking.
                         </p>
                     </div>
@@ -165,42 +219,42 @@
 
             <!-- Main Content -->
             <div class="p-8">
-                <h2 class="text-2xl font-bold text-gray-900 mb-6">The 5-Step Off-Market Framework</h2>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 font-futura">The 5-Step Off-Market Framework</h2>
 
                 <!-- Step 1 -->
                 <div class="mb-6 border rounded-lg overflow-hidden">
-                    <button onclick="toggleSection(1)" class="w-full bg-blue-50 hover:bg-blue-100 p-6 flex items-center justify-between transition-colors">
+                    <button onclick="toggleSection(1)" class="w-full bg-[#F2F5F5] hover:bg-[#F2F5F5]/80 p-6 flex items-center justify-between transition-colors">
                         <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
-                            <h3 class="text-xl font-bold text-gray-900">Identify Fragmented Niches</h3>
+                            <div class="w-10 h-10 bg-[#0098EE] text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
+                            <h3 class="text-xl font-bold text-gray-900 font-futura">Identify Fragmented Niches</h3>
                         </div>
                         <i data-lucide="chevron-down" class="w-5 h-5" id="chevron-1"></i>
                     </button>
                     <div id="section-1" class="hidden p-6 bg-white">
-                        <p class="text-gray-700 mb-4 leading-relaxed">
+                        <p class="text-gray-700 mb-4 text-refined">
                             Fragmentation is your friend. When an industry has thousands of independent operators instead of a few large chains, you have leverage. Healthcare is the goldmine because 60-70% of practices are still independently owned.
                         </p>
                         <h4 class="font-bold text-gray-900 mb-3">Top Healthcare Niches for Off-Market Deals:</h4>
                         <div class="grid md:grid-cols-2 gap-4 mb-4">
                             <div class="bg-green-50 p-4 rounded-lg border border-green-200">
-                                <h5 class="font-bold text-green-900 mb-2">🦷 Dental Practices</h5>
+                                <h5 class="font-bold text-[#FFC900] mb-2">🦷 Dental Practices</h5>
                                 <p class="text-sm text-gray-700">165,000+ independent practices | Avg. valuation: $800K-$2M | High cash flow</p>
                             </div>
                             <div class="bg-green-50 p-4 rounded-lg border border-green-200">
-                                <h5 class="font-bold text-green-900 mb-2">🏥 Urgent Care Centers</h5>
+                                <h5 class="font-bold text-[#FFC900] mb-2">🏥 Urgent Care Centers</h5>
                                 <p class="text-sm text-gray-700">9,000+ facilities | Avg. valuation: $1.5M-$4M | Growing demand</p>
                             </div>
                             <div class="bg-green-50 p-4 rounded-lg border border-green-200">
-                                <h5 class="font-bold text-green-900 mb-2">💪 Physical Therapy</h5>
+                                <h5 class="font-bold text-[#FFC900] mb-2">💪 Physical Therapy</h5>
                                 <p class="text-sm text-gray-700">38,000+ clinics | Avg. valuation: $600K-$1.5M | Aging population driver</p>
                             </div>
                             <div class="bg-green-50 p-4 rounded-lg border border-green-200">
-                                <h5 class="font-bold text-green-900 mb-2">🏠 Home Health Agencies</h5>
+                                <h5 class="font-bold text-[#FFC900] mb-2">🏠 Home Health Agencies</h5>
                                 <p class="text-sm text-gray-700">33,000+ agencies | Avg. valuation: $500K-$2M | Medicare-backed revenue</p>
                             </div>
                         </div>
-                        <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-600">
-                            <p class="text-sm font-semibold text-blue-900 mb-2">PRO TIP:</p>
+                        <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-[#0098EE]">
+                            <p class="text-sm font-semibold text-[#003452] mb-2">PRO TIP:</p>
                             <p class="text-sm text-gray-700">
                                 Look for niches where the average owner is 55+ years old. In healthcare, 40% of practice owners are approaching retirement but haven't listed their business yet—they're waiting for the "right buyer" to approach them.
                             </p>
@@ -210,10 +264,10 @@
 
                 <!-- Step 2 -->
                 <div class="mb-6 border rounded-lg overflow-hidden">
-                    <button onclick="toggleSection(2)" class="w-full bg-blue-50 hover:bg-blue-100 p-6 flex items-center justify-between transition-colors">
+                    <button onclick="toggleSection(2)" class="w-full bg-[#F2F5F5] hover:bg-[#F2F5F5]/80 p-6 flex items-center justify-between transition-colors">
                         <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
-                            <h3 class="text-xl font-bold text-gray-900">Build Your Owner Database</h3>
+                            <div class="w-10 h-10 bg-[#0098EE] text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
+                            <h3 class="text-xl font-bold text-gray-900 font-futura">Build Your Owner Database</h3>
                         </div>
                         <i data-lucide="chevron-down" class="w-5 h-5" id="chevron-2"></i>
                     </button>
@@ -223,7 +277,7 @@
                         </p>
                         <h4 class="font-bold text-gray-900 mb-3">Essential Data Sources:</h4>
                         <div class="space-y-4 mb-4">
-                            <div class="border-l-4 border-indigo-600 pl-4">
+                            <div class="border-l-4 border-[#004C76] pl-4">
                                 <h5 class="font-bold text-gray-900 mb-1">NPI Registry (NPPES)</h5>
                                 <p class="text-sm text-gray-700 mb-2">
                                     National Provider Identifier database - every healthcare provider in the US is listed here with business details, taxonomy codes, and practice locations.
@@ -232,7 +286,7 @@
                                     npiregistry.cms.hhs.gov
                                 </p>
                             </div>
-                            <div class="border-l-4 border-indigo-600 pl-4">
+                            <div class="border-l-4 border-[#004C76] pl-4">
                                 <h5 class="font-bold text-gray-900 mb-1">CMS Provider Data</h5>
                                 <p class="text-sm text-gray-700 mb-2">
                                     Medicare/Medicaid participating providers with revenue indicators, patient volumes, and service histories - critical for valuation insights.
@@ -241,7 +295,7 @@
                                     data.cms.gov/provider-data
                                 </p>
                             </div>
-                            <div class="border-l-4 border-indigo-600 pl-4">
+                            <div class="border-l-4 border-[#004C76] pl-4">
                                 <h5 class="font-bold text-gray-900 mb-1">State Health Department Registries</h5>
                                 <p class="text-sm text-gray-700 mb-2">
                                     State-specific licensing databases with entity ownership, inspection records, and compliance histories. Each state has its own portal.
@@ -251,8 +305,8 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-600">
-                            <p class="text-sm font-semibold text-purple-900 mb-2">WORKFLOW HACK:</p>
+                        <div class="bg-[#F2F5F5] p-4 rounded-lg border-l-4 border-[#FF9316]">
+                            <p class="text-sm font-semibold text-[#FF9316] mb-2">WORKFLOW HACK:</p>
                             <p class="text-sm text-gray-700 mb-3">
                                 Start with a geographic radius. Pull all licensed facilities within 50 miles of your target market, then cross-reference against broker listings to eliminate what's already for sale. What's left is your off-market goldmine.
                             </p>
@@ -265,10 +319,10 @@
 
                 <!-- Step 3 -->
                 <div class="mb-6 border rounded-lg overflow-hidden">
-                    <button onclick="toggleSection(3)" class="w-full bg-blue-50 hover:bg-blue-100 p-6 flex items-center justify-between transition-colors">
+                    <button onclick="toggleSection(3)" class="w-full bg-[#F2F5F5] hover:bg-[#F2F5F5]/80 p-6 flex items-center justify-between transition-colors">
                         <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
-                            <h3 class="text-xl font-bold text-gray-900">Craft Personalized Outreach</h3>
+                            <div class="w-10 h-10 bg-[#0098EE] text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
+                            <h3 class="text-xl font-bold text-gray-900 font-futura">Craft Personalized Outreach</h3>
                         </div>
                         <i data-lucide="chevron-down" class="w-5 h-5" id="chevron-3"></i>
                     </button>
@@ -316,8 +370,8 @@
                                 <p>Even if you haven't considered an exit, I'd value a brief conversation about your vision for the practice's future. Would you be open to a 15-minute call?"</p>
                             </div>
                         </div>
-                        <div class="bg-amber-50 p-4 rounded-lg border-l-4 border-amber-600">
-                            <p class="text-sm font-semibold text-amber-900 mb-2">MULTI-CHANNEL APPROACH:</p>
+                        <div class="bg-[#F2F5F5] p-4 rounded-lg border-l-4 border-[#FFC900]">
+                            <p class="text-sm font-semibold text-[#FFC900] mb-2">MULTI-CHANNEL APPROACH:</p>
                             <p class="text-sm text-gray-700">
                                 Send a physical letter first (90% open rate vs 20% for email), follow up with email after 7-10 days, then LinkedIn connection with a personalized note. Triple touchpoints = 3x response rate.
                             </p>
@@ -327,10 +381,10 @@
 
                 <!-- Step 4 -->
                 <div class="mb-6 border rounded-lg overflow-hidden">
-                    <button onclick="toggleSection(4)" class="w-full bg-blue-50 hover:bg-blue-100 p-6 flex items-center justify-between transition-colors">
+                    <button onclick="toggleSection(4)" class="w-full bg-[#F2F5F5] hover:bg-[#F2F5F5]/80 p-6 flex items-center justify-between transition-colors">
                         <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
-                            <h3 class="text-xl font-bold text-gray-900">Lead With Value, Not Money</h3>
+                            <div class="w-10 h-10 bg-[#0098EE] text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
+                            <h3 class="text-xl font-bold text-gray-900 font-futura">Lead With Value, Not Money</h3>
                         </div>
                         <i data-lucide="chevron-down" class="w-5 h-5" id="chevron-4"></i>
                     </button>
@@ -340,8 +394,8 @@
                         </p>
                         <h4 class="font-bold text-gray-900 mb-3">The Three Trust Pillars:</h4>
                         <div class="space-y-4 mb-4">
-                            <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-600">
-                                <h5 class="font-bold text-green-900 mb-2">1. Staff Retention Commitment</h5>
+                            <div class="bg-[#F2F5F5] p-4 rounded-lg border-l-4 border-[#FFC900]">
+                                <h5 class="font-bold text-[#FFC900] mb-2">1. Staff Retention Commitment</h5>
                                 <p class="text-sm text-gray-700 mb-2">
                                     Healthcare owners are loyal to their teams. Assure them you're committed to retaining key employees and offer employment agreements to prove it.
                                 </p>
@@ -349,8 +403,8 @@
                                     <span class="font-semibold">What to say:</span> "I want to retain your entire team. I'd like to offer 1-year employment agreements with raises to show my commitment to continuity."
                                 </p>
                             </div>
-                            <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-600">
-                                <h5 class="font-bold text-blue-900 mb-2">2. Patient Continuity Plan</h5>
+                            <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-[#0098EE]">
+                                <h5 class="font-bold text-[#003452] mb-2">2. Patient Continuity Plan</h5>
                                 <p class="text-sm text-gray-700 mb-2">
                                     Patients are the lifeblood of healthcare practices. Outline how you'll maintain quality of care, communication standards, and the same level of service.
                                 </p>
@@ -358,8 +412,8 @@
                                     <span class="font-semibold">What to say:</span> "I plan to keep the same hours, providers, and patient communication systems. I want this to feel like a seamless transition for your patients."
                                 </p>
                             </div>
-                            <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-600">
-                                <h5 class="font-bold text-purple-900 mb-2">3. Smooth Transition Strategy</h5>
+                            <div class="bg-[#F2F5F5] p-4 rounded-lg border-l-4 border-[#FF9316]">
+                                <h5 class="font-bold text-[#FF9316] mb-2">3. Smooth Transition Strategy</h5>
                                 <p class="text-sm text-gray-700 mb-2">
                                     Propose a 30-90 day transition period where the owner stays on as a consultant. This gives them peace of mind and gives you crucial knowledge transfer.
                                 </p>
@@ -379,10 +433,10 @@
 
                 <!-- Step 5 -->
                 <div class="mb-6 border rounded-lg overflow-hidden">
-                    <button onclick="toggleSection(5)" class="w-full bg-blue-50 hover:bg-blue-100 p-6 flex items-center justify-between transition-colors">
+                    <button onclick="toggleSection(5)" class="w-full bg-[#F2F5F5] hover:bg-[#F2F5F5]/80 p-6 flex items-center justify-between transition-colors">
                         <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">5</div>
-                            <h3 class="text-xl font-bold text-gray-900">Use AI to Scale Your Research</h3>
+                            <div class="w-10 h-10 bg-[#0098EE] text-white rounded-full flex items-center justify-center font-bold text-lg">5</div>
+                            <h3 class="text-xl font-bold text-gray-900 font-futura">Use AI to Scale Your Research</h3>
                         </div>
                         <i data-lucide="chevron-down" class="w-5 h-5" id="chevron-5"></i>
                     </button>
@@ -392,7 +446,7 @@
                         </p>
                         <h4 class="font-bold text-gray-900 mb-3">High-Value AI Applications:</h4>
                         <div class="space-y-4 mb-4">
-                            <div class="border-l-4 border-blue-600 pl-4">
+                            <div class="border-l-4 border-[#0098EE] pl-4">
                                 <h5 class="font-bold text-gray-900 mb-2">Automated License Data Extraction</h5>
                                 <p class="text-sm text-gray-700 mb-2">
                                     Use AI to scrape state licensing websites and organize data into spreadsheets with owner names, addresses, license numbers, and expiration dates.
@@ -404,7 +458,7 @@
                                     <span class="font-semibold">Prompt example:</span> "Extract all physical therapy clinic licenses from this state database page and create a CSV with facility name, owner name, address, license number, and issue date"
                                 </p>
                             </div>
-                            <div class="border-l-4 border-indigo-600 pl-4">
+                            <div class="border-l-4 border-[#004C76] pl-4">
                                 <h5 class="font-bold text-gray-900 mb-2">Owner Profile Summaries</h5>
                                 <p class="text-sm text-gray-700 mb-2">
                                     Feed AI publicly available information (LinkedIn, practice websites, news articles) and get concise summaries of owner backgrounds, business histories, and potential selling motivations.
@@ -429,8 +483,8 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-600">
-                            <p class="text-sm font-semibold text-green-900 mb-2">THE MULTIPLICATION EFFECT:</p>
+                        <div class="bg-[#F2F5F5] p-4 rounded-lg border-l-4 border-[#FFC900]">
+                            <p class="text-sm font-semibold text-[#FFC900] mb-2">THE MULTIPLICATION EFFECT:</p>
                             <p class="text-sm text-gray-700 mb-2">
                                 Without AI: Research 1 prospect = 3-4 hours. 5 prospects per week = your limit.
                             </p>
@@ -443,42 +497,42 @@
             </div>
 
             <!-- Bonus Section -->
-            <div class="p-8 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
-                <h2 class="text-2xl font-bold mb-4">BONUS: Expected Timeline & Results</h2>
+            <div class="p-8 bg-gradient-to-r from-[#003452] to-[#004C76] text-white">
+                <h2 class="text-2xl font-bold mb-4 font-futura">BONUS: Expected Timeline & Results</h2>
                 <div class="grid md:grid-cols-3 gap-6">
                     <div class="bg-white/10 backdrop-blur rounded-lg p-4">
                         <h3 class="font-bold text-lg mb-2">Weeks 1-2</h3>
-                        <p class="text-sm text-blue-100">Build database of 100-200 prospects. Complete initial research. Prepare outreach materials.</p>
+                        <p class="text-sm text-white/90">Build database of 100-200 prospects. Complete initial research. Prepare outreach materials.</p>
                     </div>
                     <div class="bg-white/10 backdrop-blur rounded-lg p-4">
                         <h3 class="font-bold text-lg mb-2">Weeks 3-8</h3>
-                        <p class="text-sm text-blue-100">Send first wave of outreach. Expect 15-20 responses. Start initial conversations. Identify 3-5 serious opportunities.</p>
+                        <p class="text-sm text-white/90">Send first wave of outreach. Expect 15-20 responses. Start initial conversations. Identify 3-5 serious opportunities.</p>
                     </div>
                     <div class="bg-white/10 backdrop-blur rounded-lg p-4">
                         <h3 class="font-bold text-lg mb-2">Weeks 9-16</h3>
-                        <p class="text-sm text-blue-100">Enter preliminary due diligence with top 2-3 prospects. Negotiate LOIs. Close your first off-market deal.</p>
+                        <p class="text-sm text-white/90">Enter preliminary due diligence with top 2-3 prospects. Negotiate LOIs. Close your first off-market deal.</p>
                     </div>
                 </div>
                 <div class="mt-6 bg-white/20 backdrop-blur rounded-lg p-4">
                     <p class="font-bold text-lg mb-2">Average Success Rate:</p>
-                    <p class="text-sm text-blue-100">15-20% response rate on initial outreach → 5-8% serious conversations → 1-2% closed deals</p>
-                    <p class="text-sm text-blue-100 mt-2">Translation: Contact 100 prospects = 1-2 acquisitions within 4-6 months</p>
+                    <p class="text-sm text-white/90">15-20% response rate on initial outreach → 5-8% serious conversations → 1-2% closed deals</p>
+                    <p class="text-sm text-white/90 mt-2">Translation: Contact 100 prospects = 1-2 acquisitions within 4-6 months</p>
                 </div>
             </div>
 
             <!-- Call to Action -->
-            <div class="p-8 bg-gray-50 border-t-4 border-blue-600">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4">Ready to Start Sourcing?</h2>
+            <div class="p-8 bg-[#F2F5F5] border-t-4 border-[#0098EE]">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 font-futura">Ready to Start Sourcing?</h2>
                 <p class="text-gray-700 mb-6 leading-relaxed">
                     This framework has helped dozens of first-time buyers acquire healthcare businesses without ever touching a broker listing.
                 </p>
-                <div class="bg-blue-600 text-white p-6 rounded-lg">
+                <div class="bg-[#003452] text-white p-6 rounded-lg">
                     <p class="font-bold text-lg mb-2">Want more insights like this?</p>
-                    <p class="text-blue-100 text-sm mb-4">
+                    <p class="text-white/90 text-sm mb-4">
                         Subscribe to the Nikonomics Podcast for weekly strategies on business acquisition, entrepreneurship, and building wealth through ownership.
                     </p>
                     <div class="flex gap-3">
-                        <button onclick="subscribeToPodcast()" class="bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
+                        <button onclick="subscribeToPodcast()" class="bg-white text-[#003452] px-6 py-2 rounded-lg font-semibold hover:bg-[#F2F5F5] transition-colors text-sm">
                             Subscribe to Podcast
                         </button>
                     </div>
@@ -492,7 +546,7 @@
         <div class="bg-white rounded-lg shadow-lg p-6 mt-8">
             <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div class="flex items-center gap-4">
-                    <button onclick="goBack()" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg flex items-center gap-2 transition-colors">
+                    <button onclick="goBack()" class="bg-[#0098EE] hover:bg-blue-700 text-white px-6 py-2 rounded-lg flex items-center gap-2 transition-colors">
                         <i data-lucide="arrow-left" class="w-4 h-4"></i>
                         Back to Resources
                     </button>
@@ -502,9 +556,8 @@
                 </div>
                 <div class="text-sm text-gray-500 text-center">
                     <p>Want more resources like this?</p>
-                    <p>Subscribe to the <a href="https://open.spotify.com/show/0vmmQi1QAMugxu8iDzHqHT" class="text-blue-600 hover:text-blue-800">Nikonomics Podcast</a></p>
                     <p class="mt-2">
-                        <a href="https://nikonomics.info/nikonomicspodLM" class="text-blue-600 hover:text-blue-800 font-medium">Subscribe to my newsletter</a>
+                        <a href="https://nikonomics.info/nikonomicspodLM" class="text-[#0098EE] hover:text-[#004C76] font-medium">Subscribe to my newsletter</a>
                     </p>
                 </div>
             </div>
