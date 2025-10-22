@@ -7,7 +7,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
-<body class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-12 px-4">
+    <!-- Navigation Header -->
+    <div class="max-w-4xl mx-auto mb-6">
+        <div class="bg-white rounded-lg shadow-lg p-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <button onclick="goBack()" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg flex items-center gap-2 transition-colors">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    Back to Resources
+                </button>
+                <div class="text-gray-600">|</div>
+                <a href="https://nikonomicspod.com" class="text-blue-600 hover:text-blue-800 font-medium">Nikonomics Home</a>
+            </div>
+            <div class="text-sm text-gray-500">
+                Exclusive Lead Magnet
+            </div>
+        </div>
+    </div><body class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-12 px-4">
     <div class="max-w-4xl mx-auto">
         <!-- Header -->
         <div class="bg-white rounded-2xl shadow-2xl overflow-hidden mb-8">
@@ -238,7 +253,24 @@
 
         <!-- Footer -->
         <div class="text-center text-gray-400 text-sm">
-            <p>© 2025 Nikonomics Podcast | Exclusive Lead Magnet for Followers</p>
+        <!-- Navigation Footer -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mt-8">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-4">
+                    <button onclick="goBack()" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg flex items-center gap-2 transition-colors">
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                        Back to Resources
+                    </button>
+                    <a href="https://nikonomicspod.com" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-6 py-2 rounded-lg transition-colors">
+                        Visit Main Site
+                    </a>
+                </div>
+                <div class="text-sm text-gray-500 text-center">
+                    <p>Want more resources like this?</p>
+                    <p>Subscribe to the <a href="https://open.spotify.com/show/0vmmQi1QAMugxu8iDzHqHT" class="text-blue-600 hover:text-blue-800">Nikonomics Podcast</a></p>
+                </div>
+            </div>
+        </div>            <p>© 2025 Nikonomics Podcast | Exclusive Lead Magnet for Followers</p>
         </div>
     </div>
 
@@ -264,7 +296,16 @@
         }
         // Button functionality
         function subscribeToPodcast() {
-            // You can customize these URLs to your actual podcast platforms
+        // Navigation function
+        function goBack() {
+            // Try to go back to the main resources page
+            if (document.referrer && document.referrer.includes("nikonomics")) {
+                window.history.back();
+            } else {
+                // Fallback to main resources page
+                window.location.href = "../index.html";
+            }
+        }            // You can customize these URLs to your actual podcast platforms
             const podcastUrls = {
                 spotify: 'https://open.spotify.com/show/0vmmQi1QAMugxu8iDzHqHT',
                 apple: 'https://podcasts.apple.com/us/podcast/nikonomics-the-economics-of-small-business/id1740361365',
