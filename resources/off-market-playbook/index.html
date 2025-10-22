@@ -22,11 +22,16 @@
             }
         }
         function subscribeToPodcast() {
-            const choice = confirm("Choose your preferred platform:\n\nOK = Spotify\nCancel = Apple Podcasts");
-            if (choice) {
-                window.open("https://open.spotify.com/show/0vmmQi1QAMugxu8iDzHqHT", "_blank");
-            } else {
+            const choice = prompt("Choose your preferred platform:\n\n1 = Apple Podcasts\n2 = Spotify\n3 = YouTube\n\nEnter 1, 2, or 3:");
+            
+            if (choice === "1") {
                 window.open("https://podcasts.apple.com/us/podcast/nikonomics-the-economics-of-small-business/id1740361365", "_blank");
+            } else if (choice === "2") {
+                window.open("https://open.spotify.com/show/0vmmQi1QAMugxu8iDzHqHT", "_blank");
+            } else if (choice === "3") {
+                window.open("https://nikonomics.info/YTSub", "_blank");
+            } else if (choice !== null) {
+                alert("Please enter 1, 2, or 3 to choose your platform.");
             }
         }
         function goBack() {
