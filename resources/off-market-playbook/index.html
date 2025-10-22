@@ -61,7 +61,7 @@
 
                 <!-- Step 1 -->
                 <div class="mb-6 border rounded-lg overflow-hidden">
-                    <button onclick="toggleSection(1)" class="w-full bg-blue-50 hover:bg-blue-100 p-6 flex items-center justify-between transition-colors">
+                    <button onclick="toggleSection(1); console.log("Button 1 clicked")" class="w-full bg-blue-50 hover:bg-blue-100 p-6 flex items-center justify-between transition-colors">
                         <div class="flex items-center gap-4">
                             <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
                             <h3 class="text-xl font-bold text-gray-900">Identify Fragmented Niches</h3>
@@ -276,25 +276,52 @@
 
     <script>
         // Initialize Lucide icons
-        lucide.createIcons();
+        if (typeof lucide !== "undefined" lucide.createIcons();lucide.createIcons(); lucide.createIcons) {
+                lucide.createIcons();
+            } else {
+                console.log("Lucide not loaded yet, retrying...");
+                setTimeout(() => {
+                    if (typeof lucide !== "undefined" lucide.createIcons();lucide.createIcons(); lucide.createIcons) {
+                        lucide.createIcons();
+                    }
+                }, 100);
+            }
 
         // Toggle section functionality
         function toggleSection(sectionNumber) {
+            console.log("Toggling section:", sectionNumber);
             const section = document.getElementById(`section-${sectionNumber}`);
             const chevron = document.getElementById(`chevron-${sectionNumber}`);
             
-            if (section.classList.contains('hidden')) {
-                section.classList.remove('hidden');
-                chevron.setAttribute('data-lucide', 'chevron-up');
+            if (!section || !chevron) {
+                console.error("Element not found for section:", sectionNumber);
+                return;
+            }
+            
+            if (section.classList.contains("hidden")) {
+                section.classList.remove("hidden");
+                chevron.setAttribute("data-lucide", "chevron-up");
+                console.log("Expanding section:", sectionNumber);
             } else {
-                section.classList.add('hidden');
-                chevron.setAttribute('data-lucide', 'chevron-down');
+                section.classList.add("hidden");
+                chevron.setAttribute("data-lucide", "chevron-down");
+                console.log("Collapsing section:", sectionNumber);
             }
             
             // Re-initialize icons after changing attributes
-            lucide.createIcons();
-        }
-        // Button functionality
+            if (typeof lucide !== "undefined" && lucide.createIcons) {
+                if (typeof lucide !== "undefined" lucide.createIcons();lucide.createIcons(); lucide.createIcons) {
+                lucide.createIcons();
+            } else {
+                console.log("Lucide not loaded yet, retrying...");
+                setTimeout(() => {
+                    if (typeof lucide !== "undefined" lucide.createIcons();lucide.createIcons(); lucide.createIcons) {
+                        lucide.createIcons();
+                    }
+                }, 100);
+            }
+            }
+        }        // Button functionality
         function subscribeToPodcast() {
         // Navigation function
         function goBack() {
@@ -332,6 +359,17 @@
                 <head>
                     <title>Off-Market Acquisition Playbook - PDF</title>
                     <style>
+        .step-content {
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        .step-content.hidden {
+            max-height: 0;
+            padding: 0;
+        }
+        .step-content:not(.hidden) {
+            max-height: 1000px;
+        }
                         body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; }
                         .header { text-align: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px 20px; margin-bottom: 30px; border-radius: 10px; }
                         .header h1 { font-size: 2.5rem; margin-bottom: 10px; }
