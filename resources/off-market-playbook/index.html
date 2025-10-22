@@ -29,9 +29,6 @@
                 window.open("https://podcasts.apple.com/us/podcast/nikonomics-the-economics-of-small-business/id1740361365", "_blank");
             }
         }
-        function downloadPDF() {
-            alert("PDF Download: Right-click and select Print, then choose Save as PDF");
-        }
         function goBack() {
             if (document.referrer && document.referrer.includes("nikonomics")) {
                 window.history.back();
@@ -412,10 +409,6 @@
                     <div class="flex gap-3">
                         <button onclick="subscribeToPodcast()" class="bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
                             Subscribe to Podcast
-                        </button>
-                        <button onclick="downloadPDF()" class="bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-800 transition-colors text-sm flex items-center gap-2">
-                            <i data-lucide="download" class="w-4 h-4"></i>
-                            Download PDF
                         </button>
                     </div>
                 </div>
