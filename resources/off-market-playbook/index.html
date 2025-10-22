@@ -22,17 +22,74 @@
             }
         }
         function subscribeToPodcast() {
-            const choice = prompt("Choose your preferred platform:\n\n1 = Apple Podcasts\n2 = Spotify\n3 = YouTube\n\nEnter 1, 2, or 3:");
+            // Create modal overlay
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1000;
+            `;
             
-            if (choice === "1") {
-                window.open("https://podcasts.apple.com/us/podcast/nikonomics-the-economics-of-small-business/id1740361365", "_blank");
-            } else if (choice === "2") {
-                window.open("https://open.spotify.com/show/0vmmQi1QAMugxu8iDzHqHT", "_blank");
-            } else if (choice === "3") {
-                window.open("https://nikonomics.info/YTSub", "_blank");
-            } else if (choice !== null) {
-                alert("Please enter 1, 2, or 3 to choose your platform.");
-            }
+            // Create modal content
+            const modalContent = document.createElement('div');
+            modalContent.style.cssText = `
+                background: white;
+                padding: 30px;
+                border-radius: 12px;
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+                max-width: 400px;
+                width: 90%;
+                text-align: center;
+            `;
+            
+            modalContent.innerHTML = `
+                <h3 style="margin: 0 0 20px 0; font-size: 1.5rem; color: #1f2937;">Choose Your Platform</h3>
+                <p style="margin: 0 0 25px 0; color: #6b7280;">Subscribe to the Nikonomics Podcast</p>
+                
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <button onclick="window.open('https://podcasts.apple.com/us/podcast/nikonomics-the-economics-of-small-business/id1740361365', '_blank'); closeModal();" 
+                            style="background: #007AFF; color: white; border: none; padding: 12px 20px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: background 0.2s;">
+                        🍎 Apple Podcasts
+                    </button>
+                    
+                    <button onclick="window.open('https://open.spotify.com/show/0vmmQi1QAMugxu8iDzHqHT', '_blank'); closeModal();" 
+                            style="background: #1DB954; color: white; border: none; padding: 12px 20px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: background 0.2s;">
+                        🎵 Spotify
+                    </button>
+                    
+                    <button onclick="window.open('https://nikonomics.info/YTSub', '_blank'); closeModal();" 
+                            style="background: #FF0000; color: white; border: none; padding: 12px 20px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: background 0.2s;">
+                        📺 YouTube
+                    </button>
+                </div>
+                
+                <button onclick="closeModal();" 
+                        style="background: #6b7280; color: white; border: none; padding: 8px 16px; border-radius: 6px; margin-top: 20px; cursor: pointer; font-size: 14px;">
+                    Cancel
+                </button>
+            `;
+            
+            modal.appendChild(modalContent);
+            document.body.appendChild(modal);
+            
+            // Close modal function
+            window.closeModal = function() {
+                document.body.removeChild(modal);
+            };
+            
+            // Close on overlay click
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
         }
         function goBack() {
             if (document.referrer && document.referrer.includes("nikonomics")) {
