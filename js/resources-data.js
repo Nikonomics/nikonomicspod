@@ -3,12 +3,34 @@
 // To add a new resource: 1) Create the resource page, 2) Add entry here, 3) Resource appears automatically
 
 const resources = {
-  'business-plans': [
+  'first-time-entrepreneurs': [
+    // This section will be populated as you add the 30 business plans
+    // Each will have rookie-friendliness scores and beginner-focused guidance
+  ],
+  'seasonal-businesses': [
+    {
+      title: 'Fireworks Stand Business Plan',
+      description: 'Work 20 days, make $15K-$30K: 67-73% margins with seasonal intensity and walk-in traffic model',
+      url: '/resources/fireworks-stand/',
+      category: 'Seasonal Business',
+      type: '📄 Business Plan',
+      time: '50 min read',
+      featured: false
+    },
     {
       title: 'Christmas Tree Lot Business Plan',
       description: 'Complete business plan for seasonal Christmas tree lot with 25-40% net margins, location selection strategies, and 6-week revenue cycle optimization',
       url: '/resources/christmas-tree-lot/',
-      category: 'Business Plan',
+      category: 'Seasonal Business',
+      type: '📄 Business Plan',
+      time: '50 min read',
+      featured: false
+    },
+    {
+      title: 'Christmas Lights Installation',
+      description: 'Generate $100K-$800K in 60-90 days with 90% customer retention and 25-45% net margins',
+      url: '/resources/christmas-lights-installation/',
+      category: 'Seasonal Business',
       type: '📄 Business Plan',
       time: '50 min read',
       featured: false
@@ -17,11 +39,58 @@ const resources = {
       title: 'Shaved Ice Stand Business Plan',
       description: 'Complete business plan for starting a shaved ice business with 88-94% margins, event booking strategies, and seasonal success framework',
       url: '/resources/shaved-ice-business-plan/',
-      category: 'Business Plan',
+      category: 'Seasonal Business',
       type: '📄 Business Plan',
       time: '45 min read',
       featured: false
     },
+    {
+      title: 'Seasonal Leaf Removal Business',
+      description: 'Earn $15K-$35K in 3-4 months with low barrier to entry and 35-50% margins',
+      url: '/resources/seasonal-leaf-removal/',
+      category: 'Seasonal Business',
+      type: '📄 Business Plan',
+      time: '45 min read',
+      featured: false
+    },
+    {
+      title: 'Snow Removal Business',
+      description: 'Seasonal service with 93% customer retention in $23B market with 60-75% margins',
+      url: '/resources/snow-removal-business/',
+      category: 'Seasonal Business',
+      type: '📄 Business Plan',
+      time: '45 min read',
+      featured: false
+    },
+    {
+      title: 'Backyard Ice Rink Business',
+      description: 'Seasonal cold-weather opportunity with $100K-$300K potential and 60-68% margins',
+      url: '/resources/backyard-ice-rink/',
+      category: 'Seasonal Business',
+      type: '📄 Business Plan',
+      time: '50 min read',
+      featured: false
+    },
+    {
+      title: 'Porch Pumpkin Decorating Service',
+      description: 'Seasonal decorating business with $25K-$250K potential in 4 months and 70% margins',
+      url: '/resources/porch-pumpkin-decorating-service/',
+      category: 'Seasonal Business',
+      type: '📄 Business Plan',
+      time: '40 min read',
+      featured: false
+    },
+    {
+      title: 'Halloween Pop-Up Shop',
+      description: 'Complete business plan for seasonal retail with $150K revenue in 60 days',
+      url: '/resources/halloween-popup-shop/',
+      category: 'Seasonal Business',
+      type: '📄 Business Plan',
+      time: '45 min read',
+      featured: false
+    },
+  ],
+  'business-plans': [
     {
       title: 'Complete Business Plan Template',
       description: 'Step-by-step guide to creating a professional business plan that investors and lenders will love',
