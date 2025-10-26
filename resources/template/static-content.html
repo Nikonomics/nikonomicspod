@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[RESOURCE TITLE] - Nikonomics</title>
+    <meta name="description" content="[RESOURCE DESCRIPTION]">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom font stack with Futura as primary */
+        .font-futura {
+            font-family: 'Futura Now Headline CN XBlack', 'Futura', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 900;
+        }
+        
+        .font-futura-bold {
+            font-family: 'Futura Now Headline CN XBlack', 'Futura', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 800;
+        }
+        
+        .font-futura-medium {
+            font-family: 'Futura Now Headline CN XBlack', 'Futura', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 600;
+        }
+        
+        /* Apply to key elements */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Futura Now Headline CN XBlack', 'Futura', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        /* Enhanced typography matching Framer site */
+        .text-refined {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            letter-spacing: -0.01em;
+        }
+        
+        .text-refined-bold {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 600;
+            line-height: 1.5;
+            letter-spacing: -0.02em;
+        }
+        
+        .text-refined-heavy {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 700;
+            line-height: 1.4;
+            letter-spacing: -0.03em;
+        }
+
+        /* Content-specific styles */
+        .content-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .toc {
+            background: #F2F5F5;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .toc h3 {
+            color: #003452;
+            margin-bottom: 1rem;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc li {
+            margin-bottom: 0.5rem;
+        }
+
+        .toc a {
+            color: #0098EE;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .toc a:hover {
+            color: #004C76;
+        }
+
+        .content-section {
+            margin: 3rem 0;
+        }
+
+        .content-section h2 {
+            color: #003452;
+            border-bottom: 2px solid #0098EE;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section h3 {
+            color: #004C76;
+            margin: 2rem 0 1rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #FF9316 0%, #FFC900 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .highlight-box h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .back-navigation {
+            background: #F2F5F5;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .back-navigation a {
+            color: #0098EE;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-navigation a:hover {
+            color: #004C76;
+        }
+
+        .cta-section {
+            background: #003452;
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-section h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section .btn-primary {
+            background: #FF9316;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-section .btn-primary:hover {
+            background: #FFC900;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header>
+        <nav>
+            <div class="nav-brand">
+                <h1>Nikonomics</h1>
+            </div>
+            <div class="nav-links">
+                <a href="../../index.html">← Back to Resources</a>
+                <a href="https://nikonomicspod.com">Home</a>
+                <a href="https://nikonomicspod.com/about">About</a>
+                <a href="https://nikonomicspod.com/episodes">Episodes</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Resource Header -->
+        <section class="hero">
+            <div class="container">
+                <div class="back-navigation">
+                    <a href="../../index.html">← Back to Nikonomics Toolkit</a>
+                </div>
+                <h1 class="font-futura">[RESOURCE TITLE]</h1>
+                <p class="text-refined">[RESOURCE DESCRIPTION]</p>
+                <div class="resource-meta">
+                    <span class="resource-type">[RESOURCE TYPE]</span>
+                    <span class="resource-time">[ESTIMATED TIME]</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table of Contents -->
+        <section class="toc">
+            <div class="container">
+                <h3 class="font-futura">Table of Contents</h3>
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#section1">[Section 1 Title]</a></li>
+                    <li><a href="#section2">[Section 2 Title]</a></li>
+                    <li><a href="#section3">[Section 3 Title]</a></li>
+                    <li><a href="#implementation">Implementation</a></li>
+                    <li><a href="#next-steps">Next Steps</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="content-wrapper">
+            <!-- Overview Section -->
+            <div class="content-section" id="overview">
+                <h2 class="font-futura">Overview</h2>
+                <p class="text-refined">[Overview content goes here. This should be a brief introduction to what the resource covers and why it's valuable.]</p>
+                
+                <div class="highlight-box">
+                    <h3 class="font-futura">Key Benefits</h3>
+                    <ul class="text-refined">
+                        <li>Benefit 1: [Description]</li>
+                        <li>Benefit 2: [Description]</li>
+                        <li>Benefit 3: [Description]</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Section 1 -->
+            <div class="content-section" id="section1">
+                <h2 class="font-futura">[Section 1 Title]</h2>
+                <p class="text-refined">[Section content goes here. Use proper heading hierarchy and include practical examples where relevant.]</p>
+                
+                <h3 class="font-futura-medium">[Subsection Title]</h3>
+                <p class="text-refined">[Subsection content]</p>
+                
+                <!-- Example content structure -->
+                <div style="background: #F2F5F5; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+                    <h4 class="text-refined-bold">Example:</h4>
+                    <p class="text-refined">[Example content here]</p>
+                </div>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="content-section" id="section2">
+                <h2 class="font-futura">[Section 2 Title]</h2>
+                <p class="text-refined">[Section content goes here]</p>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="content-section" id="section3">
+                <h2 class="font-futura">[Section 3 Title]</h2>
+                <p class="text-refined">[Section content goes here]</p>
+            </div>
+
+            <!-- Implementation Section -->
+            <div class="content-section" id="implementation">
+                <h2 class="font-futura">Implementation</h2>
+                <p class="text-refined">[Step-by-step implementation guide]</p>
+                
+                <h3 class="font-futura-medium">Step 1: [Action]</h3>
+                <p class="text-refined">[Description]</p>
+                
+                <h3 class="font-futura-medium">Step 2: [Action]</h3>
+                <p class="text-refined">[Description]</p>
+                
+                <h3 class="font-futura-medium">Step 3: [Action]</h3>
+                <p class="text-refined">[Description]</p>
+            </div>
+
+            <!-- Next Steps -->
+            <div class="content-section" id="next-steps">
+                <h2 class="font-futura">Next Steps</h2>
+                <p class="text-refined">[What to do next after using this resource]</p>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="cta-section">
+                <h3 class="font-futura">Ready to Take Action?</h3>
+                <p class="text-refined">Get more resources like this delivered to your inbox weekly.</p>
+                <a href="../../index.html#newsletter" class="btn-primary">Subscribe to Newsletter</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Nikonomics. All rights reserved.</p>
+            <p><a href="https://nikonomicspod.com" style="color: #0098EE;">Visit Nikonomics Podcast</a></p>
+        </div>
+    </footer>
+
+    <script src="../../script.js"></script>
+</body>
+</html>
