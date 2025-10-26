@@ -37,7 +37,18 @@ const resources = {
       score: '33/45',
       rookieFriendly: true
     },
-    // This section will be populated as you add the remaining 27 business plans
+    {
+      title: 'Carpet Cleaning Business',
+      description: '50-70% margins with $5K-$15K monthly revenue: High-margin local service with $15K-$40K startup and 3-6 month breakeven',
+      url: '/resources/carpet-cleaning-business/',
+      category: 'First-Time Entrepreneur',
+      type: '📄 Business Plan',
+      time: '30 min read',
+      featured: false,
+      score: '34/45',
+      rookieFriendly: true
+    },
+    // This section will be populated as you add the remaining 26 business plans
   ],
   'seasonal-businesses': [
     {

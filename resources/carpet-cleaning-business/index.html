@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carpet Cleaning Business Plan - Nikonomics Business Toolkit</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom font stack with Futura as primary */
+        .font-futura {
+            font-family: 'Futura Now Headline CN XBlack', 'Futura', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 900;
+        }
+
+        /* Enhanced typography matching Framer site */
+        .text-refined {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            letter-spacing: -0.01em;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #003452;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+        }
+
+        .business-plan-header {
+            background: linear-gradient(135deg, #6f42c1 0%, #9b59b6 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .business-plan-header h1 {
+            font-size: 2.5rem;
+            margin: 0 0 1rem 0;
+        }
+
+        .business-plan-header .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .score-badge-large {
+            background: white;
+            color: #6f42c1;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 1.25rem;
+            font-weight: 800;
+            display: inline-block;
+            margin-top: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .toc {
+            position: sticky;
+            top: 2rem;
+            height: fit-content;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .toc h3 {
+            margin: 0 0 1rem 0;
+            font-size: 1rem;
+            color: #003452;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc li {
+            margin-bottom: 0.75rem;
+        }
+
+        .toc a {
+            color: #6c757d;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .toc a:hover {
+            color: #6f42c1;
+        }
+
+        .main-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section h2 {
+            color: #6f42c1;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #6f42c1;
+        }
+
+        .section h3 {
+            color: #003452;
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+            border-left: 4px solid #6f42c1;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .highlight-box strong {
+            color: #6f42c1;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+        }
+
+        .stat-card .stat-value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #6f42c1;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card .stat-label {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .pros, .cons {
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .pros {
+            background: #f3e5f5;
+            border: 2px solid #6f42c1;
+        }
+
+        .cons {
+            background: #fff3e0;
+            border: 2px solid #ff9800;
+        }
+
+        .pros h4, .cons h4 {
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+
+        .pros h4 {
+            color: #6f42c1;
+        }
+
+        .cons h4 {
+            color: #ff9800;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        th {
+            background: #6f42c1;
+            color: white;
+            font-weight: 700;
+        }
+
+        tr:hover {
+            background: #f8f9fa;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #6f42c1 0%, #9b59b6 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-box h3 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #6f42c1;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .toc {
+                position: static;
+            }
+
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+
+            .main-content {
+                padding: 1.5rem;
+            }
+
+            .business-plan-header h1 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="business-plan-header">
+        <h1 class="font-futura">Carpet Cleaning Business</h1>
+        <p class="subtitle text-refined">50-70% margins with $5K-$15K monthly revenue: High-margin local service with $15K-$40K startup and 3-6 month breakeven</p>
+        <div class="score-badge-large">★ 34/45 SCORE - All-Star Starter Business</div>
+    </div>
+
+    <div class="container">
+        <a href="../../index.html" class="back-link">← Back to Business Toolkit</a>
+
+        <div class="content-wrapper">
+            <aside class="toc">
+                <h3>Table of Contents</h3>
+                <ul>
+                    <li><a href="#snapshot">Business Snapshot</a></li>
+                    <li><a href="#breakdown">Business Breakdown</a></li>
+                    <li><a href="#financials">Financials</a></li>
+                    <li><a href="#operations">Operations</a></li>
+                    <li><a href="#business-model">Business Model</a></li>
+                    <li><a href="#risks">Risks & Red Flags</a></li>
+                    <li><a href="#ai-automation">AI & Automation</a></li>
+                    <li><a href="#founder-fit">Founder Fit</a></li>
+                    <li><a href="#scorecard">Nik's Scorecard</a></li>
+                    <li><a href="#real-world">Real-World Example</a></li>
+                    <li><a href="#tools">Tools & Platforms</a></li>
+                </ul>
+            </aside>
+
+            <main class="main-content">
+                <section id="snapshot" class="section">
+                    <h2>Business Snapshot</h2>
+                    <p class="text-refined">
+                        Carpet cleaning is a service business that provides deep cleaning, stain removal, and maintenance for residential and commercial carpets using specialized equipment and cleaning solutions. It's primarily B2C, focused on homeowners, with some B2B opportunities serving offices, restaurants, and rental properties.
+                    </p>
+                    <p class="text-refined">
+                        Typical customers include busy families, pet owners, landlords preparing units for new tenants, and businesses maintaining professional appearances. The model is simple: charge $200-500 per job, maintain 50-70% margins, and build a local reputation through quality work and customer service.
+                    </p>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-value">50-70%</span>
+                            <span class="stat-label">Net Margin</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value">$15-40K</span>
+                            <span class="stat-label">Startup Cost</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value">3-6 mo</span>
+                            <span class="stat-label">Time to Breakeven</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value">$5-15K</span>
+                            <span class="stat-label">Monthly Revenue (Solo)</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="breakdown" class="section">
+                    <h2>Business Breakdown</h2>
+
+                    <div class="highlight-box">
+                        <strong>Core Value Proposition:</strong> Classic local service business everyone understands—show up, clean carpets, collect payment, repeat. Learn equipment operation and basic stain chemistry; no rocket science required.
+                    </div>
+
+                    <h3>Customer Profile</h3>
+                    <ul>
+                        <li><strong>Primary:</strong> Busy families, pet owners needing stain/odor removal, homeowners preparing for guests</li>
+                        <li><strong>Secondary:</strong> Landlords preparing units for tenants, offices/restaurants maintaining appearance</li>
+                        <li><strong>Acquisition Channels:</strong> Google Local Services, Google Ads, NextDoor, referrals</li>
+                        <li><strong>Decision Factors:</strong> Price, reviews, availability, quality of work</li>
+                    </ul>
+
+                    <h3>Service Delivery Model</h3>
+                    <ul>
+                        <li>Customer books via phone/online (same day to 1 week out)</li>
+                        <li>Pre-inspection and quote confirmation</li>
+                        <li>Pre-treatment of stains and high-traffic areas</li>
+                        <li>Hot water extraction cleaning (typical method)</li>
+                        <li>Post-treatment and drying recommendations</li>
+                        <li>Payment collection and review request</li>
+                    </ul>
+
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h4>✓ Strengths</h4>
+                            <ul>
+                                <li>Exceptional margins (50-70%)</li>
+                                <li>Simple, proven business model</li>
+                                <li>Solo-operator friendly to start</li>
+                                <li>Fast sales cycle (same day to 1 week)</li>
+                                <li>Multiple effective marketing channels</li>
+                                <li>Equipment retains value</li>
+                                <li>Low regulatory oversight</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h4>⚠ Challenges</h4>
+                            <ul>
+                                <li>Low recurring revenue (20-40% annual)</li>
+                                <li>Physical, labor-intensive work</li>
+                                <li>Seasonal slowdown in winter</li>
+                                <li>Zero defensibility (easy to copy)</li>
+                                <li>Travel time reduces efficiency</li>
+                                <li>Equipment maintenance required</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="financials" class="section">
+                    <h2>Financial Breakdown</h2>
+
+                    <h3>Startup Investment: $15,000–$40,000</h3>
+                    <table>
+                        <tr>
+                            <th>Category</th>
+                            <th>Cost Range</th>
+                        </tr>
+                        <tr>
+                            <td>Van or Truck</td>
+                            <td>$8,000-$15,000</td>
+                        </tr>
+                        <tr>
+                            <td>Cleaning Equipment (extractor, hoses, wands)</td>
+                            <td>$3,000-$8,000</td>
+                        </tr>
+                        <tr>
+                            <td>Cleaning Supplies (chemicals, solutions)</td>
+                            <td>$1,000-$2,000</td>
+                        </tr>
+                        <tr>
+                            <td>Insurance & Licensing</td>
+                            <td>$2,000-$5,000</td>
+                        </tr>
+                        <tr>
+                            <td>Marketing (website, ads, vehicle wrap)</td>
+                            <td>$1,000-$3,000</td>
+                        </tr>
+                    </table>
+
+                    <h3>Revenue Potential</h3>
+                    <div class="highlight-box">
+                        <p><strong>Solo Operator:</strong> $5,000-$15,000/month</p>
+                        <p><strong>With Team (2-3 vans):</strong> $50,000-$150,000/month</p>
+                        <p><strong>Typical Pricing:</strong> $0.25-0.50 per sq ft, $150-300 per room, $200-500 per job average</p>
+                    </div>
+
+                    <h3>Path to $10K/Month</h3>
+                    <ul>
+                        <li><strong>35-50 jobs per month</strong> averaging $200-285 each</li>
+                        <li><strong>2-3 jobs per day</strong> at 5-6 days per week</li>
+                        <li><strong>Marketing spend:</strong> $500-1,000/month on Google Local Services + local advertising</li>
+                        <li><strong>Timeline:</strong> 3-5 months to reach consistent $10K months</li>
+                    </ul>
+
+                    <h3>Profitability Timeline</h3>
+                    <ul>
+                        <li><strong>Month 1-3:</strong> $2,000-$5,000/month profit (building customer base, 40-50% margins)</li>
+                        <li><strong>Month 4-6:</strong> $5,000-$8,000/month profit (50-60% margins with efficiency gains)</li>
+                        <li><strong>Month 7-12:</strong> $8,000-$15,000/month profit (60-70% margins, strong referral base)</li>
+                        <li><strong>Year 2+:</strong> Scale with additional vans and crews for sustained growth</li>
+                    </ul>
+                </section>
+
+                <section id="operations" class="section">
+                    <h2>Operations</h2>
+
+                    <h3>Solo-Operator Friendly?</h3>
+                    <p class="text-refined">
+                        <strong>Yes, highly solo-friendly.</strong> You can handle all aspects of the business initially—booking, cleaning, equipment maintenance, and admin. Perfect for testing the market before hiring.
+                    </p>
+
+                    <h3>Weekly Time Commitment</h3>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-value">30-50</span>
+                            <span class="stat-label">Hours Per Week</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value">20-30</span>
+                            <span class="stat-label">Hours Cleaning Jobs</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value">8-12</span>
+                            <span class="stat-label">Hours Travel Time</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value">5-8</span>
+                            <span class="stat-label">Hours Admin/Marketing</span>
+                        </div>
+                    </div>
+
+                    <h3>Typical Daily Tasks</h3>
+                    <ul>
+                        <li>Morning: Load van with equipment and supplies, check schedule</li>
+                        <li>Midday: Execute 2-4 cleaning jobs (1-2 hours each)</li>
+                        <li>Afternoon: Complete remaining jobs, equipment cleanup</li>
+                        <li>Evening: Process payments, respond to inquiries, schedule bookings</li>
+                        <li>Weekly: Equipment maintenance, solution mixing, marketing activities</li>
+                    </ul>
+
+                    <h3>Labor Requirements</h3>
+                    <ul>
+                        <li><strong>Start:</strong> Solo operator (you do everything)</li>
+                        <li><strong>Month 6-12:</strong> Optional part-time helper for large jobs or busy periods</li>
+                        <li><strong>Scale:</strong> Add vans + 1-2 person crews for each route ($15-20/hour)</li>
+                        <li><strong>Management:</strong> At 3+ vans, hire operations manager or dispatcher</li>
+                    </ul>
+                </section>
+
+                <section id="business-model" class="section">
+                    <h2>Business Model</h2>
+
+                    <h3>Revenue Structure</h3>
+                    <p class="text-refined">
+                        <strong>One-time service fees, some recurring maintenance contracts.</strong> Most revenue comes from episodic cleaning (moving, spring cleaning, stain emergencies), but you can build 20-40% annual repeat rate with quality work.
+                    </p>
+
+                    <h3>Pricing Models</h3>
+                    <table>
+                        <tr>
+                            <th>Service Type</th>
+                            <th>Typical Price</th>
+                        </tr>
+                        <tr>
+                            <td>Per Square Foot (residential)</td>
+                            <td>$0.25-$0.50/sq ft</td>
+                        </tr>
+                        <tr>
+                            <td>Per Room</td>
+                            <td>$150-$300/room</td>
+                        </tr>
+                        <tr>
+                            <td>Average Job (3 rooms)</td>
+                            <td>$200-$500</td>
+                        </tr>
+                        <tr>
+                            <td>Whole House (2,000 sq ft)</td>
+                            <td>$400-$800</td>
+                        </tr>
+                        <tr>
+                            <td>Stain/Pet Treatment (add-on)</td>
+                            <td>$50-$150</td>
+                        </tr>
+                    </table>
+
+                    <h3>Customer Acquisition</h3>
+                    <div class="highlight-box">
+                        <p><strong>Primary Channels:</strong> Google Local Services Ads (40-50%), referrals (30-40% once established), NextDoor (10-15%)</p>
+                        <p><strong>Most Effective Marketing:</strong> Google Local Services (pay-per-lead), direct mail to affluent neighborhoods, vehicle wraps</p>
+                        <p><strong>CAC Range:</strong> $25-75 per customer</p>
+                        <p><strong>LTV:CAC Ratio:</strong> 3:1 to 5:1 (LTV $150-250, CAC $25-75)</p>
+                    </div>
+
+                    <h3>Sales Cycle</h3>
+                    <ul>
+                        <li><strong>Speed:</strong> Fast (same day to 1 week from inquiry to booking)</li>
+                        <li><strong>Process:</strong> Inbound inquiry → quote → schedule → job → payment → review request</li>
+                        <li><strong>Conversion Rate:</strong> 60-75% of quotes convert to bookings</li>
+                        <li><strong>Pipeline Build Time:</strong> 2-4 months for consistent bookings</li>
+                    </ul>
+
+                    <h3>Seasonality</h3>
+                    <p class="text-refined">
+                        <strong>Yes, seasonal variation.</strong> Peak spring/summer (March-August) with 30-50% higher demand due to spring cleaning, pre-party prep, and post-vacation cleanups. Slower winter months require cash reserves or supplemental services.
+                    </p>
+                </section>
+
+                <section id="risks" class="section">
+                    <h2>Risks & Red Flags</h2>
+
+                    <h3>Regulatory & Licensing</h3>
+                    <ul>
+                        <li><strong>Required:</strong> Business license, some states require contractor license</li>
+                        <li><strong>Recommended:</strong> IICRC (Institute of Inspection, Cleaning and Restoration Certification)</li>
+                        <li><strong>Insurance:</strong> General liability, commercial auto, workers' comp (if hiring)</li>
+                        <li><strong>Risk Level:</strong> Low (minimal government oversight)</li>
+                    </ul>
+
+                    <h3>Market & Competition Risks</h3>
+                    <ul>
+                        <li><strong>Defensibility:</strong> Zero (easy for competitors to copy your exact playbook)</li>
+                        <li><strong>Competition:</strong> Local independents + national franchises (Stanley Steemer, Chem-Dry)</li>
+                        <li><strong>Differentiation:</strong> Service quality, response time, customer reviews, specialized treatments</li>
+                        <li><strong>Market Trend:</strong> Stable to slightly growing (3-4% annually)</li>
+                    </ul>
+
+                    <h3>Operational Risks</h3>
+                    <div class="highlight-box">
+                        <ul>
+                            <li><strong>Labor-Heavy:</strong> Physical work with equipment, requires good health and stamina</li>
+                            <li><strong>Travel Time:</strong> Eats into efficiency (plan 30-60 min between jobs)</li>
+                            <li><strong>Equipment Dependency:</strong> Breakdown stops revenue immediately (maintain backup plan)</li>
+                            <li><strong>Seasonality:</strong> Winter slowdown requires 2-3 months cash reserves</li>
+                        </ul>
+                    </div>
+
+                    <h3>Revenue Concentration</h3>
+                    <p class="text-refined">
+                        <strong>Low risk.</strong> Diverse customer base with no platform dependency (though Google Local Services is dominant channel). Not reliant on any single customer or source.
+                    </p>
+                </section>
+
+                <section id="ai-automation" class="section">
+                    <h2>AI & Automation Opportunities</h2>
+
+                    <h3>Automate Completely</h3>
+                    <ul>
+                        <li>Appointment scheduling (Jobber, ServiceTitan, Housecall Pro)</li>
+                        <li>Customer communications (automated SMS/email confirmations)</li>
+                        <li>Invoicing and payment processing (Square, Stripe integration)</li>
+                        <li>Route optimization (minimize drive time between jobs)</li>
+                        <li>Review generation (automatic follow-up requests)</li>
+                    </ul>
+
+                    <h3>High-Leverage AI Use Cases</h3>
+                    <ul>
+                        <li><strong>Lead Qualification:</strong> Chatbots to screen inquiries and provide instant quotes</li>
+                        <li><strong>Pricing Calculators:</strong> Website tools for customers to estimate costs by room/sq ft</li>
+                        <li><strong>Automated Follow-Up:</strong> Email sequences for review requests and rebooking reminders</li>
+                        <li><strong>Smart Scheduling:</strong> AI-optimized calendar that maximizes jobs per day</li>
+                    </ul>
+
+                    <h3>Not Automatable (Human Required)</h3>
+                    <ul>
+                        <li>Physical cleaning service (equipment operation, stain treatment)</li>
+                        <li>Customer relationship building (trust-driven service)</li>
+                        <li>Equipment maintenance and troubleshooting</li>
+                        <li>On-site problem solving (unexpected stains, damage)</li>
+                        <li>Quality control and inspection</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <strong>AI Impact:</strong> Moderate (30-40% time savings on admin and scheduling, but core service stays manual)
+                    </div>
+                </section>
+
+                <section id="founder-fit" class="section">
+                    <h2>Founder Fit</h2>
+
+                    <h3>Passion Required?</h3>
+                    <p class="text-refined">
+                        <strong>No.</strong> This is a pure execution play. You don't need to love cleaning carpets—you need to be good at operating a business, delivering quality service, and building customer relationships.
+                    </p>
+
+                    <h3>Trust-Driven or Ops-Driven?</h3>
+                    <p class="text-refined">
+                        <strong>Trust-driven.</strong> You're working inside customers' homes, handling their belongings, and accessing private spaces. Professionalism, reliability, and quality work are critical to success and referrals.
+                    </p>
+
+                    <h3>Best Suited For:</h3>
+                    <ul>
+                        <li><strong>Practical Operators:</strong> Value high-margin, repeatable service over creative ventures</li>
+                        <li><strong>Detail-Oriented:</strong> Take pride in quality work and customer satisfaction</li>
+                        <li><strong>Physically Capable:</strong> Comfortable with equipment operation and physical work</li>
+                        <li><strong>Local-Focused:</strong> Want to serve their community and build local reputation</li>
+                        <li><strong>Business Learners:</strong> Want real business fundamentals while generating cash flow</li>
+                    </ul>
+
+                    <h3>Not Ideal For:</h3>
+                    <ul>
+                        <li>Passive income seekers (requires active work)</li>
+                        <li>Those avoiding physical labor or client-facing work</li>
+                        <li>Location-independent entrepreneurs (requires local presence)</li>
+                        <li>People needing intellectual stimulation (repetitive work)</li>
+                    </ul>
+                </section>
+
+                <section id="scorecard" class="section">
+                    <h2>Nik's 8+1 Scorecard</h2>
+
+                    <table>
+                        <tr>
+                            <th>Category</th>
+                            <th>Score</th>
+                            <th>Notes</th>
+                        </tr>
+                        <tr>
+                            <td>Neanderthal-Friendly</td>
+                            <td>4/5</td>
+                            <td>Learn equipment operation, basic stain chemistry, and customer service. No rocket science required.</td>
+                        </tr>
+                        <tr>
+                            <td>Tastes Like Chicken</td>
+                            <td>5/5</td>
+                            <td>Classic local service business everyone understands. Show up, clean, collect payment, repeat.</td>
+                        </tr>
+                        <tr>
+                            <td>Startup Cost & Payback</td>
+                            <td>4/5</td>
+                            <td>$15K-40K startup with a 3-6 month breakeven is reasonable for most aspiring entrepreneurs.</td>
+                        </tr>
+                        <tr>
+                            <td>Recurring Revenue</td>
+                            <td>2/5</td>
+                            <td>Mostly one-time jobs with only a 20-40% annual repeat rate. Some maintenance contracts but not the norm.</td>
+                        </tr>
+                        <tr>
+                            <td>Operator-Friendly</td>
+                            <td>4/5</td>
+                            <td>Perfect solo start with a clear scaling path. You can literally be the entire operation initially.</td>
+                        </tr>
+                        <tr>
+                            <td>Low Downside Risk</td>
+                            <td>4/5</td>
+                            <td>Equipment retains value, skills transfer to other cleaning services, and low regulatory risk. Hard to lose everything.</td>
+                        </tr>
+                        <tr>
+                            <td>Founder Flexibility</td>
+                            <td>4/5</td>
+                            <td>No emotional mission required. Pure operational excellence and customer service game.</td>
+                        </tr>
+                        <tr>
+                            <td>Customer Acquisition</td>
+                            <td>4/5</td>
+                            <td>Google Local Services, referrals, and door-to-door work. CAC of $25-75 with strong ROAS is solid.</td>
+                        </tr>
+                        <tr>
+                            <td>AI Leverage</td>
+                            <td>3/5</td>
+                            <td>Good automation opportunities for scheduling, follow-up, and lead qualification, but the core service stays manual.</td>
+                        </tr>
+                        <tr style="background: #f3e5f5; font-weight: bold;">
+                            <td>TOTAL SCORE</td>
+                            <td>34/45</td>
+                            <td>All-Star Starter Business</td>
+                        </tr>
+                    </table>
+
+                    <div class="highlight-box">
+                        <h3>Score Interpretation</h3>
+                        <p><strong>32-39 Points = Solid pick with upside!</strong></p>
+                        <p>This business scores consistently well across most categories with exceptional margins (50-70%). The low recurring revenue is offset by strong referral potential and proven unit economics. Perfect for operators who want to learn business fundamentals while generating cash flow.</p>
+                    </div>
+
+                    <h3>Nik's Verdict</h3>
+                    <p class="text-refined">
+                        This is a <strong>meat-and-potatoes local service business</strong> that works if you execute consistently. The margins are attractive (50-70%), the model is proven, and you can start lean with clear scaling paths.
+                    </p>
+                    <p class="text-refined">
+                        The lack of recurring revenue hurts, but strong referral potential (30-50%) and decent unit economics compensate. It's not glamorous, but it pays the bills and builds real business skills that transfer to other ventures.
+                    </p>
+                    <p class="text-refined">
+                        <strong>Bottom Line:</strong> If you want to learn business fundamentals while generating cash flow, carpet cleaning beats most alternatives.
+                    </p>
+                </section>
+
+                <section id="real-world" class="section">
+                    <h2>Real-World Example</h2>
+
+                    <h3>Stanley Steemer (Franchise Model)</h3>
+                    <p class="text-refined">
+                        Founded in 1947, now 280+ locations doing $300M+ annually. Franchise model with strong brand recognition and systems. Individual franchise owners report $500K-$1.5M in annual revenue with 20-30% net margins after scaling to 3-5 vans.
+                    </p>
+
+                    <h3>Independent Operator Example</h3>
+                    <div class="highlight-box">
+                        <p><strong>Scenario:</strong> "Mike's Carpet Cleaning" in mid-sized city (250K population)</p>
+                        <ul>
+                            <li><strong>Year 1:</strong> $90K revenue, $54K profit (60% margin) - solo operator</li>
+                            <li><strong>Year 2:</strong> $180K revenue, $108K profit (60% margin) - added part-time helper</li>
+                            <li><strong>Year 3:</strong> $350K revenue, $210K profit (60% margin) - 2 vans, 3 employees</li>
+                        </ul>
+                        <p><strong>Key Success Factors:</strong> Google Local Services mastery, excellent reviews (4.9+ stars), quick response times, quality work that generates referrals</p>
+                    </div>
+
+                    <h3>Clients Needed for $10K/Month</h3>
+                    <ul>
+                        <li><strong>35-50 jobs</strong> per month averaging $200-285 each</li>
+                        <li><strong>2-3 jobs per day</strong> at 5-6 days per week</li>
+                        <li><strong>Marketing spend:</strong> $500-1,000/month on Google Local Services</li>
+                        <li><strong>Timeline:</strong> 3-5 months to reach consistent $10K months</li>
+                    </ul>
+                </section>
+
+                <section id="tools" class="section">
+                    <h2>Tools & Platforms</h2>
+
+                    <h3>Essential Software</h3>
+                    <table>
+                        <tr>
+                            <th>Category</th>
+                            <th>Recommended Tools</th>
+                        </tr>
+                        <tr>
+                            <td>Booking & Scheduling</td>
+                            <td>Jobber, Housecall Pro, ServiceTitan</td>
+                        </tr>
+                        <tr>
+                            <td>Payment Processing</td>
+                            <td>Square, Stripe, PayPal</td>
+                        </tr>
+                        <tr>
+                            <td>Route Optimization</td>
+                            <td>OptimoRoute, Route4Me, Google Maps</td>
+                        </tr>
+                        <tr>
+                            <td>Customer Communication</td>
+                            <td>Podium, Twilio, SimpleTexting</td>
+                        </tr>
+                        <tr>
+                            <td>Lead Generation</td>
+                            <td>Google Local Services Ads, Angie's List, HomeAdvisor</td>
+                        </tr>
+                        <tr>
+                            <td>Accounting</td>
+                            <td>QuickBooks Online, FreshBooks</td>
+                        </tr>
+                        <tr>
+                            <td>Review Management</td>
+                            <td>Podium, BirdEye, ReviewTrackers</td>
+                        </tr>
+                    </table>
+
+                    <h3>Marketing Platforms</h3>
+                    <ul>
+                        <li><strong>Google Local Services Ads:</strong> Primary channel (pay-per-lead, 40-50% of business)</li>
+                        <li><strong>Google My Business:</strong> Critical for local SEO and map visibility</li>
+                        <li><strong>NextDoor:</strong> High-converting neighborhood network for local services</li>
+                        <li><strong>Angie's List/HomeAdvisor:</strong> Lead generation platforms (higher CAC but consistent flow)</li>
+                        <li><strong>Direct Mail:</strong> Target affluent neighborhoods with postcards/door hangers</li>
+                    </ul>
+
+                    <h3>Physical Equipment</h3>
+                    <ul>
+                        <li>Truck-mounted or portable carpet extractor ($2K-6K)</li>
+                        <li>Hoses, wands, and attachments</li>
+                        <li>Pre-treatment chemicals and cleaning solutions</li>
+                        <li>Spot cleaning tools and brushes</li>
+                        <li>Air movers for drying (optional but helpful)</li>
+                        <li>Van or truck with adequate storage</li>
+                    </ul>
+                </section>
+
+                <div class="cta-box">
+                    <h3 class="font-futura">Ready to Start Your Business Journey?</h3>
+                    <p>Explore more business plans, calculators, and frameworks in the Nikonomics Business Toolkit</p>
+                    <a href="../../index.html" style="display: inline-block; margin-top: 1rem; padding: 1rem 2rem; background: white; color: #6f42c1; text-decoration: none; border-radius: 4px; font-weight: 700;">Browse All Resources</a>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <footer style="background: #003452; color: white; padding: 2rem; text-align: center; margin-top: 4rem;">
+        <p>&copy; 2024 Nikonomics. All rights reserved. | By Nik Hulewsky</p>
+    </footer>
+</body>
+</html>
