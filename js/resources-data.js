@@ -103,7 +103,18 @@ const resources = {
       score: '32/45',
       rookieFriendly: true
     },
-    // This section will be populated as you add the remaining 21 business plans
+    {
+      title: 'Trash Bin Cleaning Business',
+      description: '35-50% margins with $8K-$25K monthly revenue: Recurring subscription with $75K-$200K startup and 6-12 month breakeven',
+      url: '/resources/trash-bin-cleaning/',
+      category: 'First-Time Entrepreneur',
+      type: '📄 Business Plan',
+      time: '30 min read',
+      featured: false,
+      score: '36/45',
+      rookieFriendly: true
+    },
+    // This section will be populated as you add the remaining 20 business plans
   ],
   'seasonal-businesses': [
     {
