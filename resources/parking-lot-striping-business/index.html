@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Lot Striping Business Plan - Nikonomics Business Toolkit</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom font stack with Futura as primary */
+        .font-futura {
+            font-family: 'Futura Now Headline CN XBlack', 'Futura', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 900;
+        }
+
+        /* Enhanced typography matching Framer site */
+        .text-refined {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            letter-spacing: -0.01em;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #003452;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+        }
+
+        .business-plan-header {
+            background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .business-plan-header h1 {
+            font-size: 2.5rem;
+            margin: 0 0 1rem 0;
+        }
+
+        .business-plan-header .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .score-badge-large {
+            background: white;
+            color: #ff9800;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 1.25rem;
+            font-weight: 800;
+            display: inline-block;
+            margin-top: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .toc {
+            position: sticky;
+            top: 2rem;
+            height: fit-content;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .toc h3 {
+            margin: 0 0 1rem 0;
+            font-size: 1rem;
+            color: #003452;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc li {
+            margin-bottom: 0.75rem;
+        }
+
+        .toc a {
+            color: #6c757d;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .toc a:hover {
+            color: #ff9800;
+        }
+
+        .main-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section h2 {
+            color: #ff9800;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #ff9800;
+        }
+
+        .section h3 {
+            color: #003452;
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+            border-left: 4px solid #ff9800;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .highlight-box strong {
+            color: #ff9800;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+        }
+
+        .stat-card .stat-value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #ff9800;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card .stat-label {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .pros, .cons {
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .pros {
+            background: #fff8e1;
+            border: 2px solid #ff9800;
+        }
+
+        .cons {
+            background: #ffebee;
+            border: 2px solid #f44336;
+        }
+
+        .pros h4, .cons h4 {
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+
+        .pros h4 {
+            color: #ff9800;
+        }
+
+        .cons h4 {
+            color: #f44336;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        th {
+            background: #ff9800;
+            color: white;
+            font-weight: 700;
+        }
+
+        tr:hover {
+            background: #f8f9fa;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-box h3 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #ff9800;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .toc {
+                position: static;
+            }
+
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+
+            .main-content {
+                padding: 1.5rem;
+            }
+
+            .business-plan-header h1 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="business-plan-header">
+        <h1 class="font-futura">Parking Lot Striping Business</h1>
+        <p class="subtitle text-refined">45-65% margins with $8K-$15K monthly revenue: B2B service with $15K-$35K startup and 3-6 month breakeven</p>
+        <div class="score-badge-large">★ 37/45 SCORE - All-Star Starter Business</div>
+    </div>
+
+    <div class="container">
+        <a href="../../index.html" class="back-link">← Back to Business Toolkit</a>
+
+        <div class="content-wrapper">
+            <aside class="toc">
+                <h3>Table of Contents</h3>
+                <ul>
+                    <li><a href="#snapshot">Business Snapshot</a></li>
+                    <li><a href="#breakdown">Business Breakdown</a></li>
+                    <li><a href="#financials">Financials</a></li>
+                    <li><a href="#operations">Operations</a></li>
+                    <li><a href="#business-model">Business Model</a></li>
+                    <li><a href="#risks">Risks & Red Flags</a></li>
+                    <li><a href="#ai-automation">AI & Automation</a></li>
+                    <li><a href="#founder-fit">Founder Fit</a></li>
+                    <li><a href="#scorecard">Nik's Scorecard</a></li>
+                    <li><a href="#real-world">Real-World Example</a></li>
+                    <li><a href="#tools">Tools & Platforms</a></li>
+                </ul>
+            </aside>
+
+            <main class="main-content">
+                <section id="snapshot" class="section">
+                    <h2>Business Snapshot</h2>
+                    <p class="text-refined">
+                        Parking lot striping involves painting lines, symbols, and markings on asphalt or concrete surfaces for commercial properties, retail centers, office buildings, schools, and municipal facilities. This is primarily a B2B service business serving property managers, facility managers, retail chains, schools, and municipalities.
+                    </p>
+                    <p class="text-refined">
+                        The work includes initial striping for new lots, re-striping faded lines, adding ADA compliance markings, and creating custom layouts for maximum parking efficiency. This is a classic service business model: find customers, do work, get paid, repeat.
+                    </p>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-value">45-65%</span>
+                            <span class="stat-label">Net Margin</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value">$15-35K</span>
+                            <span class="stat-label">Startup Cost</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value">3-6 mo</span>
+                            <span class="stat-label">Time to Breakeven</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value">$8-15K</span>
+                            <span class="stat-label">Monthly Revenue (Solo)</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="breakdown" class="section">
+                    <h2>Business Breakdown</h2>
+
+                    <div class="highlight-box">
+                        <strong>Core Value Proposition:</strong> Paint lines straight, measure accurately, show up on time. If you can operate a spray gun and follow a tape measure, you're qualified. Classic B2B service business that everyone understands.
+                    </div>
+
+                    <h3>Customer Profile</h3>
+                    <ul>
+                        <li><strong>Primary:</strong> Property managers, facility managers for commercial properties and retail centers</li>
+                        <li><strong>Secondary:</strong> Schools, municipalities, office buildings, retail chains, general contractors</li>
+                        <li><strong>Acquisition Channels:</strong> Google Local Services, door-to-door prospecting, referrals from contractors</li>
+                        <li><strong>Decision Factors:</strong> ADA compliance, quality of work, pricing, availability, responsiveness</li>
+                    </ul>
+
+                    <h3>Service Delivery Model</h3>
+                    <ul>
+                        <li>Initial inquiry and site visit for measurement/quote</li>
+                        <li>Quote submission ($0.15-$0.35 per linear foot or $75-$150 per space)</li>
+                        <li>Approval and scheduling (1 call to 2 weeks typically)</li>
+                        <li>Surface prep, paint mixing, and line application</li>
+                        <li>Quality control walkthrough with customer</li>
+                        <li>Payment collection and follow-up for future maintenance</li>
+                    </ul>
+
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h4>✓ Strengths</h4>
+                            <ul>
+                                <li>Strong margins (45-65%)</li>
+                                <li>Recurring need every 1-3 years</li>
+                                <li>Simple, easy-to-understand service</li>
+                                <li>Multiple marketing channels work</li>
+                                <li>High LTV:CAC ratio (8:1 to 15:1)</li>
+                                <li>Equipment holds value well</li>
+                                <li>Growing market (aging infrastructure)</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h4>⚠ Challenges</h4>
+                            <ul>
+                                <li>Seasonal (dormant in winter)</li>
+                                <li>Physically demanding work</li>
+                                <li>Weather-dependent operations</li>
+                                <li>ADA compliance requirements</li>
+                                <li>Easy to copy (low barriers)</li>
+                                <li>Crew management needed to scale</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="financials" class="section">
+                    <h2>Financial Breakdown</h2>
+
+                    <h3>Startup Investment: $15,000–$35,000</h3>
+                    <table>
+                        <tr>
+                            <th>Category</th>
+                            <th>Cost Range</th>
+                        </tr>
+                        <tr>
+                            <td>Truck or Trailer</td>
+                            <td>$8,000-$12,000</td>
+                        </tr>
+                        <tr>
+                            <td>Striping Machine (airless or walk-behind)</td>
+                            <td>$3,000-$8,000</td>
+                        </tr>
+                        <tr>
+                            <td>Paint & Supplies (initial inventory)</td>
+                            <td>$2,000-$3,000</td>
+                        </tr>
+                        <tr>
+                            <td>Insurance & Licensing</td>
+                            <td>$2,000-$5,000</td>
+                        </tr>
+                        <tr>
+                            <td>Marketing & Equipment (measuring tools, stencils)</td>
+                            <td>$1,000-$2,000</td>
+                        </tr>
+                    </table>
+
+                    <h3>Revenue Potential</h3>
+                    <div class="highlight-box">
+                        <p><strong>Solo Operator:</strong> $8,000-$15,000/month (during season)</p>
+                        <p><strong>With Crew (2-3 person team):</strong> $25,000-$50,000/month</p>
+                        <p><strong>Typical Pricing:</strong> $0.15-$0.35/linear foot, $75-$150/parking space, $300-$500 minimum job</p>
+                    </div>
+
+                    <h3>Path to $10K/Month</h3>
+                    <ul>
+                        <li><strong>20-30 regular commercial accounts</strong> with repeat business every 18-36 months</li>
+                        <li><strong>3-5 jobs per week</strong> averaging $800-$1,500 per job</li>
+                        <li><strong>Marketing spend:</strong> $400-800/month on Google Ads + door-to-door prospecting</li>
+                        <li><strong>Timeline:</strong> 3-6 months to reach consistent $10K months during season</li>
+                    </ul>
+
+                    <h3>Profitability Timeline</h3>
+                    <ul>
+                        <li><strong>Month 1-3:</strong> $4,000-$8,000/month profit (building customer base, 45-50% margins)</li>
+                        <li><strong>Month 4-6:</strong> $6,000-$12,000/month profit (50-60% margins with repeat customers)</li>
+                        <li><strong>Month 7-12:</strong> $10,000-$18,000/month profit (60-65% margins, strong referral base)</li>
+                        <li><strong>Year 2+:</strong> $150K-$300K annually with 2-person crew and maintenance contracts</li>
+                    </ul>
+                </section>
+
+                <section id="operations" class="section">
+                    <h2>Operations</h2>
+
+                    <h3>Solo-Operator Friendly?</h3>
+                    <p class="text-refined">
+                        <strong>Yes, but physically demanding.</strong> You can handle all aspects solo initially—quoting, striping, equipment maintenance. Most operators add 1-2 crew members within the first year to handle larger jobs and increase capacity.
+                    </p>
+
+                    <h3>Weekly Time Commitment</h3>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-value">40-50</span>
+                            <span class="stat-label">Hours Per Week</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value">30-35</span>
+                            <span class="stat-label">Hours Striping Jobs</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value">6-10</span>
+                            <span class="stat-label">Hours Travel/Setup</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value">5-8</span>
+                            <span class="stat-label">Hours Sales/Admin</span>
+                        </div>
+                    </div>
+
+                    <h3>Typical Daily Tasks</h3>
+                    <ul>
+                        <li>Morning: Load equipment and paint, review job schedule and site plans</li>
+                        <li>Midday: Execute 1-2 striping jobs (2-4 hours each depending on lot size)</li>
+                        <li>Afternoon: Complete remaining work, equipment cleanup and maintenance</li>
+                        <li>Evening: Quote new jobs, respond to inquiries, schedule upcoming work</li>
+                        <li>Weekly: Sales prospecting (door-to-door or cold calling), equipment maintenance, supply ordering</li>
+                    </ul>
+
+                    <h3>Labor Requirements</h3>
+                    <ul>
+                        <li><strong>Start:</strong> Solo operator (you do everything)</li>
+                        <li><strong>Month 6-12:</strong> Add 1 crew member for larger jobs and increased capacity ($15-20/hour)</li>
+                        <li><strong>Scale:</strong> 2-3 person crews for multiple simultaneous jobs</li>
+                        <li><strong>Management:</strong> At multiple crews, hire operations manager for scheduling and quality control</li>
+                    </ul>
+                </section>
+
+                <section id="business-model" class="section">
+                    <h2>Business Model</h2>
+
+                    <h3>Revenue Structure</h3>
+                    <p class="text-refined">
+                        <strong>Project-based contracts with occasional maintenance retainers.</strong> Not monthly subscriptions, but customers need re-striping every 1-3 years depending on traffic. Close enough to recurring revenue with maintenance contracts (annual or biannual touch-ups).
+                    </p>
+
+                    <h3>Pricing Models</h3>
+                    <table>
+                        <tr>
+                            <th>Pricing Method</th>
+                            <th>Typical Rate</th>
+                            <th>When to Use</th>
+                        </tr>
+                        <tr>
+                            <td>Per Linear Foot</td>
+                            <td>$0.15-$0.35/ft</td>
+                            <td>Standard parking lots, simple layouts</td>
+                        </tr>
+                        <tr>
+                            <td>Per Parking Space</td>
+                            <td>$75-$150/space</td>
+                            <td>New lots, complex layouts, ADA requirements</td>
+                        </tr>
+                        <tr>
+                            <td>Minimum Job Fee</td>
+                            <td>$300-$500</td>
+                            <td>Small jobs to ensure profitability</td>
+                        </tr>
+                        <tr>
+                            <td>Maintenance Contracts</td>
+                            <td>$1,000-$5,000/year</td>
+                            <td>Large properties, annual touch-ups</td>
+                        </tr>
+                    </table>
+
+                    <h3>Customer Acquisition</h3>
+                    <div class="highlight-box">
+                        <p><strong>Primary Channels:</strong> Referrals from contractors (40-60% after first year), Google Local Services (25-35%), door-to-door prospecting (15-25%)</p>
+                        <p><strong>Most Effective Marketing:</strong> Local Google Ads targeting property managers, door-to-door sales to commercial properties, networking with general contractors</p>
+                        <p><strong>CAC Range:</strong> $50-200 per customer (higher than B2C but offset by much higher LTV)</p>
+                        <p><strong>LTV:CAC Ratio:</strong> 8:1 to 15:1 (customers typically re-engage every 18-36 months for $1,500-$3,000 jobs)</p>
+                    </div>
+
+                    <h3>Sales Cycle</h3>
+                    <ul>
+                        <li><strong>Speed:</strong> Fast to medium (1 call to 2 weeks for approval, sometimes faster for urgent work)</li>
+                        <li><strong>Process:</strong> Inquiry → site visit → quote → approval → schedule → job → payment → maintenance follow-up</li>
+                        <li><strong>Conversion Rate:</strong> 40-60% of quotes convert to jobs (lower than B2C but much higher value)</li>
+                        <li><strong>Pipeline Build Time:</strong> 2-4 months for steady flow of commercial accounts</li>
+                    </ul>
+
+                    <h3>Seasonality</h3>
+                    <p class="text-refined">
+                        <strong>Yes, significant seasonal variation.</strong> Peak season April-October with majority of annual revenue. Slow or dormant November-March in northern climates (paint doesn't adhere well in cold/wet conditions). Plan for 4-6 months of reduced/zero revenue or pivot to indoor striping (warehouse floors, indoor parking).
+                    </p>
+                </section>
+
+                <section id="risks" class="section">
+                    <h2>Risks & Red Flags</h2>
+
+                    <h3>Regulatory & Licensing</h3>
+                    <ul>
+                        <li><strong>Required:</strong> Business license, contractor license (varies by state), DOT certifications for road work</li>
+                        <li><strong>ADA Compliance:</strong> Must understand and implement accessibility requirements (critical for commercial work)</li>
+                        <li><strong>Environmental:</strong> Paint regulations, proper disposal of materials</li>
+                        <li><strong>Traffic Control:</strong> Permits and safety procedures for work in active lots</li>
+                        <li><strong>Risk Level:</strong> Moderate (ADA compliance and environmental regulations are main concerns)</li>
+                    </ul>
+
+                    <h3>Market & Competition Risks</h3>
+                    <ul>
+                        <li><strong>Defensibility:</strong> Low (easy to copy with readily available equipment and low technical barriers)</li>
+                        <li><strong>Competition:</strong> Local independents, larger asphalt/paving companies offering striping as add-on</li>
+                        <li><strong>Differentiation:</strong> Quality, responsiveness, ADA expertise, maintenance contracts, relationships</li>
+                        <li><strong>Market Trend:</strong> Growing (new construction + aging infrastructure needing re-striping)</li>
+                    </ul>
+
+                    <h3>Operational Risks</h3>
+                    <div class="highlight-box">
+                        <ul>
+                            <li><strong>Seasonality:</strong> 4-6 months dormant in northern climates requires significant cash reserves</li>
+                            <li><strong>Weather-Dependent:</strong> Rain, extreme heat, or cold can delay jobs and reduce efficiency</li>
+                            <li><strong>Physical Demands:</strong> Physically demanding work limits solo scalability</li>
+                            <li><strong>Equipment Dependency:</strong> Machine breakdown stops revenue until repaired</li>
+                        </ul>
+                    </div>
+
+                    <h3>Revenue Concentration</h3>
+                    <p class="text-refined">
+                        <strong>Low if diversified; higher risk if dependent on single large client.</strong> Best practice: target 20-30 regular accounts rather than relying on 2-3 major contracts. Diversification protects against losing a large account.
+                    </p>
+                </section>
+
+                <section id="ai-automation" class="section">
+                    <h2>AI & Automation Opportunities</h2>
+
+                    <h3>Automate Completely</h3>
+                    <ul>
+                        <li>Quote generation (automated pricing based on measurements)</li>
+                        <li>Job scheduling and calendar management</li>
+                        <li>Customer follow-up sequences for maintenance reminders</li>
+                        <li>Invoice processing and payment collection</li>
+                        <li>Equipment maintenance tracking</li>
+                    </ul>
+
+                    <h3>High-Leverage AI Use Cases</h3>
+                    <ul>
+                        <li><strong>Aerial Photo Analysis:</strong> Use Google Earth/Maps images to estimate lot size and generate preliminary quotes</li>
+                        <li><strong>Automated Bidding:</strong> Input square footage and get instant pricing recommendations</li>
+                        <li><strong>CRM Automation:</strong> Automated maintenance reminders every 18-24 months for past customers</li>
+                        <li><strong>Route Optimization:</strong> Plan daily routes to minimize drive time between jobs</li>
+                    </ul>
+
+                    <h3>Not Automatable (Human Required)</h3>
+                    <ul>
+                        <li>Physical paint application and line striping</li>
+                        <li>Surface preparation and cleanup</li>
+                        <li>Quality inspection and touch-ups</li>
+                        <li>Customer relationship building (B2B relationships are key)</li>
+                        <li>On-site problem solving (layout adjustments, ADA compliance)</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <strong>AI Impact:</strong> Moderate (30-40% time savings on quotes, scheduling, and measurements, but core service stays manual)
+                    </div>
+                </section>
+
+                <section id="founder-fit" class="section">
+                    <h2>Founder Fit</h2>
+
+                    <h3>Passion Required?</h3>
+                    <p class="text-refined">
+                        <strong>No, zero passion required.</strong> Pure execution play—deliver quality work consistently, show up on time, and build relationships with property managers. You don't need to love striping parking lots to succeed.
+                    </p>
+
+                    <h3>Trust-Driven or Ops-Driven?</h3>
+                    <p class="text-refined">
+                        <strong>Ops-driven with trust elements for repeat business.</strong> Quality execution and reliability drive referrals and repeat work. Property managers need to trust you'll do ADA-compliant work that passes inspection.
+                    </p>
+
+                    <h3>Best Suited For:</h3>
+                    <ul>
+                        <li><strong>Process-Oriented Operators:</strong> Comfortable with repetitive, physical work and consistent execution</li>
+                        <li><strong>B2B Salespeople:</strong> Comfortable prospecting, building relationships with property managers</li>
+                        <li><strong>Seasonal Workers:</strong> Okay with 6-8 month work season and 4-6 month off-season</li>
+                        <li><strong>Detail-Oriented:</strong> Understand importance of measurements, ADA compliance, quality control</li>
+                        <li><strong>Local-Focused:</strong> Want to serve their community and build long-term commercial relationships</li>
+                    </ul>
+
+                    <h3>Not Ideal For:</h3>
+                    <ul>
+                        <li>Passive income seekers (requires active work)</li>
+                        <li>Those avoiding physical labor or outdoor work</li>
+                        <li>Location-independent entrepreneurs (requires local presence)</li>
+                        <li>People needing year-round consistent revenue (highly seasonal)</li>
+                        <li>Those uncomfortable with B2B sales and relationship building</li>
+                    </ul>
+                </section>
+
+                <section id="scorecard" class="section">
+                    <h2>Nik's 8+1 Scorecard</h2>
+
+                    <table>
+                        <tr>
+                            <th>Category</th>
+                            <th>Score</th>
+                            <th>Notes</th>
+                        </tr>
+                        <tr>
+                            <td>Neanderthal-Friendly</td>
+                            <td>5/5</td>
+                            <td>Paint lines straight, measure accurately, show up on time. If you can operate a spray gun and follow a tape measure, you're qualified.</td>
+                        </tr>
+                        <tr>
+                            <td>Tastes Like Chicken</td>
+                            <td>5/5</td>
+                            <td>Classic service business model everyone understands: find customers, do work, get paid, repeat.</td>
+                        </tr>
+                        <tr>
+                            <td>Startup Cost & Payback</td>
+                            <td>4/5</td>
+                            <td>$15K-$35K startup with 3-6 month payback is reasonable, though upper end pushes the limit.</td>
+                        </tr>
+                        <tr>
+                            <td>Recurring Revenue</td>
+                            <td>4/5</td>
+                            <td>Not monthly subscriptions, but customers need re-striping every 1-3 years. Close enough to recurring with maintenance contracts.</td>
+                        </tr>
+                        <tr>
+                            <td>Operator-Friendly</td>
+                            <td>3/5</td>
+                            <td>Solo viable but physically demanding. Scaling requires crew management which adds complexity.</td>
+                        </tr>
+                        <tr>
+                            <td>Low Downside Risk</td>
+                            <td>4/5</td>
+                            <td>Equipment holds value, skills transfer to other businesses, and you keep customer relationships if pivoting.</td>
+                        </tr>
+                        <tr>
+                            <td>Founder Flexibility</td>
+                            <td>5/5</td>
+                            <td>Pure execution play. No emotional attachment needed — just deliver quality work consistently.</td>
+                        </tr>
+                        <tr>
+                            <td>Customer Acquisition</td>
+                            <td>4/5</td>
+                            <td>Multiple channels work (Google, door-to-door, referrals) with strong LTV:CAC ratios and referral potential.</td>
+                        </tr>
+                        <tr>
+                            <td>AI Leverage</td>
+                            <td>3/5</td>
+                            <td>Good automation opportunities for quotes, scheduling, and measurements, but core service remains manual.</td>
+                        </tr>
+                        <tr style="background: #fff8e1; font-weight: bold;">
+                            <td>TOTAL SCORE</td>
+                            <td>37/45</td>
+                            <td>All-Star Starter Business</td>
+                        </tr>
+                    </table>
+
+                    <div class="highlight-box">
+                        <h3>Score Interpretation</h3>
+                        <p><strong>32-39 Points = Solid pick with upside!</strong></p>
+                        <p>This scores in the solid pick category with clear upside potential. The business model is dead simple, margins are strong (45-65%), and you're solving a real recurring need for commercial properties. The seasonal nature and physical demands are manageable trade-offs for a business that can hit $150K-$300K annually with a small crew.</p>
+                    </div>
+
+                    <h3>Nik's Verdict</h3>
+                    <p class="text-refined">
+                        This scores in the solid pick category with clear upside potential. The business model is dead simple, margins are strong, and you're solving a real recurring need for commercial properties. The seasonal nature (4-6 months dormant in cold climates) and physical demands are manageable trade-offs.
+                    </p>
+                    <p class="text-refined">
+                        The key to success: build relationships with 20-30 commercial property managers who need re-striping every 1-3 years. This creates quasi-recurring revenue without the complexity of true subscriptions. Strong LTV:CAC ratios (8:1 to 15:1) make customer acquisition highly profitable.
+                    </p>
+                    <p class="text-refined">
+                        <strong>Bottom Line:</strong> A meat-and-potatoes local service business that prints money if you execute consistently and build relationships with commercial property managers.
+                    </p>
+                </section>
+
+                <section id="real-world" class="section">
+                    <h2>Real-World Example</h2>
+
+                    <h3>Independent Operators (r/entrepreneur reports)</h3>
+                    <p class="text-refined">
+                        Multiple operators on Reddit's entrepreneur community report $150K-$300K annual revenue with 2-person crews. Typical trajectory: start solo making $60K-$100K in year 1, add crew member and scale to $150K-$250K by year 2-3.
+                    </p>
+
+                    <h3>Solo Operator Example</h3>
+                    <div class="highlight-box">
+                        <p><strong>Scenario:</strong> Solo operator in mid-sized market (200K population)</p>
+                        <ul>
+                            <li><strong>Season 1:</strong> $55K revenue (6 months), $30K profit (55% margin) - learning curve, building relationships</li>
+                            <li><strong>Season 2:</strong> $90K revenue, $54K profit (60% margin) - repeat customers + referrals</li>
+                            <li><strong>Season 3:</strong> $180K revenue, $108K profit (60% margin) - added crew member, maintenance contracts</li>
+                        </ul>
+                        <p><strong>Key Success Factors:</strong> Door-to-door prospecting to property managers, Google Local Services ads, ADA compliance expertise, maintenance contract offering (annual touch-ups)</p>
+                    </div>
+
+                    <h3>Clients Needed for $10K/Month (During Season)</h3>
+                    <ul>
+                        <li><strong>20-30 regular commercial accounts</strong> rotating through 18-36 month cycles</li>
+                        <li><strong>3-5 jobs per week</strong> averaging $800-$1,500 per job</li>
+                        <li><strong>Marketing spend:</strong> $400-800/month on Google Ads + door-to-door time</li>
+                        <li><strong>Timeline:</strong> 3-6 months to reach consistent $10K months during active season</li>
+                    </ul>
+                </section>
+
+                <section id="tools" class="section">
+                    <h2>Tools & Platforms</h2>
+
+                    <h3>Essential Software</h3>
+                    <table>
+                        <tr>
+                            <th>Category</th>
+                            <th>Recommended Tools</th>
+                        </tr>
+                        <tr>
+                            <td>CRM & Sales</td>
+                            <td>HubSpot (free tier), Pipedrive, Badger Maps (route planning)</td>
+                        </tr>
+                        <tr>
+                            <td>Quoting & Invoicing</td>
+                            <td>QuickBooks Online, FreshBooks, Jobber</td>
+                        </tr>
+                        <tr>
+                            <td>Measurement Tools</td>
+                            <td>Google Earth/Maps, MeasureSquare, on-site measuring wheel</td>
+                        </tr>
+                        <tr>
+                            <td>Scheduling</td>
+                            <td>Jobber, Housecall Pro, Google Calendar</td>
+                        </tr>
+                        <tr>
+                            <td>Payment Processing</td>
+                            <td>Square, Stripe, PayPal (mobile card reader)</td>
+                        </tr>
+                        <tr>
+                            <td>Lead Generation</td>
+                            <td>Google Local Services Ads, Bing Ads, direct outreach</td>
+                        </tr>
+                    </table>
+
+                    <h3>Marketing Strategies</h3>
+                    <ul>
+                        <li><strong>Google Local Services Ads:</strong> Pay-per-lead targeting property managers searching for striping</li>
+                        <li><strong>Door-to-Door Prospecting:</strong> Visit commercial properties, leave business cards with managers</li>
+                        <li><strong>General Contractor Network:</strong> Build relationships with paving/asphalt companies for referrals</li>
+                        <li><strong>Municipal Bidding:</strong> Register for RFPs from schools and government facilities</li>
+                        <li><strong>Maintenance Contracts:</strong> Offer annual touch-up packages to create recurring revenue</li>
+                    </ul>
+
+                    <h3>Physical Equipment</h3>
+                    <ul>
+                        <li>Truck or trailer with adequate storage</li>
+                        <li>Airless or walk-behind striping machine ($3K-8K)</li>
+                        <li>Traffic paint (water-based or alkyd)</li>
+                        <li>Measuring wheel and tape measures</li>
+                        <li>ADA stencils and templates</li>
+                        <li>Traffic cones and safety gear</li>
+                        <li>Surface prep tools (brooms, blowers)</li>
+                    </ul>
+                </section>
+
+                <div class="cta-box">
+                    <h3 class="font-futura">Ready to Start Your Business Journey?</h3>
+                    <p>Explore more business plans, calculators, and frameworks in the Nikonomics Business Toolkit</p>
+                    <a href="../../index.html" style="display: inline-block; margin-top: 1rem; padding: 1rem 2rem; background: white; color: #ff9800; text-decoration: none; border-radius: 4px; font-weight: 700;">Browse All Resources</a>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <footer style="background: #003452; color: white; padding: 2rem; text-align: center; margin-top: 4rem;">
+        <p>&copy; 2024 Nikonomics. All rights reserved. | By Nik Hulewsky</p>
+    </footer>
+</body>
+</html>

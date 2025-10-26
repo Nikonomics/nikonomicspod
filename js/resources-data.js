@@ -59,7 +59,18 @@ const resources = {
       score: '38/45',
       rookieFriendly: true
     },
-    // This section will be populated as you add the remaining 25 business plans
+    {
+      title: 'Parking Lot Striping Business',
+      description: '45-65% margins with $8K-$15K monthly revenue: B2B service with $15K-$35K startup and 3-6 month breakeven',
+      url: '/resources/parking-lot-striping-business/',
+      category: 'First-Time Entrepreneur',
+      type: '📄 Business Plan',
+      time: '30 min read',
+      featured: false,
+      score: '37/45',
+      rookieFriendly: true
+    },
+    // This section will be populated as you add the remaining 24 business plans
   ],
   'seasonal-businesses': [
     {
