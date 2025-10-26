@@ -48,7 +48,18 @@ const resources = {
       score: '34/45',
       rookieFriendly: true
     },
-    // This section will be populated as you add the remaining 26 business plans
+    {
+      title: 'Mobile Car Detailing Business',
+      description: '40-60% margins with $3K-$8K monthly revenue: Flexible mobile service with $10K-$25K startup and 3-6 month breakeven',
+      url: '/resources/mobile-car-detailing-business/',
+      category: 'First-Time Entrepreneur',
+      type: '📄 Business Plan',
+      time: '30 min read',
+      featured: false,
+      score: '38/45',
+      rookieFriendly: true
+    },
+    // This section will be populated as you add the remaining 25 business plans
   ],
   'seasonal-businesses': [
     {
