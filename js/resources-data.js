@@ -5,6 +5,24 @@
 const resources = {
   'business-plans': [
     {
+      title: 'Christmas Tree Lot Business Plan',
+      description: 'Complete business plan for seasonal Christmas tree lot with 25-40% net margins, location selection strategies, and 6-week revenue cycle optimization',
+      url: '/resources/christmas-tree-lot/',
+      category: 'Business Plan',
+      type: '📄 Business Plan',
+      time: '50 min read',
+      featured: false
+    },
+    {
+      title: 'Shaved Ice Stand Business Plan',
+      description: 'Complete business plan for starting a shaved ice business with 88-94% margins, event booking strategies, and seasonal success framework',
+      url: '/resources/shaved-ice-business-plan/',
+      category: 'Business Plan',
+      type: '📄 Business Plan',
+      time: '45 min read',
+      featured: false
+    },
+    {
       title: 'Complete Business Plan Template',
       description: 'Step-by-step guide to creating a professional business plan that investors and lenders will love',
       url: '/resources/business-plans/complete-template/',
