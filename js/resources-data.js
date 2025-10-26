@@ -92,7 +92,18 @@ const resources = {
       score: '29/45',
       rookieFriendly: true
     },
-    // This section will be populated as you add the remaining 22 business plans
+    {
+      title: 'Laundromat Business',
+      description: '20-35% margins with $5K-$15K monthly revenue: Pay-per-use with $200K-$500K startup and 18-36 month breakeven',
+      url: '/resources/laundromat-business/',
+      category: 'First-Time Entrepreneur',
+      type: '📄 Business Plan',
+      time: '30 min read',
+      featured: false,
+      score: '32/45',
+      rookieFriendly: true
+    },
+    // This section will be populated as you add the remaining 21 business plans
   ],
   'seasonal-businesses': [
     {
