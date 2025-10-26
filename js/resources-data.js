@@ -26,7 +26,18 @@ const resources = {
       score: '30/35',
       rookieFriendly: true
     },
-    // This section will be populated as you add the remaining 28 business plans
+    {
+      title: 'Junk Removal Business',
+      description: '15-35% margins with $5K-$15K monthly revenue: Meat-and-potatoes hauling business with $10K-$25K startup and 3-8 month breakeven',
+      url: '/resources/junk-removal-business/',
+      category: 'First-Time Entrepreneur',
+      type: '📄 Business Plan',
+      time: '30 min read',
+      featured: false,
+      score: '33/45',
+      rookieFriendly: true
+    },
+    // This section will be populated as you add the remaining 27 business plans
   ],
   'seasonal-businesses': [
     {
