@@ -15,7 +15,18 @@ const resources = {
       score: '35/35',
       rookieFriendly: true
     },
-    // This section will be populated as you add the remaining 29 business plans
+    {
+      title: 'Garage Epoxy Flooring Business',
+      description: '65-75% margins with $8K-$15K monthly revenue: Project-based with $15K-$35K startup and 3-6 month breakeven',
+      url: '/resources/garage-epoxy-flooring/',
+      category: 'First-Time Entrepreneur',
+      type: '📄 Business Plan',
+      time: '30 min read',
+      featured: false,
+      score: '30/35',
+      rookieFriendly: true
+    },
+    // This section will be populated as you add the remaining 28 business plans
   ],
   'seasonal-businesses': [
     {
