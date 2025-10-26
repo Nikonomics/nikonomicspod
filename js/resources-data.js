@@ -81,7 +81,18 @@ const resources = {
       score: '35/45',
       rookieFriendly: true
     },
-    // This section will be populated as you add the remaining 23 business plans
+    {
+      title: 'Fence Installation Business',
+      description: '35-50% margins with $8K-$15K monthly revenue: Project-based with $15K-$50K startup and 3-6 month breakeven',
+      url: '/resources/fence-installation-business/',
+      category: 'First-Time Entrepreneur',
+      type: '📄 Business Plan',
+      time: '30 min read',
+      featured: false,
+      score: '29/45',
+      rookieFriendly: true
+    },
+    // This section will be populated as you add the remaining 22 business plans
   ],
   'seasonal-businesses': [
     {
