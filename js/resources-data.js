@@ -70,7 +70,18 @@ const resources = {
       score: '37/45',
       rookieFriendly: true
     },
-    // This section will be populated as you add the remaining 24 business plans
+    {
+      title: 'Construction Site Cleanup Business',
+      description: '35-55% margins with $8K-$15K monthly revenue: B2B contractor service with $15K-$35K startup and 3-6 month breakeven',
+      url: '/resources/construction-site-cleanup-business/',
+      category: 'First-Time Entrepreneur',
+      type: '📄 Business Plan',
+      time: '30 min read',
+      featured: false,
+      score: '35/45',
+      rookieFriendly: true
+    },
+    // This section will be populated as you add the remaining 23 business plans
   ],
   'seasonal-businesses': [
     {
