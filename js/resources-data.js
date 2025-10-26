@@ -4,8 +4,18 @@
 
 const resources = {
   'first-time-entrepreneurs': [
-    // This section will be populated as you add the 30 business plans
-    // Each will have rookie-friendliness scores and beginner-focused guidance
+    {
+      title: 'Pressure Washing Business',
+      description: '60-80% margins with $3K-$8K monthly revenue: Solo-operator friendly with $5K-$15K startup and 2-4 month breakeven',
+      url: '/resources/pressure-washing-business/',
+      category: 'First-Time Entrepreneur',
+      type: '📄 Business Plan',
+      time: '30 min read',
+      featured: false,
+      score: '35/35',
+      rookieFriendly: true
+    },
+    // This section will be populated as you add the remaining 29 business plans
   ],
   'seasonal-businesses': [
     {
