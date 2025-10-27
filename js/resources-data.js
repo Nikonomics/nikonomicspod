@@ -136,7 +136,18 @@ const resources = {
       score: '35/45',
       rookieFriendly: true
     },
-    // This section will be populated as you add the remaining 18 business plans
+    {
+      title: 'Photo Booth Rentals Business',
+      description: '65-80% margins with $3K-$8K monthly revenue: Event-based with $15K-$45K startup and 8-15 month breakeven',
+      url: '/resources/photo-booth-rentals/',
+      category: 'First-Time Entrepreneur',
+      type: '📄 Business Plan',
+      time: '30 min read',
+      featured: false,
+      score: '32/45',
+      rookieFriendly: true
+    },
+    // This section will be populated as you add the remaining 17 business plans
   ],
   'seasonal-businesses': [
     {
