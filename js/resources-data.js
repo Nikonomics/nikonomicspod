@@ -180,7 +180,18 @@ const resources = {
       score: '36/45',
       rookieFriendly: true
     },
-    // This section will be populated as you add the remaining 14 business plans
+    {
+      title: 'Dryer Vent Cleaning Business',
+      description: '60-75% margins with $5K-$15K monthly revenue: Safety-focused service with $3K-$8K startup and 2-4 month breakeven',
+      url: '/resources/dryer-vent-cleaning-business/',
+      category: 'First-Time Entrepreneur',
+      type: '📄 Business Plan',
+      time: '30 min read',
+      featured: false,
+      score: '39/45',
+      rookieFriendly: true
+    },
+    // This section will be populated as you add the remaining 13 business plans
   ],
   'seasonal-businesses': [
     {
