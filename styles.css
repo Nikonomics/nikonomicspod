@@ -60,29 +60,38 @@ nav {
 .hero {
     background: linear-gradient(135deg, #003452 0%, #004C76 100%);
     color: white;
-    padding: 4rem 0;
-    text-align: center;
+    padding: 2rem 0;
 }
 
-.hero h2 {
+.hero-title {
     font-size: 3rem;
     margin-bottom: 1rem;
     font-weight: 700;
+    text-align: center;
 }
 
-.hero p {
-    font-size: 1.2rem;
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text p {
+    font-size: 0.95rem;
     opacity: 0.9;
-    max-width: 600px;
-    margin: 0 auto 2rem;
+    margin: 0;
 }
 
 /* Hero Stats */
 .hero-stats {
     display: flex;
-    justify-content: center;
-    gap: 3rem;
-    margin-top: 2rem;
+    gap: 2rem;
+    align-items: center;
 }
 
 .stat {
@@ -91,14 +100,14 @@ nav {
 
 .stat-number {
     display: block;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     color: #FFC900;
     line-height: 1;
 }
 
 .stat-label {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     opacity: 0.8;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -137,7 +146,7 @@ nav {
 
 /* Resource Sections */
 .resource-section {
-    padding: 4rem 0;
+    padding: 3rem 0;
     background: white;
 }
 
@@ -147,19 +156,19 @@ nav {
 
 .section-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .section-header h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #003452;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .section-header p {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     color: #666;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
@@ -430,21 +439,31 @@ footer {
         display: none;
     }
 
-    .hero h2 {
+    .hero-title {
         font-size: 2rem;
     }
 
-    .hero p {
+    .hero-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-text p {
         font-size: 1rem;
     }
 
     .hero-stats {
-        flex-direction: column;
+        justify-content: center;
         gap: 1.5rem;
     }
 
     .stat-number {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
     .featured-resource-hero {
