@@ -202,7 +202,18 @@ const resources = {
       score: '36/45',
       rookieFriendly: true
     },
-    // This section will be populated as you add the remaining 12 business plans
+    {
+      title: 'Pool Cleaning Business',
+      description: '60-80% margins with $3K-$8K monthly revenue: Recurring revenue service with $5K-$15K startup and 3-6 month breakeven',
+      url: '/resources/pool-cleaning-business/',
+      category: 'First-Time Entrepreneur',
+      type: '📄 Business Plan',
+      time: '30 min read',
+      featured: false,
+      score: '39/45',
+      rookieFriendly: true
+    },
+    // This section will be populated as you add the remaining 11 business plans
   ],
   'seasonal-businesses': [
     {
