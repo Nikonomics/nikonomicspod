@@ -69,25 +69,35 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <h2 class="font-futura hero-title">Nikonomics Business Toolkit</h2>
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <p class="text-refined">Everything you need to start, grow, and scale your business. From interactive calculators to comprehensive guides and proven frameworks.</p>
+        <!-- hero update: improved visual hierarchy, spacing, and background -->
+        <section class="hero" style="position: relative; overflow: hidden; padding: 4rem 0 5rem; background: linear-gradient(135deg, rgba(0, 52, 82, 0.03) 0%, rgba(0, 152, 238, 0.05) 100%);">
+            <!-- hero update: abstract background decoration -->
+            <div style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(0, 152, 238, 0.08) 0%, transparent 70%); border-radius: 50%; pointer-events: none;"></div>
+            <div style="position: absolute; bottom: -150px; left: -150px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255, 147, 22, 0.06) 0%, transparent 70%); border-radius: 50%; pointer-events: none;"></div>
+
+            <div class="container" style="position: relative; z-index: 1;">
+                <!-- hero update: larger main headline with better spacing -->
+                <h1 class="font-futura hero-title" style="font-size: 3.5rem; font-weight: 900; text-align: center; margin-bottom: 1.5rem; line-height: 1.1; letter-spacing: -0.02em; color: #003452;">Nikonomics Business Toolkit</h1>
+
+                <div class="hero-content" style="display: flex; flex-direction: column; align-items: center; gap: 2.5rem;">
+                    <!-- hero update: narrower subhead (55-60% width) -->
+                    <div class="hero-text" style="max-width: 600px; text-align: center;">
+                        <p class="text-refined" style="font-size: 1.25rem; line-height: 1.6; color: #4a5568;">Everything you need to start, grow, and scale your business. From interactive calculators to comprehensive guides and proven frameworks.</p>
                     </div>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <span class="stat-number">50+</span>
-                            <span class="stat-label">Resources</span>
+
+                    <!-- hero update: badge-style stats with improved spacing and alignment -->
+                    <div class="hero-stats" style="display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center;">
+                        <div class="stat" style="background: white; border: 2px solid #e2e8f0; border-radius: 12px; padding: 1rem 2rem; display: flex; align-items: center; gap: 0.75rem; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); transition: transform 0.2s;">
+                            <span class="stat-number" style="font-size: 2rem; font-weight: 800; color: #0098EE; font-family: 'Inter', sans-serif;">50+</span>
+                            <span class="stat-label" style="font-size: 0.875rem; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em;">Resources</span>
                         </div>
-                        <div class="stat">
-                            <span class="stat-number">247</span>
-                            <span class="stat-label">Episodes</span>
+                        <div class="stat" style="background: white; border: 2px solid #e2e8f0; border-radius: 12px; padding: 1rem 2rem; display: flex; align-items: center; gap: 0.75rem; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); transition: transform 0.2s;">
+                            <span class="stat-number" style="font-size: 2rem; font-weight: 800; color: #0098EE; font-family: 'Inter', sans-serif;">247</span>
+                            <span class="stat-label" style="font-size: 0.875rem; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em;">Episodes</span>
                         </div>
-                        <div class="stat">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Free</span>
+                        <div class="stat" style="background: white; border: 2px solid #e2e8f0; border-radius: 12px; padding: 1rem 2rem; display: flex; align-items: center; gap: 0.75rem; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); transition: transform 0.2s;">
+                            <span class="stat-number" style="font-size: 2rem; font-weight: 800; color: #FF9316; font-family: 'Inter', sans-serif;">100%</span>
+                            <span class="stat-label" style="font-size: 0.875rem; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em;">Free</span>
                         </div>
                     </div>
                 </div>
@@ -95,7 +105,8 @@
         </section>
 
         <!-- Featured Resources Grid -->
-        <section class="featured-resources-grid" style="padding: 3rem 0;">
+        <!-- global layout improvement: consistent section padding -->
+        <section class="featured-resources-grid" style="padding: 4rem 0 5rem;">
             <div class="container">
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem;">
                     <!-- Episodes Database Card -->
@@ -118,11 +129,13 @@
         </section>
 
         <!-- 30 Businesses for First Time Entrepreneurs Section -->
-        <section class="resource-section" id="first-time-entrepreneurs">
+        <!-- global layout improvement: consistent section padding -->
+        <section class="resource-section" id="first-time-entrepreneurs" style="padding: 4rem 0 5rem;">
             <div class="container">
-                <div class="section-header">
-                    <h3 class="font-futura">30 Businesses for First Time Entrepreneurs</h3>
-                    <p class="text-refined">Carefully curated business ideas perfect for your first venture. Each plan includes realistic financials, rookie-friendliness scores, and honest assessments of what it really takes to succeed.</p>
+                <!-- global layout improvement: consistent typography hierarchy for section titles -->
+                <div class="section-header" style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
+                    <h2 class="font-futura" style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; color: #003452; line-height: 1.2;">30 Businesses for First Time Entrepreneurs</h2>
+                    <p class="text-refined" style="font-size: 1.125rem; line-height: 1.6; color: #64748b;">Carefully curated business ideas perfect for your first venture. Each plan includes realistic financials, rookie-friendliness scores, and honest assessments of what it really takes to succeed.</p>
                 </div>
                 <div class="resource-grid">
                     <div class="resource-card">
@@ -381,11 +394,13 @@
         </section>
 
         <!-- 10 Favorite Seasonal Businesses Section -->
-        <section class="resource-section" id="seasonal-businesses">
+        <!-- global layout improvement: consistent section padding -->
+        <section class="resource-section" id="seasonal-businesses" style="padding: 4rem 0 5rem;">
             <div class="container">
-                <div class="section-header">
-                    <h3 class="font-futura">10 Favorite Seasonal Businesses</h3>
-                    <p class="text-refined">High-margin seasonal opportunities that let you earn significant income in compressed timeframes. Perfect for side hustles or building multiple income streams throughout the year.</p>
+                <!-- global layout improvement: consistent typography hierarchy for section titles -->
+                <div class="section-header" style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
+                    <h2 class="font-futura" style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; color: #003452; line-height: 1.2;">10 Favorite Seasonal Businesses</h2>
+                    <p class="text-refined" style="font-size: 1.125rem; line-height: 1.6; color: #64748b;">High-margin seasonal opportunities that let you earn significant income in compressed timeframes. Perfect for side hustles or building multiple income streams throughout the year.</p>
                 </div>
                 <div class="resource-grid">
                     <div class="resource-card">
@@ -494,10 +509,11 @@
 
 
         <!-- Newsletter Signup -->
-        <section class="newsletter">
-            <div class="container">
-                <h3 class="font-futura">Get New Resources First</h3>
-                <p>Subscribe to our newsletter and be the first to access new tools and guides</p>
+        <!-- global layout improvement: consistent section padding and typography -->
+        <section class="newsletter" style="padding: 4rem 0 5rem;">
+            <div class="container" style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <h2 class="font-futura" style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; color: #003452; line-height: 1.2;">Get New Resources First</h2>
+                <p class="text-refined" style="font-size: 1.125rem; line-height: 1.6; color: #64748b; margin-bottom: 2rem;">Subscribe to our newsletter and be the first to access new tools and guides</p>
                 <div class="newsletter-form">
                     <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
                     <iframe src="https://subscribe-forms.beehiiv.com/95178567-1e86-4ed9-87c2-9dec4ee17e17" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width: 560px; height: 315px; margin: 0 auto; max-width: 100%; display: block;"></iframe>
