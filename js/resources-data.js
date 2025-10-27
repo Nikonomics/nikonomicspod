@@ -191,7 +191,18 @@ const resources = {
       score: '39/45',
       rookieFriendly: true
     },
-    // This section will be populated as you add the remaining 13 business plans
+    {
+      title: 'Bounce House / Event Rentals',
+      description: '60-80% margins with $3K-$8K monthly revenue: High-margin rental with $15K-$50K startup and 6-18 month breakeven',
+      url: '/resources/bounce-house-event-rentals/',
+      category: 'First-Time Entrepreneur',
+      type: '📄 Business Plan',
+      time: '30 min read',
+      featured: false,
+      score: '36/45',
+      rookieFriendly: true
+    },
+    // This section will be populated as you add the remaining 12 business plans
   ],
   'seasonal-businesses': [
     {
