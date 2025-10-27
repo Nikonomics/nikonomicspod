@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pest Control Business Plan - Nikonomics</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; line-height: 1.6; color: #2c3e50; background: linear-gradient(135deg, #e67e22 0%, #d35400 100%); padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; display: grid; grid-template-columns: 250px 1fr; min-height: 90vh; }
+        .sidebar { background: linear-gradient(180deg, #e67e22 0%, #d35400 100%); color: white; padding: 30px 20px; position: sticky; top: 0; height: 100vh; overflow-y: auto; }
+        .sidebar h3 { font-size: 1.2em; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid rgba(255,255,255,0.3); }
+        .sidebar ul { list-style: none; }
+        .sidebar li { margin: 12px 0; }
+        .sidebar a { color: rgba(255,255,255,0.9); text-decoration: none; font-size: 0.95em; transition: all 0.3s; display: block; padding: 8px 12px; border-radius: 6px; }
+        .sidebar a:hover { background: rgba(255,255,255,0.2); color: white; transform: translateX(5px); }
+        .content { padding: 60px; overflow-y: auto; }
+        .header { text-align: center; margin-bottom: 50px; padding-bottom: 30px; border-bottom: 3px solid #e67e22; }
+        .header h1 { font-size: 3em; color: #e67e22; margin-bottom: 15px; font-weight: 800; }
+        .header .subtitle { font-size: 1.3em; color: #555; font-weight: 300; }
+        .score-badge { display: inline-block; background: linear-gradient(135deg, #e67e22, #d35400); color: white; padding: 12px 24px; border-radius: 50px; font-weight: 700; font-size: 1.1em; margin: 20px 0; box-shadow: 0 4px 15px rgba(230,126,34,0.4); }
+        .section { margin: 50px 0; }
+        .section h2 { font-size: 2.2em; color: #e67e22; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 3px solid #e67e22; display: flex; align-items: center; gap: 15px; }
+        .section h3 { font-size: 1.6em; color: #d35400; margin: 30px 0 15px 0; }
+        .section p { margin: 15px 0; font-size: 1.1em; line-height: 1.8; }
+        .section ul, .section ol { margin: 20px 0 20px 40px; }
+        .section li { margin: 10px 0; font-size: 1.05em; line-height: 1.7; }
+        .highlight-box { background: linear-gradient(135deg, #fdebd0 0%, #fad7a0 100%); border-left: 5px solid #e67e22; padding: 25px; margin: 25px 0; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .highlight-box strong { color: #d35400; font-size: 1.15em; }
+        .warning-box { background: linear-gradient(135deg, #fff3cd 0%, #ffe69c 100%); border-left: 5px solid #ff9800; padding: 25px; margin: 25px 0; border-radius: 8px; }
+        .warning-box strong { color: #e65100; }
+        .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0; }
+        .metric-card { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 25px; border-radius: 12px; border-left: 5px solid #e67e22; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .metric-card h4 { color: #e67e22; margin-bottom: 10px; font-size: 1.2em; }
+        .metric-card p { font-size: 1.1em; color: #495057; }
+        table { width: 100%; border-collapse: collapse; margin: 30px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        th { background: linear-gradient(135deg, #e67e22, #d35400); color: white; padding: 15px; text-align: left; font-weight: 600; }
+        td { padding: 15px; border-bottom: 1px solid #dee2e6; }
+        tr:hover { background: #f8f9fa; }
+        .emoji { font-size: 1.4em; margin-right: 10px; }
+        .back-link { display: inline-block; margin: 30px 0; padding: 12px 24px; background: linear-gradient(135deg, #e67e22, #d35400); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(230,126,34,0.3); }
+        .back-link:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(230,126,34,0.4); }
+        @media (max-width: 968px) { .container { grid-template-columns: 1fr; } .sidebar { position: relative; height: auto; } .content { padding: 30px 20px; } .header h1 { font-size: 2em; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <h3>Quick Navigation</h3>
+            <ul>
+                <li><a href="#snapshot">📸 Business Snapshot</a></li>
+                <li><a href="#breakdown">🔍 The Breakdown</a></li>
+                <li><a href="#financials">💰 The Financials</a></li>
+                <li><a href="#operations">⚙️ Operations</a></li>
+                <li><a href="#model">🎯 Business Model</a></li>
+                <li><a href="#risks">⚠️ The Risks</a></li>
+                <li><a href="#ai">🤖 AI & Automation</a></li>
+                <li><a href="#founder">👤 Founder Fit</a></li>
+                <li><a href="#scorecard">📊 The Scorecard</a></li>
+                <li><a href="#example">🏆 Real-World Example</a></li>
+                <li><a href="#tools">🛠️ Tools & Resources</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <div class="header">
+                <h1>Pest Control Business Plan</h1>
+                <p class="subtitle">15-35% margins with $3K-$8K monthly revenue: Recurring contracts with $15K-$50K startup and 6-18 month breakeven</p>
+                <div class="score-badge">★ 35/45 SCORE - All-Star Starter Business</div>
+            </div>
+
+            <section id="snapshot" class="section">
+                <h2><span class="emoji">📸</span>Business Snapshot</h2>
+                
+                <div class="highlight-box">
+                    <strong>The Concept:</strong> Provide extermination, prevention, and management services for insects, rodents, and other unwanted pests in residential homes, commercial properties, and industrial facilities. Customers pay for monthly, quarterly, or one-time treatments. You inspect properties, apply treatments (sprays, baits, traps), and maintain ongoing pest-free environments. It's a route-based subscription business—70-80% residential customers (homeowners), 20-30% commercial (restaurants, offices, warehouses).
+                </div>
+
+                <div class="highlight-box">
+                    <strong>The "Meat-and-Potatoes Service Business" Factor:</strong> This is a classic route-based subscription business that works. Recurring revenue (60-70% monthly contracts) with 70-85% retention creates predictable income. Referrals drive 20-30% of new business. The licensing barrier (state pesticide applicator license) keeps out lazy competitors once you're in. If you can handle getting licensed and don't mind crawling around basements, this prints money once you hit scale (150-300 accounts).
+                </div>
+
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h4>💰 Monthly Revenue</h4>
+                        <p><strong>$3,000 - $8,000</strong><br>Solo operator with 100-150 accounts</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>📈 Net Profit Margins</h4>
+                        <p><strong>15-35%</strong><br>Higher for established routes, lower when starting</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>💵 Startup Investment</h4>
+                        <p><strong>$15,000 - $50,000</strong><br>Truck/van, equipment, licensing, insurance</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>⏱️ Time to Breakeven</h4>
+                        <p><strong>6-18 months</strong><br>Once you hit 100-150 recurring accounts</p>
+                    </div>
+                </div>
+
+                <h3>Why Pest Control Works:</h3>
+                <ul>
+                    <li><strong>Recurring Revenue:</strong> 60-70% monthly/quarterly contracts with 70-85% retention = predictable cash flow</li>
+                    <li><strong>Essential Service:</strong> People NEED pests gone—not optional, especially roaches/termites/rodents</li>
+                    <li><strong>Growing Market:</strong> 3-5% annual growth driven by urbanization and climate change (pests thrive in warming climates)</li>
+                    <li><strong>High Referral Rate:</strong> 20-30% of new customers from word-of-mouth (sticky local reputation)</li>
+                    <li><strong>Low Churn:</strong> Once customers experience pest-free homes, they rarely cancel</li>
+                    <li><strong>Licensing Barrier:</strong> State pesticide applicator license keeps out casual competition</li>
+                    <li><strong>Solo-Founder Viable:</strong> Start alone, scale to 2-5 technicians after 300+ accounts</li>
+                </ul>
+
+                <h3>The Reality Check:</h3>
+                <ul>
+                    <li><strong>Licensing Required:</strong> State pesticide applicator license (40-80 hours training + exam)</li>
+                    <li><strong>Regulatory Overhead:</strong> EPA regulations, state compliance, chemical handling documentation</li>
+                    <li><strong>Physical Demands:</strong> Crawling in attics/basements, lifting equipment, outdoor work in heat/cold</li>
+                    <li><strong>Seasonality:</strong> Revenue drops 20-30% in winter (Nov-Feb), peaks spring/summer (Mar-Sep)</li>
+                    <li><strong>Customer Anxiety:</strong> Dealing with stressed homeowners who have roach/termite infestations</li>
+                    <li><strong>Chemical Exposure:</strong> Daily handling of pesticides (requires safety protocols, PPE)</li>
+                    <li><strong>Competition:</strong> Established players (Terminix, Orkin) have brand recognition and marketing budgets</li>
+                </ul>
+            </section>
+
+            <section id="breakdown" class="section">
+                <h2><span class="emoji">🔍</span>The Breakdown</h2>
+                
+                <h3>What You're Actually Doing:</h3>
+                <p>You're operating a route-based pest management service. You inspect properties for pest activity (ants, roaches, rodents, termites, spiders), apply treatments (sprays, baits, traps, granules), and provide ongoing monitoring. Customers pay monthly, quarterly, or one-time fees. Your day consists of driving a route (8-15 stops), treating properties (20-45 min per stop), communicating with customers, and managing paperwork/compliance. It's 50% customer service, 30% technical application, 20% business operations.</p>
+
+                <h3>The Customer:</h3>
+                <ul>
+                    <li><strong>Primary (70-80%):</strong> Homeowners dealing with ants, roaches, rodents, spiders, termites</li>
+                    <li><strong>Secondary (15-25%):</strong> Restaurants, offices, warehouses requiring regular pest management programs</li>
+                    <li><strong>Tertiary (5-10%):</strong> Property managers, real estate agents (pre-sale inspections, tenant move-ins)</li>
+                    <li><strong>Demographics:</strong> Middle to upper-middle income homeowners, suburban/urban areas</li>
+                    <li><strong>Purchase Triggers:</strong> Pest sighting (roach in kitchen), seasonal influx (ants in spring), home sale inspection</li>
+                </ul>
+
+                <h3>Service Delivery Model:</h3>
+                <ol>
+                    <li><strong>Lead Inquiry:</strong> Customer calls/texts/emails about pest problem (ants, roaches, rodents)</li>
+                    <li><strong>Inspection:</strong> You visit property, identify pest type, assess infestation severity</li>
+                    <li><strong>Estimate:</strong> Provide pricing (one-time treatment $150-500 or monthly plan $50-80)</li>
+                    <li><strong>Treatment:</strong> Apply interior/exterior treatments (sprays, baits, traps) per state regulations</li>
+                    <li><strong>Follow-Up:</strong> Return for quarterly/monthly service, inspect for new activity, retreat as needed</li>
+                    <li><strong>Upsells:</strong> Termite inspections ($100-200), exclusion work (sealing entry points, $200-1,000+)</li>
+                </ol>
+
+                <div class="highlight-box">
+                    <strong>The Subscription Model:</strong> One-time treatments generate $150-500 revenue but zero recurring income. Monthly/quarterly plans create $40-80/month × 12 months = $480-960 annual LTV per customer with 70-85% retention. Your goal is to convert 70-80% of customers to recurring plans. Pitch: "For just $60/month, we maintain pest-free home year-round—no surprise infestations, guaranteed service." This is how you build $5-10K/month predictable revenue.
+                </div>
+            </section>
+
+            <section id="financials" class="section">
+                <h2><span class="emoji">💰</span>The Financials</h2>
+                
+                <h3>Revenue Model:</h3>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h4>Residential Monthly Plans</h4>
+                        <p>$40-80/month<br>Quarterly service (every 3 months)<br>70-85% retention rate</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Commercial Contracts</h4>
+                        <p>$100-500+/month<br>Restaurants, offices, warehouses<br>Higher revenue, more complexity</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>One-Time Treatments</h4>
+                        <p>$150-500 per job<br>Termite: $300-1,500+<br>No recurring, but leads to subscriptions</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>LTV per Customer</h4>
+                        <p>$300-600 annually<br>Monthly plan customer = 3-5 years LTV<br>$1,500-3,000 total value</p>
+                    </div>
+                </div>
+
+                <h3>Startup Costs (Detailed Breakdown):</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Expense Category</th>
+                            <th>Low End</th>
+                            <th>High End</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Truck/Van</strong></td>
+                            <td>$10,000</td>
+                            <td>$25,000</td>
+                            <td>Used cargo van or pickup truck</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pest Control Equipment</strong></td>
+                            <td>$3,000</td>
+                            <td>$8,000</td>
+                            <td>Sprayers, backpack, tools, PPE, ladders</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Initial Chemical Inventory</strong></td>
+                            <td>$1,000</td>
+                            <td>$3,000</td>
+                            <td>Pesticides, baits, termiticides</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Licensing & Training</strong></td>
+                            <td>$500</td>
+                            <td>$2,000</td>
+                            <td>State pesticide applicator license + training</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Insurance (Year 1)</strong></td>
+                            <td>$2,000</td>
+                            <td>$5,000</td>
+                            <td>General liability, commercial auto, pest-specific</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Business License & Bonding</strong></td>
+                            <td>$500</td>
+                            <td>$1,500</td>
+                            <td>State/local business license, surety bond</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Website & Marketing Setup</strong></td>
+                            <td>$1,000</td>
+                            <td>$3,000</td>
+                            <td>Website, Google Ads setup, door hangers</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Software/CRM</strong></td>
+                            <td>$500</td>
+                            <td>$1,500</td>
+                            <td>PestRoutes or ServiceTitan setup + first 6 months</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Initial Marketing Budget</strong></td>
+                            <td>$2,000</td>
+                            <td>$5,000</td>
+                            <td>Google Ads, door-to-door campaigns, local ads</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Working Capital (3 months)</strong></td>
+                            <td>$3,000</td>
+                            <td>$6,000</td>
+                            <td>Fuel, chemicals, operating expenses buffer</td>
+                        </tr>
+                        <tr>
+                            <td><strong>TOTAL STARTUP</strong></td>
+                            <td><strong>$23,500</strong></td>
+                            <td><strong>$60,000</strong></td>
+                            <td>Round to $15K-$50K typical range</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Monthly Operating Expenses (Solo Operation):</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Expense</th>
+                            <th>Monthly Cost</th>
+                            <th>% of Revenue</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Chemicals/Materials</td>
+                            <td>$400 - $800</td>
+                            <td>10-15%</td>
+                        </tr>
+                        <tr>
+                            <td>Fuel/Vehicle Maintenance</td>
+                            <td>$300 - $600</td>
+                            <td>8-12%</td>
+                        </tr>
+                        <tr>
+                            <td>Insurance (monthly avg)</td>
+                            <td>$200 - $400</td>
+                            <td>5-8%</td>
+                        </tr>
+                        <tr>
+                            <td>Software/CRM (PestRoutes)</td>
+                            <td>$100 - $300</td>
+                            <td>2-5%</td>
+                        </tr>
+                        <tr>
+                            <td>Marketing/Advertising</td>
+                            <td>$400 - $1,000</td>
+                            <td>10-20%</td>
+                        </tr>
+                        <tr>
+                            <td>Phone/Communication</td>
+                            <td>$50 - $100</td>
+                            <td>1-2%</td>
+                        </tr>
+                        <tr>
+                            <td>Licensing/Continuing Ed</td>
+                            <td>$50 - $150</td>
+                            <td>1-3%</td>
+                        </tr>
+                        <tr>
+                            <td>Misc (equipment, repairs)</td>
+                            <td>$200 - $400</td>
+                            <td>5-8%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>TOTAL MONTHLY EXPENSES</strong></td>
+                            <td><strong>$1,700 - $3,750</strong></td>
+                            <td><strong>40-65%</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box">
+                    <strong>Profit Math Example (Solo Operation, 150 Accounts):</strong>
+                    <ul>
+                        <li>150 monthly customers × $60/month = $9,000/month revenue</li>
+                        <li>Monthly expenses: $3,200 (36% of revenue)</li>
+                        <li>Monthly net profit: $5,800 (64% margin—optimistic for mature route)</li>
+                        <li>Annual net profit: $69,600</li>
+                        <li>Startup investment: $35,000</li>
+                        <li>Payback period: 6 months</li>
+                    </ul>
+                    <p><strong>Reality Check:</strong> Most operators see 15-35% net margins due to marketing costs, slower ramp-up, and seasonality. But once you hit 150-200 recurring accounts with efficient routes, margins improve significantly. The key is surviving months 1-12 while building customer base.</p>
+                </div>
+
+                <h3>Path to $10K/Month Net Profit:</h3>
+                <ul>
+                    <li><strong>Solo:</strong> 250-300 monthly accounts at $50-65 average = $12,500-19,500/month revenue × 30-40% margin = $3,750-7,800 profit (hard to hit $10K solo)</li>
+                    <li><strong>With 1-2 Technicians:</strong> 500-700 accounts = $25-40K/month revenue × 25-30% margin = $6,250-12,000 profit</li>
+                    <li><strong>Timeline:</strong> 18-36 months to reach 500+ accounts with 2 techs generating $10K+ monthly profit</li>
+                </ul>
+            </section>
+
+            <section id="operations" class="section">
+                <h2><span class="emoji">⚙️</span>Operations & Workflow</h2>
+                
+                <h3>Daily Operations (Solo Founder):</h3>
+                <ol>
+                    <li><strong>Morning Prep (30-60 min):</strong> Load truck with chemicals/equipment, review day's route (8-15 stops), check weather</li>
+                    <li><strong>Route Execution (6-8 hours):</strong> Drive to properties, perform treatments (interior/exterior spray, baits, traps), document service</li>
+                    <li><strong>Per-Stop Time:</strong> 20-45 minutes (inspection, treatment, customer communication, documentation)</li>
+                    <li><strong>Afternoon Admin (1-2 hours):</strong> Return calls, schedule estimates, update CRM, process payments</li>
+                    <li><strong>Weekly Tasks:</strong> Equipment maintenance, chemical inventory restocking, marketing follow-ups</li>
+                </ol>
+
+                <h3>Time Commitment:</h3>
+                <ul>
+                    <li><strong>Launch Phase (Months 1-6):</strong> 50-60 hours/week (heavy customer acquisition, building routes)</li>
+                    <li><strong>Steady State (Solo, 100-200 accounts):</strong> 40-50 hours/week (route work + admin)</li>
+                    <li><strong>Owner Tasks:</strong> Treatments, estimates, customer service, marketing, bookkeeping</li>
+                    <li><strong>Can Outsource:</strong> Hire technicians after 300+ accounts ($15-20/hr + commission)</li>
+                </ul>
+
+                <h3>Route Efficiency Metrics:</h3>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h4>Stops Per Day</h4>
+                        <p>8-15 properties<br>20-45 min per stop<br>Tight routes = more stops</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Revenue Per Day</h4>
+                        <p>$400-800 (monthly route)<br>$1,000-2,000 (one-time jobs)<br>Mix of both maximizes income</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Geographic Clustering</h4>
+                        <p>Target 3-5 mile radius<br>Reduces drive time<br>Increases stops/day</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Seasonality Pattern</h4>
+                        <p>Peak: Mar-Sep (80% revenue)<br>Slow: Nov-Feb (20% revenue)<br>Plan cash reserves accordingly</p>
+                    </div>
+                </div>
+
+                <h3>Scaling Path:</h3>
+                <ol>
+                    <li><strong>Phase 1 (Months 1-12):</strong> Solo operation, 0-150 accounts, $0-9K/month revenue, breakeven month 6-12</li>
+                    <li><strong>Phase 2 (Year 2):</strong> Solo at capacity, 150-250 accounts, $9-15K/month revenue, consider hiring tech</li>
+                    <li><strong>Phase 3 (Year 3):</strong> Hire first technician, 250-500 accounts, $15-30K/month revenue, owner focuses on sales/mgmt</li>
+                    <li><strong>Phase 4 (Year 4+):</strong> 2-3 technicians, 500-1,000 accounts, $30-60K/month revenue, semi-passive operations</li>
+                </ol>
+
+                <div class="highlight-box">
+                    <strong>The Route Density Strategy:</strong> Successful operators cluster customers in tight geographic zones (neighborhoods, subdivisions). Driving 30 minutes between stops kills profitability. Target one neighborhood at a time with door-to-door sales—once you have 5-10 customers in an area, referrals compound. Route density = 10-15 stops/day instead of 6-8 = 50% more revenue with same time investment.
+                </div>
+            </section>
+
+            <section id="model" class="section">
+                <h2><span class="emoji">🎯</span>Business Model & Strategy</h2>
+                
+                <h3>Core Business Model:</h3>
+                <p><strong>Route-Based Recurring Service.</strong> Customers pay monthly/quarterly for ongoing pest management. You drive optimized routes treating properties on schedule (monthly, bi-monthly, quarterly). Success = customer acquisition + retention + route density. Convert one-time customers to monthly plans for predictable recurring revenue. LTV:CAC ratio of 3:1 to 8:1 makes unit economics work.</p>
+
+                <h3>Revenue Streams:</h3>
+                <ol>
+                    <li><strong>Recurring Monthly Plans (60-70%):</strong> $40-80/month per customer, quarterly service visits</li>
+                    <li><strong>One-Time Treatments (20-30%):</strong> $150-500 for initial treatments, lead to subscriptions</li>
+                    <li><strong>Commercial Contracts (10-20%):</strong> $100-500+/month for restaurants, offices</li>
+                    <li><strong>Specialty Services (5-10%):</strong> Termite treatments ($300-1,500+), exclusion work ($200-1,000+)</li>
+                </ol>
+
+                <h3>Customer Acquisition Channels:</h3>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h4>Google Ads/SEO</h4>
+                        <p>40% of customers<br>"pest control near me" searches<br>CAC: $40-75 per customer</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Door-to-Door</h4>
+                        <p>25% of customers<br>Knock in existing customer neighborhoods<br>CAC: $25-40 (time investment)</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Referrals</h4>
+                        <p>20% of customers<br>Word-of-mouth, incentives ($25 credit)<br>CAC: $10-25 (referral bonus)</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Nextdoor/Local Ads</h4>
+                        <p>15% of customers<br>Community apps, direct mail<br>CAC: $30-60 per customer</p>
+                    </div>
+                </div>
+
+                <h3>Pricing Strategy:</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Service Type</th>
+                            <th>Typical Pricing</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>General Pest Monthly Plan</td>
+                            <td>$50-80/month</td>
+                            <td>Quarterly service (4x/year), covers ants/roaches/spiders</td>
+                        </tr>
+                        <tr>
+                            <td>Initial Treatment</td>
+                            <td>$150-300</td>
+                            <td>One-time service, higher margin, converts to monthly</td>
+                        </tr>
+                        <tr>
+                            <td>Rodent Control</td>
+                            <td>$200-500</td>
+                            <td>Trapping, exclusion work, follow-up visits</td>
+                        </tr>
+                        <tr>
+                            <td>Termite Inspection</td>
+                            <td>$75-150</td>
+                            <td>Pre-sale inspections, lead to treatments</td>
+                        </tr>
+                        <tr>
+                            <td>Termite Treatment</td>
+                            <td>$300-1,500+</td>
+                            <td>Soil treatment or bait systems, high-value service</td>
+                        </tr>
+                        <tr>
+                            <td>Commercial (Restaurants)</td>
+                            <td>$150-500/month</td>
+                            <td>Weekly/bi-weekly service, regulatory compliance</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Retention & Churn Management:</h3>
+                <ul>
+                    <li><strong>70-85% Annual Retention:</strong> Once customers see results, they rarely cancel</li>
+                    <li><strong>Churn Triggers:</strong> Price increases, missed treatments, poor communication, moving away</li>
+                    <li><strong>Retention Tactics:</strong> Automatic scheduling, reminder texts, loyalty discounts (annual prepay 10% off)</li>
+                    <li><strong>Win-Back Campaigns:</strong> Email/SMS to lapsed customers: "We miss you! First treatment back 50% off"</li>
+                </ul>
+
+                <h3>Growth Levers:</h3>
+                <ol>
+                    <li><strong>Route Density:</strong> Focus on tight geographic clusters before expanding to new areas</li>
+                    <li><strong>Referral Program:</strong> $25 credit for customer referrals (20-30% of new business)</li>
+                    <li><strong>Commercial Expansion:</strong> Target restaurants, offices for higher-value recurring contracts</li>
+                    <li><strong>Termite Services:</strong> Add termite inspections/treatments ($300-1,500+ per job)</li>
+                    <li><strong>Seasonal Promotions:</strong> Spring "Ant Season Special" campaigns when demand peaks</li>
+                </ol>
+
+                <div class="highlight-box">
+                    <strong>The Licensing Moat:</strong> State pesticide applicator licenses require 40-80 hours training + passing exam + continuing education. This barrier keeps out casual competitors—not as easy as starting a pressure washing business. Once you're licensed, you have a competitive moat. Most customers assume you're "legit" because you're licensed, which builds instant trust. Use this to your advantage in marketing: "Licensed & Insured Pest Control—EPA Certified Applicator."
+                </div>
+            </section>
+
+            <section id="risks" class="section">
+                <h2><span class="emoji">⚠️</span>The Risks & Challenges</h2>
+                
+                <h3>High-Impact Risks:</h3>
+                
+                <div class="warning-box">
+                    <strong>Risk #1: Regulatory Compliance & Liability</strong>
+                    <p>Pest control is heavily regulated—EPA rules, state compliance, chemical handling documentation. Misapplication can result in fines ($1,000-10,000+), license suspension, or lawsuits. One chemical spill or wrong treatment can bankrupt you. Mitigate by taking training seriously, following label directions religiously, and carrying $1M+ liability insurance. Never cut corners on safety protocols.</p>
+                </div>
+
+                <div class="warning-box">
+                    <strong>Risk #2: Seasonality Crushes Winter Cash Flow</strong>
+                    <p>Revenue drops 20-30% in winter months (Nov-Feb) as pest activity declines. If you hit winter with thin margins, you'll struggle to cover fixed costs (truck payment, insurance). Mitigate by building 6-month cash reserves during peak season (Mar-Sep) and offering winter discounts to maintain customer engagement.</p>
+                </div>
+
+                <div class="warning-box">
+                    <strong>Risk #3: Customer Liability Claims</strong>
+                    <p>Customers blame pest control for anything after treatment—pet gets sick, kid has allergic reaction, damage to property. Even baseless claims cost $5-10K to defend legally. Carry robust insurance ($1-2M liability minimum), document everything (pre/post-treatment photos, signed agreements), and communicate risks clearly upfront.</p>
+                </div>
+
+                <h3>Operational Challenges:</h3>
+                <ul>
+                    <li><strong>Licensing Complexity:</strong> 40-80 hours training, passing state exam, continuing education requirements</li>
+                    <li><strong>Chemical Handling:</strong> Daily exposure to pesticides requires PPE, safety protocols, health monitoring</li>
+                    <li><strong>Physical Demands:</strong> Crawling in attics/basements, lifting 50lb equipment, outdoor work in extreme weather</li>
+                    <li><strong>Customer Anxiety:</strong> Dealing with stressed homeowners who have roach/rodent infestations (emotional labor)</li>
+                    <li><strong>Equipment Maintenance:</strong> Sprayers, backpacks, trucks require regular upkeep and repairs</li>
+                    <li><strong>Re-Treatments:</strong> Some customers require 2-3 follow-ups before pest-free (time/cost burden)</li>
+                </ul>
+
+                <h3>Competitive Risks:</h3>
+                <ul>
+                    <li><strong>National Chains:</strong> Terminix, Orkin have massive marketing budgets and brand recognition</li>
+                    <li><strong>Price Competition:</strong> New operators undercut pricing to steal customers (race to bottom)</li>
+                    <li><strong>DIY Trend:</strong> Some customers buy $20 Home Depot sprays and do it themselves</li>
+                    <li><strong>Franchise Expansion:</strong> National franchises entering local markets with aggressive promotions</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <strong>Risk Mitigation Checklist:</strong>
+                    <ul>
+                        <li>✓ Take licensing training seriously—don't just pass the test, learn the material</li>
+                        <li>✓ Carry $1-2M+ liability insurance from day one (non-negotiable)</li>
+                        <li>✓ Document everything—pre/post-treatment photos, signed service agreements</li>
+                        <li>✓ Follow pesticide label directions exactly (legal defense if issues arise)</li>
+                        <li>✓ Build 6-month cash reserves during peak season (Mar-Sep) for winter survival</li>
+                        <li>✓ Invest in PPE and safety equipment—protect yourself from chemical exposure</li>
+                        <li>✓ Join state pest control association—stay updated on regulations, network with peers</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="ai" class="section">
+                <h2><span class="emoji">🤖</span>AI & Automation Potential</h2>
+                
+                <h3>Current Automation Level: ★★★☆☆ (Moderate)</h3>
+                <p>The physical work (inspections, chemical applications) can't be automated, but scheduling, routing, billing, and customer communications are highly automatable. Smart operators use tech to minimize admin time and maximize time treating properties.</p>
+
+                <h3>What's Already Automated:</h3>
+                <ul>
+                    <li><strong>Scheduling Software:</strong> PestRoutes, ServiceTitan auto-schedule recurring treatments</li>
+                    <li><strong>Route Optimization:</strong> Software plans most efficient daily routes (saves 1-2 hours/day)</li>
+                    <li><strong>Billing/Invoicing:</strong> Auto-charge monthly subscriptions, handle failed payments</li>
+                    <li><strong>Customer Reminders:</strong> Automated SMS/email 24 hours before scheduled service</li>
+                </ul>
+
+                <h3>High-Leverage AI/Automation Opportunities:</h3>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h4>Lead Qualification Chatbot</h4>
+                        <p>AI chatbot on website pre-qualifies leads, schedules estimates, answers FAQs 24/7</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Pest Identification Apps</h4>
+                        <p>Customer uploads photo, AI identifies pest type, suggests treatment (speeds estimates)</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Predictive Scheduling</h4>
+                        <p>AI predicts seasonal pest surges, proactively schedules preventive treatments</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Churn Prediction</h4>
+                        <p>AI flags at-risk customers (missed payments, service gaps) for retention outreach</p>
+                    </div>
+                </div>
+
+                <h3>Tech Stack for Efficiency:</h3>
+                <ul>
+                    <li><strong>PestRoutes or ServiceTitan:</strong> Industry-specific CRM for scheduling, routing, billing ($100-300/month)</li>
+                    <li><strong>Jobber or Housecall Pro:</strong> Simpler alternatives for solo operators ($30-100/month)</li>
+                    <li><strong>Google Local Services Ads:</strong> Pay-per-lead advertising (higher conversion than standard Google Ads)</li>
+                    <li><strong>Twilio:</strong> Automated SMS for appointment reminders, post-service follow-ups</li>
+                    <li><strong>QuickBooks:</strong> Accounting, expense tracking, tax prep</li>
+                </ul>
+
+                <h3>What Still Requires Humans:</h3>
+                <ul>
+                    <li><strong>Property Inspections:</strong> Identifying pest entry points, assessing infestation severity</li>
+                    <li><strong>Chemical Applications:</strong> Spraying, baiting, trapping require licensed technician</li>
+                    <li><strong>Customer Service:</strong> Calming anxious homeowners, explaining treatment plans</li>
+                    <li><strong>Estimates:</strong> Complex jobs (termites, exclusion work) require in-person assessment</li>
+                    <li><strong>Equipment Maintenance:</strong> Cleaning sprayers, repairing backpacks, truck upkeep</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <strong>The 80/20 of Automation:</strong> Automate 80% of admin work (scheduling, billing, reminders) with $100-200/month in software. This frees up 10-15 hours/week to focus on treating properties and acquiring customers. The 20% you can't automate (inspections, treatments) is your value delivery and competitive moat—which is good, because it can't be replicated by AI.
+                </div>
+            </section>
+
+            <section id="founder" class="section">
+                <h2><span class="emoji">👤</span>Founder Fit & Requirements</h2>
+                
+                <h3>Who This Business Is For:</h3>
+                <ul>
+                    <li><strong>Licensing-Willing:</strong> You're willing to invest 40-80 hours in training + pass state exam</li>
+                    <li><strong>Physically Capable:</strong> Comfortable crawling in attics/basements, lifting 50lb equipment, outdoor work</li>
+                    <li><strong>Customer-Facing:</strong> You can communicate with anxious homeowners and build trust</li>
+                    <li><strong>Detail-Oriented:</strong> Following chemical label directions, documentation, compliance matters</li>
+                    <li><strong>Route-Oriented:</strong> You value recurring revenue and systematic operations over variety</li>
+                    <li><strong>Local-Focused:</strong> You want to build a local business (not remote/digital)</li>
+                </ul>
+
+                <h3>Who Should Avoid This:</h3>
+                <ul>
+                    <li><strong>Licensing-Averse:</strong> If training/exams feel like barriers, choose pressure washing instead</li>
+                    <li><strong>Chemical-Sensitive:</strong> Daily pesticide exposure is real—not for everyone</li>
+                    <li><strong>Physical Limitations:</strong> Can't crawl in tight spaces or lift heavy equipment</li>
+                    <li><strong>Germaphobes:</strong> You're dealing with roaches, rodents, droppings—not glamorous</li>
+                    <li><strong>Impatient:</strong> 6-18 month breakeven is too slow for "I need cash now" mentality</li>
+                </ul>
+
+                <h3>Skills That Help (But Aren't Required):</h3>
+                <ul>
+                    <li><strong>Sales Skills:</strong> Door-to-door and phone sales accelerate customer acquisition</li>
+                    <li><strong>Biology/Chemistry Background:</strong> Understanding pest behavior and chemical modes of action helps</li>
+                    <li><strong>Customer Service:</strong> Empathy and communication = high retention and referrals</li>
+                    <li><strong>Route Planning:</strong> Optimizing daily schedules improves profit per hour</li>
+                    <li><strong>Marketing:</strong> Google Ads, local SEO knowledge supplements word-of-mouth</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <strong>Ideal Founder Profile:</strong> Former blue-collar worker or service industry professional who values recurring revenue and local reputation. Comfortable with physical work and customer interaction. Willing to get licensed (40-80 hours training). Patient enough to build 150-300 accounts over 12-18 months. Values predictability (route-based work) over excitement. This is NOT a passion business—it's a "meat-and-potatoes" wealth-building machine for operators who execute well.
+                </div>
+
+                <h3>Lifestyle Considerations:</h3>
+                <ul>
+                    <li><strong>Time Commitment:</strong> 40-50 hours/week solo (once established), 50-60 during ramp-up</li>
+                    <li><strong>Physical Demands:</strong> Outdoor work in heat/cold, crawling, lifting, chemical exposure</li>
+                    <li><strong>Seasonality:</strong> Revenue drops 20-30% in winter—plan for income fluctuations</li>
+                    <li><strong>Location-Bound:</strong> Local business—must be present for treatments and estimates</li>
+                    <li><strong>Wealth-Building:</strong> Steady $40-80K/year solo, $100-200K+ with 2-3 techs</li>
+                </ul>
+            </section>
+
+            <section id="scorecard" class="section">
+                <h2><span class="emoji">📊</span>Nik's 8+1 Scorecard</h2>
+                
+                <p><strong>Total Score: 35/45 - All-Star Starter Business</strong></p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Criteria</th>
+                            <th>Score</th>
+                            <th>Explanation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1. Neanderthal-Friendly</strong><br><em>Can you explain this business to a 10-year-old in one sentence?</em></td>
+                            <td>4/5</td>
+                            <td>"I spray houses to kill bugs and rodents." Simple concept, but licensing and chemical knowledge add complexity (not quite 5/5).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2. Tastes Like Chicken</strong><br><em>Is there an existing success model you can copy?</em></td>
+                            <td>5/5</td>
+                            <td>Classic route-based service business with 50+ years of proven operators. Tons of playbooks, franchises (Terminix, Orkin), YouTube tutorials.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3. Capital Efficient</strong><br><em>Can you start this without going broke?</em></td>
+                            <td>3/5</td>
+                            <td>$15K-$50K startup is manageable (better than car wash $50-500K, worse than pressure washing $5-15K). 6-18 month payback is reasonable.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>4. Operator-Friendly</strong><br><em>Does running this business suck?</em></td>
+                            <td>4/5</td>
+                            <td>Solo viable until 300+ accounts, 40-50 hrs/week once established. Physical but not grueling. Loses 1 point for crawling in attics/basements and seasonal swings.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5. Scalable Without You</strong><br><em>Can you grow this without cloning yourself?</em></td>
+                            <td>4/5</td>
+                            <td>Hire technicians at $15-20/hr once profitable. Scale to 2-5 techs managing 500-1,000 accounts without owner doing treatments. Not quite 5/5 because sales and estimates often require owner involvement initially.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>6. Fast Feedback Loops</strong><br><em>Will you know quickly if you're screwing up?</em></td>
+                            <td>4/5</td>
+                            <td>Customer acquisition velocity tells you if marketing works within 30-60 days. Treatment effectiveness is immediate (pests gone or not). Faster than car wash, slower than mobile detailing.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>7. Valuation-Friendly</strong><br><em>Can you sell this business for a meaningful multiple?</em></td>
+                            <td>3/5</td>
+                            <td>Pest control businesses with recurring revenue sell for 2-3x annual profit. 150+ customer route list has value. But local/licensed nature limits buyer pool (must transfer license).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>8. Founder Flexibility</strong><br><em>Can you run this while keeping your day job?</em></td>
+                            <td>4/5</td>
+                            <td>Operational execution business—passion helpful but not required. Once you hit 150+ accounts, it's systematic route work. Loses 1 point because customer anxiety and compliance require attention.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>+1 Secret Sauce</strong><br><em>What's the unique advantage here?</em></td>
+                            <td>4/5</td>
+                            <td><strong>Recurring Revenue + Licensing Moat.</strong> 60-70% monthly contracts with 70-85% retention = predictable income. State licensing keeps out lazy competitors. LTV:CAC of 3:1 to 8:1 = solid unit economics. 20-30% referral rate compounds growth. Loses 1 point due to seasonality and regulatory overhead.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box">
+                    <strong>Why 35/45 (All-Star Score)?</strong> Pest control scores high on recurring revenue (5/5), proven model (5/5), and scalability (4/5). The licensing barrier (4/5 on Neanderthal-Friendly) is actually a feature, not a bug—it creates a competitive moat. Capital efficiency (3/5) is middle-of-the-pack. But the combination of recurring contracts, high retention, and referral-driven growth makes this an "All-Star Starter Business" for operators willing to get licensed.
+                </div>
+
+                <h3>Comparison to Other Businesses:</h3>
+                <ul>
+                    <li><strong>vs. Trash Bin Cleaning (36/45):</strong> Trash bins score slightly higher due to lower regulatory overhead. Pest control wins on market size and commercial opportunities.</li>
+                    <li><strong>vs. Mobile Car Detailing (38/45):</strong> Mobile detailing scores higher (no licensing, lower startup), but pest control wins on recurring revenue and retention.</li>
+                    <li><strong>vs. Pressure Washing (35/35):</strong> Pest control has higher startup ($15-50K vs $5-15K) but better recurring revenue (70% subscriptions vs 30%). Choose based on capital availability.</li>
+                </ul>
+            </section>
+
+            <section id="example" class="section">
+                <h2><span class="emoji">🏆</span>Real-World Example</h2>
+                
+                <h3>Case Study: Pest Gnome (Tampa, FL)</h3>
+                
+                <div class="highlight-box">
+                    <p><strong>Background:</strong> Solo operator who started with $25K (used truck, basic equipment, licensing). Focused on door-to-door sales in suburban Tampa neighborhoods, built reputation for responsive service and fair pricing. Scaled from 0 to 400+ accounts in 3 years.</p>
+                </div>
+
+                <h4>The Numbers:</h4>
+                <ul>
+                    <li><strong>Startup Investment:</strong> $25,000 (used truck $12K, equipment $5K, licensing $1K, marketing $3K, buffer $4K)</li>
+                    <li><strong>Year 1:</strong> 0-100 accounts, $3-6K/month revenue, breakeven month 10</li>
+                    <li><strong>Year 2:</strong> 100-250 accounts, $6-15K/month revenue, $3-6K/month profit</li>
+                    <li><strong>Year 3:</strong> 250-400 accounts, $15-24K/month revenue, hired first technician, owner profit $8-12K/month</li>
+                    <li><strong>Current State:</strong> 500+ accounts, 2 techs, $30K/month revenue, $10-15K/month owner profit</li>
+                </ul>
+
+                <h4>Key Lessons from Founder:</h4>
+                <ol>
+                    <li><strong>"Door-to-door is king for first 150 customers."</strong> 60% of initial customers came from knocking doors in existing customer neighborhoods. Route density compounds sales.</li>
+                    <li><strong>"Convert to monthly plans aggressively."</strong> Pitched monthly memberships to every one-time customer: "Lock in $60/month for year-round protection." 75% conversion rate after treatment success.</li>
+                    <li><strong>"Retention > acquisition after 100 accounts."</strong> Once he hit 100 recurring customers, focused on retention (follow-up calls, thank-you notes). 82% retention created stable base.</li>
+                    <li><strong>"Seasonality WILL hurt—plan for it."</strong> Revenue dropped 30% in winter Year 1. Nearly ran out of cash. Now saves 50% of summer profits as winter cushion.</li>
+                    <li><strong>"Hire technician at 300 accounts, not sooner."</strong> Tried hiring at 200 accounts (couldn't keep them busy). Waited until 300+ before bringing on full-time tech—worked perfectly.</li>
+                </ol>
+
+                <div class="warning-box">
+                    <strong>The Reality Check:</strong> This operator worked 60 hours/week for the first 18 months—mostly door-to-door sales and treatments. Year 3 he finally dropped to 40 hours/week by hiring a tech. Success is replicable, but requires hustle and patience. Not a "get rich quick" business.
+                </div>
+
+                <h3>Another Example: Budget Brothers Termite (Franchise Model)</h3>
+                <p>National franchise with 50+ locations. Franchisees report:</p>
+                <ul>
+                    <li>Franchise fee: $40K, total investment: $60-100K (includes training, equipment, initial marketing)</li>
+                    <li>Average 200-400 accounts within 18-24 months (franchise support accelerates sales)</li>
+                    <li>$10-25K/month revenue at maturity</li>
+                    <li>25-35% net margins after royalties (6% of gross revenue)</li>
+                    <li>Owner works 40-50 hrs/week, can hire techs after 300+ accounts</li>
+                </ul>
+
+                <h3>Common Traits of Successful Operators:</h3>
+                <ul>
+                    <li><strong>Door-to-Door Hustle:</strong> Top performers knocked 500+ doors in first 12 months—not glamorous but effective</li>
+                    <li><strong>Route Obsession:</strong> Focused on tight geographic clusters (neighborhoods) before expanding</li>
+                    <li><strong>Retention Focus:</strong> Called customers 48 hours after treatment to ensure satisfaction = 80-85% retention</li>
+                    <li><strong>Referral Programs:</strong> Offered $25 credit for referrals—20-30% of new customers from word-of-mouth</li>
+                    <li><strong>Winter Planning:</strong> Built 6-month cash reserves during peak season (Mar-Sep) to survive winter slump</li>
+                </ul>
+            </section>
+
+            <section id="tools" class="section">
+                <h2><span class="emoji">🛠️</span>Tools & Resources</h2>
+                
+                <h3>Essential Equipment:</h3>
+                <ul>
+                    <li><strong>Truck/Van:</strong> Used cargo van or pickup with cap ($10-25K)</li>
+                    <li><strong>Sprayers:</strong> Backpack sprayer ($150-400), handheld sprayer ($50-150), B&G sprayer ($200-500)</li>
+                    <li><strong>Chemicals:</strong> General insecticides (Talstar, Demand), baits, rodenticides ($1-3K initial inventory)</li>
+                    <li><strong>PPE:</strong> Respirators, gloves, protective clothing, safety glasses ($200-500)</li>
+                    <li><strong>Tools:</strong> Ladders, flashlights, inspection mirrors, dust applicators ($500-1,000)</li>
+                    <li><strong>Rodent Equipment:</strong> Traps, bait stations, exclusion materials ($300-800)</li>
+                </ul>
+
+                <h3>Software & Tech:</h3>
+                <ul>
+                    <li><strong>PestRoutes:</strong> Industry-leading CRM for pest control ($150-300/month)</li>
+                    <li><strong>ServiceTitan:</strong> Comprehensive field service software ($200-400/month)</li>
+                    <li><strong>Jobber or Housecall Pro:</strong> Simpler alternatives for solo operators ($30-100/month)</li>
+                    <li><strong>Google Local Services Ads:</strong> Pay-per-lead advertising (Google guaranteed badge)</li>
+                    <li><strong>QuickBooks:</strong> Accounting, expense tracking, tax prep ($30-70/month)</li>
+                </ul>
+
+                <h3>Licensing & Training:</h3>
+                <ul>
+                    <li><strong>State Pesticide Applicator License:</strong> Requirements vary by state (check your state ag department)</li>
+                    <li><strong>Training Programs:</strong> Online courses (PestWorld University, NPMA), in-person workshops</li>
+                    <li><strong>Continuing Education:</strong> Most states require 4-8 hours/year to maintain license</li>
+                    <li><strong>Certifications:</strong> Termite specialist, rodent control, bed bug treatment (optional but valuable)</li>
+                </ul>
+
+                <h3>Learning Resources:</h3>
+                <ul>
+                    <li><strong>NPMA (National Pest Management Association):</strong> Trade group with conferences, webinars, best practices</li>
+                    <li><strong>PestWorld Magazine:</strong> Industry publication covering trends, regulations, technology</li>
+                    <li><strong>YouTube Channels:</strong> Dozens of operators share treatment techniques, business strategies</li>
+                    <li><strong>Facebook Groups:</strong> "Pest Control Business Owners" (8,000+ members sharing advice)</li>
+                    <li><strong>Books:</strong> "The Wealthy Pest Controller" by Dan Gordon (business systems)</li>
+                </ul>
+
+                <h3>Suppliers & Vendors:</strong>
+                <ul>
+                    <li><strong>DoMyOwn.com:</strong> Online supplier for chemicals, equipment (wholesale pricing)</li>
+                    <li><strong>Solutions Pest & Lawn:</strong> Wide selection, fast shipping, training resources</li>
+                    <li><strong>Univar (Veseris):</strong> Professional-grade chemicals, local pickup locations</li>
+                    <li><strong>Local Distributors:</strong> Build relationships for same-day delivery and emergency supplies</li>
+                </ul>
+
+                <h3>Financing Options:</h3>
+                <ul>
+                    <li><strong>SBA Microloan:</strong> Up to $50K, 8-13% interest, good for startup costs</li>
+                    <li><strong>Equipment Financing:</strong> Lease truck/equipment instead of buying outright</li>
+                    <li><strong>Personal Savings:</strong> Many operators bootstrap with $15-30K saved from previous job</li>
+                    <li><strong>Business Credit Cards:</strong> 0% intro APR cards for initial equipment/marketing (risky, use cautiously)</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <strong>Pro Tip:</strong> Join your state pest control association immediately. Networking with experienced operators accelerates your learning curve—ask questions about suppliers, pricing, problem pests. Many associations offer discounted insurance rates and group buying power for chemicals. Membership typically $100-300/year—worth 10x that in saved mistakes.
+                </div>
+            </section>
+
+            <a href="../../index.html" class="back-link">← Back to Nikonomics Hub</a>
+        </main>
+    </div>
+</body>
+</html>

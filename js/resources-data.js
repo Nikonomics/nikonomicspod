@@ -125,7 +125,18 @@ const resources = {
       score: '33/45',
       rookieFriendly: true
     },
-    // This section will be populated as you add the remaining 19 business plans
+    {
+      title: 'Pest Control Business',
+      description: '15-35% margins with $3K-$8K monthly revenue: Recurring contracts with $15K-$50K startup and 6-18 month breakeven',
+      url: '/resources/pest-control/',
+      category: 'First-Time Entrepreneur',
+      type: '📄 Business Plan',
+      time: '30 min read',
+      featured: false,
+      score: '35/45',
+      rookieFriendly: true
+    },
+    // This section will be populated as you add the remaining 18 business plans
   ],
   'seasonal-businesses': [
     {
