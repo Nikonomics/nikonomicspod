@@ -169,7 +169,18 @@ const resources = {
       score: '39/45',
       rookieFriendly: true
     },
-    // This section will be populated as you add the remaining 15 business plans
+    {
+      title: 'Vending Machine Business',
+      description: '20-35% margins with $300-$800 per machine monthly: Automated retail with $3K-$10K startup and 6-18 month breakeven',
+      url: '/resources/vending-machine-business/',
+      category: 'First-Time Entrepreneur',
+      type: '📄 Business Plan',
+      time: '30 min read',
+      featured: false,
+      score: '36/45',
+      rookieFriendly: true
+    },
+    // This section will be populated as you add the remaining 14 business plans
   ],
   'seasonal-businesses': [
     {
