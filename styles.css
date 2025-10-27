@@ -267,24 +267,27 @@ nav {
     gap: 1rem;
 }
 
+/* card visual improvement: enhanced hover elevation and interactivity */
 .resource-card {
     background: white;
-    padding: 1rem;
-    border-radius: 8px;
+    padding: 1.25rem;
+    border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid #E5E7EB;
     position: relative;
     display: flex;
     flex-direction: column;
 }
 
+/* card visual improvement: dramatic hover effect with elevation and scale */
 .resource-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
     border-color: #0098EE;
 }
 
+/* card visual improvement: category badge styling */
 .resource-category {
     display: inline-block;
     background: #0098EE;
@@ -299,18 +302,55 @@ nav {
     align-self: flex-start;
 }
 
-.resource-card h4 {
-    font-size: 0.95rem;
-    margin-bottom: 0.5rem;
+/* card visual improvement: optional "New" badge support */
+.resource-card .badge-new {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: linear-gradient(135deg, #FF9316 0%, #FFC900 100%);
     color: #003452;
-    line-height: 1.3;
+    padding: 0.35rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(255, 147, 22, 0.4);
+    z-index: 10;
 }
 
-.resource-card p {
-    color: #666;
+/* card visual improvement: optional "Featured" badge support */
+.resource-card .badge-featured {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: linear-gradient(135deg, #0098EE 0%, #004C76 100%);
+    color: white;
+    padding: 0.35rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(0, 152, 238, 0.4);
+    z-index: 10;
+}
+
+/* card visual improvement: bold and prominent card titles */
+.resource-card h4 {
+    font-size: 1rem;
     margin-bottom: 0.75rem;
-    line-height: 1.4;
-    font-size: 0.8rem;
+    color: #003452;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+/* card visual improvement: smaller text with improved line-height for readability */
+.resource-card p {
+    color: #64748b;
+    margin-bottom: 0.75rem;
+    line-height: 1.7;
+    font-size: 0.875rem;
     flex-grow: 1;
 }
 
@@ -339,9 +379,18 @@ nav {
     font-weight: 500;
 }
 
+/* card visual improvement: enhanced CTA button with hover elevation */
 .resource-card .btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.8rem;
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* card visual improvement: CTA button hover with lift effect */
+.resource-card .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 152, 238, 0.3);
 }
 
 /* Newsletter Section */

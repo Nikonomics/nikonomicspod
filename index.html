@@ -468,7 +468,9 @@
                         <a href="resources/bounce-house-event-rentals/index.html" class="btn" target="_blank">View Plan</a>
                     </div>
                     <!-- Pool Cleaning Business -->
+                    <!-- card visual improvement: Added "New" badge to demonstrate new content -->
                     <div class="resource-card">
+                        <div class="badge-new">✨ New</div>
                         <div class="resource-category">First-Time Entrepreneur</div>
                         <div class="score-badge" style="background: #3498db; color: white; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; display: inline-block; margin-bottom: 0.5rem;">★ 39/45 SCORE</div>
                         <h4>Pool Cleaning Business</h4>
@@ -492,7 +494,9 @@
                         <a href="resources/hood-cleaning-business/index.html" class="btn" target="_blank">View Plan</a>
                     </div>
                     <!-- Landscaping / Lawn Care Business -->
+                    <!-- card visual improvement: Added "New" badge to demonstrate new content -->
                     <div class="resource-card">
+                        <div class="badge-new">✨ New</div>
                         <div class="resource-category">First-Time Entrepreneur</div>
                         <div class="score-badge" style="background: #27ae60; color: white; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; display: inline-block; margin-bottom: 0.5rem;">★ 38/45 SCORE</div>
                         <h4>Landscaping / Lawn Care Business</h4>
@@ -660,5 +664,48 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- card visual improvement: Score badge enhancement with emoji indicators -->
+    <script>
+        // card visual improvement: Process all score badges to add emoji and text labels
+        document.addEventListener('DOMContentLoaded', function() {
+            const scoreBadges = document.querySelectorAll('.score-badge');
+
+            scoreBadges.forEach(badge => {
+                const text = badge.textContent;
+                const scoreMatch = text.match(/(\d+)\/(\d+)/);
+
+                if (scoreMatch) {
+                    const score = parseInt(scoreMatch[1]);
+                    const maxScore = parseInt(scoreMatch[2]);
+                    let emoji = '';
+                    let label = '';
+                    let bgColor = '';
+
+                    // card visual improvement: Determine difficulty level based on score
+                    if (score >= 35) {
+                        emoji = '🟢';
+                        label = 'Easy';
+                        bgColor = '#10b981'; // green
+                    } else if (score >= 30) {
+                        emoji = '🟠';
+                        label = 'Moderate';
+                        bgColor = '#f59e0b'; // orange
+                    } else {
+                        emoji = '🔴';
+                        label = 'Challenging';
+                        bgColor = '#ef4444'; // red
+                    }
+
+                    // card visual improvement: Update badge with emoji and label
+                    badge.innerHTML = `${emoji} ${score}/${maxScore} <span style="font-weight: 600;">${label}</span>`;
+                    badge.style.background = bgColor;
+                    badge.style.display = 'inline-flex';
+                    badge.style.alignItems = 'center';
+                    badge.style.gap = '0.5rem';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
