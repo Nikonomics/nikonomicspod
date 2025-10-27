@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Kitchen Hood Cleaning Business Plan | Nikonomics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+        
+        .header .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            margin-bottom: 1.5rem;
+        }
+        
+        .score-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-top: 1rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 3rem;
+            background: white;
+        }
+        
+        .sidebar {
+            position: sticky;
+            top: 2rem;
+            height: fit-content;
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        
+        .sidebar h3 {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .sidebar ul {
+            list-style: none;
+        }
+        
+        .sidebar ul li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .sidebar ul li a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        
+        .sidebar ul li a:hover {
+            color: #34495e;
+        }
+        
+        .content {
+            padding-bottom: 3rem;
+        }
+        
+        .content section {
+            margin-bottom: 3rem;
+        }
+        
+        .content h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #2c3e50;
+        }
+        
+        .content h3 {
+            font-size: 1.5rem;
+            color: #34495e;
+            margin: 2rem 0 1rem 0;
+        }
+        
+        .content p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+        
+        .content ul, .content ol {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+        
+        .content li {
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .metric-card {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        
+        .metric-card h4 {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+        
+        .metric-card .value {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .highlight-box {
+            background: #f8f9fa;
+            border-left: 4px solid #2c3e50;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+        
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .pros, .cons {
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        
+        .pros {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+        }
+        
+        .cons {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+        
+        table th, table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        table th {
+            background: #2c3e50;
+            color: white;
+            font-weight: 600;
+        }
+        
+        table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .cta-box {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .cta-box h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-box p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+            
+            .sidebar {
+                position: static;
+                margin-bottom: 2rem;
+            }
+            
+            .header h1 {
+                font-size: 1.75rem;
+            }
+            
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Commercial Kitchen Hood Cleaning Business</h1>
+        <p class="subtitle">40-60% margins with $10K-$30K monthly revenue: Compliance-driven B2B service with $20K-$50K startup and 6-12 month breakeven</p>
+        <div class="score-badge">★ 31/45 SCORE - Solid but Demanding</div>
+    </div>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Contents</h3>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#metrics">Key Metrics</a></li>
+                <li><a href="#model">Business Model</a></li>
+                <li><a href="#operations">Operations</a></li>
+                <li><a href="#financials">Financials</a></li>
+                <li><a href="#marketing">Customer Acquisition</a></li>
+                <li><a href="#risks">Risks & Challenges</a></li>
+                <li><a href="#ai">AI & Automation</a></li>
+                <li><a href="#founder-fit">Founder Fit</a></li>
+                <li><a href="#scorecard">Nik's Scorecard</a></li>
+                <li><a href="#verdict">Final Verdict</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <section id="overview">
+                <h2>Business Overview</h2>
+                <p>Commercial kitchen hood cleaning involves the deep cleaning and maintenance of exhaust systems in restaurants, hotels, cafeterias, and other commercial cooking facilities. This B2B service removes grease, debris, and fire hazards from hood filters, ducts, exhaust fans, and related ventilation equipment.</p>
+                
+                <p><strong>The value proposition is crystal clear:</strong> This isn't optional maintenance—fire codes and insurance policies mandate regular hood cleaning. Restaurants that skip cleanings risk failed inspections, insurance claims being denied after fires, and even closure. You're selling compliance, fire safety, and peace of mind.</p>
+
+                <h3>Who Are Your Customers?</h3>
+                <ul>
+                    <li><strong>Independent and chain restaurants</strong> - From corner diners to QSR franchises</li>
+                    <li><strong>Hotels, hospitals, and schools</strong> - Large institutional kitchens with strict regulations</li>
+                    <li><strong>Corporate cafeterias and food service operators</strong> - Contract food service companies managing multiple sites</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <strong>Real-World Reality:</strong> Hood cleaning typically happens overnight when kitchens are closed. You'll be working 8pm-4am shifts, climbing ladders, pressure washing ducts, and scraping thick grease. It's dirty, physically demanding work—but that's exactly why fewer competitors enter the market and clients pay premium prices for reliable crews.
+                </div>
+            </section>
+
+            <section id="metrics">
+                <h2>Key Business Metrics</h2>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h4>Startup Cost</h4>
+                        <div class="value">$20K-$50K</div>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Net Margin</h4>
+                        <div class="value">40-60%</div>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Solo Revenue</h4>
+                        <div class="value">$10K-$30K/mo</div>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Time to Breakeven</h4>
+                        <div class="value">6-12 months</div>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Annual Retention</h4>
+                        <div class="value">80-90%</div>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Scaled Revenue</h4>
+                        <div class="value">$50K-$150K/mo</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="model">
+                <h2>Business Model Deep Dive</h2>
+                
+                <h3>Revenue Model</h3>
+                <p><strong>Recurring quarterly or bi-annual service contracts</strong> are the foundation of this business. Fire codes typically require cleaning every 1-6 months depending on cooking volume (high-volume operations = monthly, low-volume = quarterly or semi-annually).</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Service Type</th>
+                            <th>Frequency</th>
+                            <th>Typical Price</th>
+                            <th>Annual Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Small Restaurant (Single Hood)</td>
+                            <td>Quarterly</td>
+                            <td>$500-$700</td>
+                            <td>$2,000-$2,800</td>
+                        </tr>
+                        <tr>
+                            <td>Medium Restaurant (2-3 Hoods)</td>
+                            <td>Bi-Annual</td>
+                            <td>$800-$1,200</td>
+                            <td>$1,600-$2,400</td>
+                        </tr>
+                        <tr>
+                            <td>Large Kitchen (4+ Hoods)</td>
+                            <td>Monthly/Quarterly</td>
+                            <td>$1,000-$1,500</td>
+                            <td>$4,000-$18,000</td>
+                        </tr>
+                        <tr>
+                            <td>Institutional (Hospital/School)</td>
+                            <td>Monthly</td>
+                            <td>$1,200-$2,000</td>
+                            <td>$14,400-$24,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Why Customer Retention Is High (80-90%)</h3>
+                <ul>
+                    <li><strong>Compliance requirement:</strong> Fire marshals check cleaning logs during inspections</li>
+                    <li><strong>Insurance mandate:</strong> Most policies require documented cleaning schedules</li>
+                    <li><strong>Switching cost:</strong> Restaurants don't want to onboard new crews who work overnight unsupervised</li>
+                    <li><strong>Relationship-driven:</strong> Once trust is established, restaurant owners rarely switch providers</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <strong>Path to $10K/Month:</strong> You need 8-15 recurring accounts at $800-$1,200 per cleaning (quarterly or bi-annual schedule). That's 2-4 jobs per week with a small crew. Many operators hit this within 6-12 months by focusing on independent restaurants in a tight geographic area.
+                </div>
+
+                <h3>Seasonality</h3>
+                <p><strong>Low seasonality—demand is year-round and compliance-driven.</strong> Unlike seasonal businesses, hood cleaning doesn't fluctuate with weather or holidays. Restaurants operate 12 months a year, and fire codes don't take breaks. Some operators even prefer slow restaurant months (January-February) because kitchens are easier to access.</p>
+            </section>
+
+            <section id="operations">
+                <h2>Day-to-Day Operations</h2>
+
+                <h3>Can You Run This Solo?</h3>
+                <p><strong>Yes, but with limitations.</strong> Most hood cleaning requires 2-3 person crews for safety and efficiency. One person works inside the kitchen, another on the roof accessing exhaust fans, and a third manages equipment and documentation. Solo operators typically partner with a helper or subcontract overflow work.</p>
+
+                <h3>Typical Work Schedule</h3>
+                <ul>
+                    <li><strong>Night shifts (8pm-4am):</strong> Kitchens close, giving you access to hoods and exhaust systems</li>
+                    <li><strong>2-4 jobs per week:</strong> Each job takes 3-6 hours depending on kitchen size and grease buildup</li>
+                    <li><strong>30-50 hours per week total:</strong> Includes cleaning, travel, equipment maintenance, admin work</li>
+                </ul>
+
+                <h3>Fulfillment Tasks</h3>
+                <ol>
+                    <li><strong>Pre-Job Setup:</strong> Cover kitchen equipment with tarps, set up pressure washer and chemical tanks</li>
+                    <li><strong>Filter Removal & Degreasing:</strong> Remove hood filters, soak in chemical degreaser, scrub clean</li>
+                    <li><strong>Duct & Plenum Cleaning:</strong> Access ducts via hood interior and roof, scrape/pressure wash grease buildup</li>
+                    <li><strong>Exhaust Fan Maintenance:</strong> Clean fan blades, hinges, and rooftop housing</li>
+                    <li><strong>Documentation:</strong> Take before/after photos, complete compliance stickers, issue certificates</li>
+                    <li><strong>Post-Job Cleanup:</strong> Remove tarps, dispose of grease waste properly, restore kitchen to working order</li>
+                </ol>
+
+                <div class="highlight-box">
+                    <strong>Real Example:</strong> Many hood cleaning routes are bought and sold privately, often valued at 2-3x annual earnings. A route generating $120K/year in revenue might sell for $240K-$360K because the recurring contracts and established relationships transfer to the new owner.
+                </div>
+
+                <h3>Labor Requirements</h3>
+                <p><strong>2-3 person crews are standard.</strong> As you scale, you'll hire W-2 employees or 1099 contractors. Expect to pay $15-$25/hour for trained crew members. Training takes 2-4 weeks to teach proper safety protocols, chemical handling, and documentation requirements.</p>
+            </section>
+
+            <section id="financials">
+                <h2>Financial Breakdown</h2>
+
+                <h3>Startup Costs: $20K-$50K</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Cost Range</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Work Truck or Van</td>
+                            <td>$10,000-$30,000</td>
+                            <td>Used cargo van or pickup truck with ladder rack</td>
+                        </tr>
+                        <tr>
+                            <td>Pressure Washer (Commercial)</td>
+                            <td>$1,500-$3,000</td>
+                            <td>Hot water unit with 3,000+ PSI</td>
+                        </tr>
+                        <tr>
+                            <td>Ladders & Safety Equipment</td>
+                            <td>$1,000-$2,000</td>
+                            <td>Extension ladder, harnesses, gloves, respirators</td>
+                        </tr>
+                        <tr>
+                            <td>Chemicals & Degreasers</td>
+                            <td>$500-$1,000</td>
+                            <td>Initial supply of industrial degreasers and cleaners</td>
+                        </tr>
+                        <tr>
+                            <td>Tools & Supplies</td>
+                            <td>$1,000-$2,000</td>
+                            <td>Scrapers, brushes, tarps, buckets, hoses</td>
+                        </tr>
+                        <tr>
+                            <td>Insurance (General Liability + Workers Comp)</td>
+                            <td>$3,000-$6,000</td>
+                            <td>Annual premium, critical for B2B contracts</td>
+                        </tr>
+                        <tr>
+                            <td>Certifications & Licenses</td>
+                            <td>$500-$1,500</td>
+                            <td>Fire safety certification (e.g., IKECA), business license</td>
+                        </tr>
+                        <tr>
+                            <td>Marketing & Website</td>
+                            <td>$1,000-$3,000</td>
+                            <td>Basic website, Google Ads, printed materials</td>
+                        </tr>
+                        <tr>
+                            <td>Working Capital</td>
+                            <td>$2,000-$5,000</td>
+                            <td>Cover first 2-3 months of operating expenses</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Monthly Operating Expenses</h3>
+                <ul>
+                    <li><strong>Vehicle (gas, maintenance, insurance):</strong> $800-$1,200</li>
+                    <li><strong>Chemicals and supplies:</strong> $300-$600</li>
+                    <li><strong>Insurance (monthly portion):</strong> $250-$500</li>
+                    <li><strong>Marketing and lead generation:</strong> $200-$800</li>
+                    <li><strong>Software (CRM, scheduling, invoicing):</strong> $100-$300</li>
+                    <li><strong>Labor (if you hire crew members):</strong> $0-$6,000 depending on scale</li>
+                </ul>
+                <p><strong>Total monthly overhead (solo):</strong> $1,650-$3,400</p>
+
+                <h3>Revenue Example: Solo Operator with Small Crew</h3>
+                <ul>
+                    <li><strong>Jobs per week:</strong> 3 jobs</li>
+                    <li><strong>Average price per job:</strong> $900</li>
+                    <li><strong>Weekly revenue:</strong> $2,700</li>
+                    <li><strong>Monthly revenue:</strong> $10,800</li>
+                    <li><strong>Annual revenue:</strong> $129,600</li>
+                </ul>
+
+                <p><strong>Profit calculation:</strong></p>
+                <ul>
+                    <li><strong>Gross revenue:</strong> $10,800/month</li>
+                    <li><strong>COGS (chemicals, fuel, supplies):</strong> $1,500 (~14%)</li>
+                    <li><strong>Labor (one helper at $20/hr, 12 hrs/week):</strong> $1,040 (~10%)</li>
+                    <li><strong>Fixed overhead:</strong> $2,500 (~23%)</li>
+                    <li><strong>Net profit:</strong> $5,760/month (~53% margin)</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <strong>Breakeven Timeline:</strong> With $35K in startup costs and $5,760/month net profit, you break even in 6-7 months. Most operators reach profitability faster by focusing on high-volume accounts (restaurants that require monthly cleanings) and building route density to minimize drive time between jobs.
+                </div>
+
+                <h3>Scaled Operations: Multiple Crews</h3>
+                <p>Once you have 20-30 accounts, you can hire additional crews and scale to $50K-$150K/month. Each crew typically generates $15K-$25K in monthly revenue. Your role shifts from technician to operations manager—scheduling jobs, managing crews, handling compliance documentation, and landing new accounts.</p>
+            </section>
+
+            <section id="marketing">
+                <h2>Customer Acquisition Strategy</h2>
+
+                <h3>Primary Marketing Channels</h3>
+                <ul>
+                    <li><strong>Cold calling restaurants (40-50% of new clients):</strong> Call local restaurants during off-hours (2-4pm), ask for the owner or general manager, offer free inspection or discounted first cleaning</li>
+                    <li><strong>Networking with fire inspectors and insurance brokers (25-35%):</strong> Build relationships with local fire marshals who can refer restaurants that failed inspections; partner with insurance agents who require clients to maintain cleaning schedules</li>
+                    <li><strong>Google Local Services Ads (20-30%):</strong> Restaurants searching "hood cleaning near me" or "restaurant exhaust cleaning" have high purchase intent</li>
+                    <li><strong>Referrals from existing clients (15-25%):</strong> Restaurant owners and managers talk; one happy client can refer you to 3-5 others in the area</li>
+                </ul>
+
+                <h3>Customer Acquisition Cost (CAC)</h3>
+                <p><strong>$200-$500 per new client.</strong> This includes sales time, marketing spend, free inspections, and initial discounts. B2B sales cycles are longer (1-3 weeks) because you're often bidding against competitors and waiting for approval from owners or corporate offices.</p>
+
+                <h3>Lifetime Value (LTV) and LTV:CAC Ratio</h3>
+                <ul>
+                    <li><strong>Average contract value:</strong> $3,000-$6,000 annually</li>
+                    <li><strong>Average retention:</strong> 3-5 years (80-90% annual retention)</li>
+                    <li><strong>Total LTV:</strong> $9,000-$30,000</li>
+                    <li><strong>LTV:CAC ratio:</strong> 8:1 to 12:1 (excellent unit economics)</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <strong>Most Effective Strategy:</strong> Start with cold calling and free inspections to land your first 10-15 accounts. Once you have proof of quality work and compliance documentation, ask for referrals and build relationships with fire inspectors. This creates a flywheel where inspectors refer non-compliant restaurants directly to you.
+                </div>
+
+                <h3>Time to Build Pipeline</h3>
+                <p><strong>6-12 months to secure a stable base of recurring accounts.</strong> The first 90 days are the hardest—you're cold calling, offering discounts, and proving reliability. After 6 months with consistent quality, referrals kick in and your pipeline becomes self-sustaining.</p>
+
+                <h3>Key Tools and Platforms</h3>
+                <ul>
+                    <li><strong>Housecall Pro or ServiceTitan:</strong> Scheduling, job tracking, customer communication</li>
+                    <li><strong>QuickBooks:</strong> Invoicing and billing (critical for commercial clients who need NET30 terms)</li>
+                    <li><strong>HubSpot or Zoho CRM:</strong> Track sales pipeline, follow-up reminders, contract renewal dates</li>
+                    <li><strong>Google Local Services Ads:</strong> Pay-per-lead model for high-intent restaurant searches</li>
+                </ul>
+            </section>
+
+            <section id="risks">
+                <h2>Risks and Red Flags</h2>
+
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h3>✓ Strengths</h3>
+                        <ul>
+                            <li>Compliance-mandated demand (recession-resistant)</li>
+                            <li>High customer retention (80-90% annually)</li>
+                            <li>Recurring revenue model locks in predictable cash flow</li>
+                            <li>Strong margins (40-60%) on labor-based service</li>
+                            <li>Routes can be sold for 2-3x annual earnings</li>
+                            <li>Low competition (dirty work deters casual entrants)</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h3>✗ Challenges</h3>
+                        <ul>
+                            <li>Night work (8pm-4am) required when kitchens are closed</li>
+                            <li>Physically demanding and dirty work environment</li>
+                            <li>Crew management adds complexity as you scale</li>
+                            <li>Strict safety and regulatory compliance (OSHA, fire codes)</li>
+                            <li>Revenue concentration risk with large institutional clients</li>
+                            <li>Requires liability insurance and certifications</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Regulatory and Compliance Requirements</h3>
+                <ul>
+                    <li><strong>Fire safety certification:</strong> Many states require IKECA (International Kitchen Exhaust Cleaning Association) or equivalent certification</li>
+                    <li><strong>Liability insurance:</strong> $1M-$2M general liability required for most commercial contracts</li>
+                    <li><strong>OSHA compliance:</strong> Proper training for chemical handling, confined spaces, fall protection</li>
+                    <li><strong>Waste disposal:</strong> Grease waste must be disposed of properly per local regulations</li>
+                </ul>
+
+                <h3>Revenue Concentration Risk</h3>
+                <p><strong>Medium risk.</strong> If you land a large institutional client (hospital, school district, hotel chain), they might represent 20-40% of your revenue. Losing that account would be painful. Diversify by mixing large anchor clients with 15-20 smaller independent restaurants.</p>
+
+                <h3>Defensibility</h3>
+                <p><strong>Moderate.</strong> The service itself is replicable—anyone can buy equipment and start cleaning hoods. Your defensibility comes from relationships, reliability, and documentation. Restaurants don't switch providers unless they're unhappy, so focus on quality work and building trust with owners and managers.</p>
+            </section>
+
+            <section id="ai">
+                <h2>AI and Automation Opportunities</h2>
+
+                <h3>What Can Be Automated?</h3>
+                <ul>
+                    <li><strong>Scheduling and routing optimization:</strong> AI-powered tools (e.g., ServiceTitan, Jobber) automatically schedule jobs, optimize routes, and send reminders to clients</li>
+                    <li><strong>Invoicing and payment collection:</strong> Automated invoicing, NET30 payment reminders, online payment processing</li>
+                    <li><strong>Compliance reporting and documentation:</strong> Auto-generate compliance certificates, upload before/after photos, track cleaning schedules for fire inspections</li>
+                    <li><strong>CRM follow-ups and sales outreach:</strong> AI-powered CRM tools send personalized follow-up emails, track contract renewal dates, and automate cold outreach campaigns</li>
+                </ul>
+
+                <h3>High-Leverage AI Use Cases</h3>
+                <ul>
+                    <li><strong>Estimate generation:</strong> Use photos and kitchen specs to auto-generate pricing proposals (speeds up sales cycle)</li>
+                    <li><strong>Personalized sales outreach:</strong> AI drafts cold emails and LinkedIn messages tailored to each restaurant type (fine dining vs. QSR vs. institutional)</li>
+                    <li><strong>Compliance tracking dashboards:</strong> Real-time dashboard showing which clients are due for cleaning, upcoming fire inspections, and documentation status</li>
+                </ul>
+
+                <h3>What Can't Be Automated?</h3>
+                <ul>
+                    <li><strong>Physical cleaning work:</strong> Scraping grease, pressure washing ducts, climbing ladders—this is hands-on labor</li>
+                    <li><strong>On-site inspections:</strong> You need to physically assess grease buildup and system condition</li>
+                    <li><strong>Relationship management:</strong> Building trust with restaurant owners and managers requires face-to-face interaction</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <strong>AI Leverage Score: 3/5.</strong> Back-office tasks (scheduling, invoicing, compliance tracking, CRM) are highly automatable, but the core service delivery is labor-intensive. AI won't reduce your crew size, but it will help you manage more accounts with less admin overhead.
+                </div>
+            </section>
+
+            <section id="founder-fit">
+                <h2>Founder Fit: Is This Business Right for You?</h2>
+
+                <h3>Emotional Investment Needed</h3>
+                <p><strong>Low.</strong> This is compliance-driven demand—restaurants need hood cleaning whether you're passionate about it or not. You don't need to love grease and exhaust systems; you just need to deliver reliable, documented service. Many successful operators view this as a cash-flow machine rather than a passion project.</p>
+
+                <h3>Trust-Driven or Operations-Driven?</h3>
+                <p><strong>Both.</strong> Restaurants must trust your crews to work unsupervised overnight in their kitchens, often with access to expensive equipment and inventory. Strong documentation and professionalism build that trust. On the operations side, you need efficient scheduling, quality control, and compliance tracking to retain accounts.</p>
+
+                <h3>Can You Succeed Without Passion?</h3>
+                <p><strong>Yes—consistency and reliability matter more than passion.</strong> The best hood cleaning operators are process-driven, detail-oriented, and focused on building long-term B2B relationships. If you can manage crews, follow checklists, and deliver on promises, you'll succeed even without loving the work itself.</p>
+
+                <h3>Best For</h3>
+                <ul>
+                    <li><strong>Operators who want sticky B2B recurring revenue</strong> and don't mind dirty, physically demanding work</li>
+                    <li><strong>Night owls or people willing to work overnight shifts</strong> when kitchens are closed</li>
+                    <li><strong>Detail-oriented founders</strong> who can manage compliance documentation and safety protocols</li>
+                    <li><strong>Entrepreneurs with crew management experience</strong> (construction, landscaping, cleaning services)</li>
+                    <li><strong>Former restaurant workers</strong> who understand kitchen operations and already have relationships with owners/managers</li>
+                </ul>
+
+                <h3>Not a Fit If</h3>
+                <ul>
+                    <li>You want a flexible, daytime schedule (night work is non-negotiable)</li>
+                    <li>You're not comfortable with physically demanding, dirty labor</li>
+                    <li>You prefer direct-to-consumer (this is B2B sales and relationship management)</li>
+                    <li>You want passive income (requires hands-on crew management as you scale)</li>
+                </ul>
+            </section>
+
+            <section id="scorecard">
+                <h2>Nik's 8+1 Scorecard Analysis</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Score</th>
+                            <th>Explanation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Neanderthal-Friendly</strong></td>
+                            <td>3/5</td>
+                            <td>Requires fire safety training, chemical handling knowledge, and overnight work. Not as simple as lawn mowing, but teachable with proper training.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tastes Like Chicken</strong></td>
+                            <td>4/5</td>
+                            <td>Clear value proposition: compliance + fire safety. Restaurants understand the need immediately—it's mandated by law and insurance.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Startup Cost & Payback</strong></td>
+                            <td>3/5</td>
+                            <td>$20K-$50K startup is moderate. 6-12 month breakeven is reasonable but requires consistent sales effort upfront.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Recurring Revenue</strong></td>
+                            <td>5/5</td>
+                            <td>Quarterly/bi-annual contracts with 80-90% retention. Compliance-driven demand ensures predictable, sticky revenue.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Operator-Friendly</strong></td>
+                            <td>3/5</td>
+                            <td>Night shifts, crew management, and physical labor add complexity. Scalable, but not passive—requires active operations management.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Low Downside Risk</strong></td>
+                            <td>4/5</td>
+                            <td>Mandated by law, recession-resistant demand, and resalable routes (2-3x earnings). Main risks are regulatory compliance and crew management.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Founder Flexibility</strong></td>
+                            <td>3/5</td>
+                            <td>Night work limits flexibility. As you scale and hire crews, you gain more freedom, but early-stage requires hands-on involvement.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Customer Acquisition</strong></td>
+                            <td>3/5</td>
+                            <td>B2B sales required (cold calling, networking). Referral-driven once established, but first 10-15 clients take effort to land.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AI Leverage</strong></td>
+                            <td>3/5</td>
+                            <td>Back-office automation (scheduling, invoicing, compliance tracking, CRM) is strong. Core service delivery remains labor-intensive.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box">
+                    <h3>Total Score: 31/45 – Solid but Demanding</h3>
+                    <p>This is a reliable, recession-resistant business with strong recurring revenue and excellent retention. The trade-off? Night work, physical labor, and crew management. Not for everyone—but those who can handle the operational demands build highly profitable, salable businesses.</p>
+                </div>
+            </section>
+
+            <section id="verdict">
+                <h2>Nik's Final Verdict</h2>
+                
+                <p><strong>Commercial kitchen hood cleaning isn't glamorous, but it's compliance-driven and sticky.</strong> The recurring revenue model with long-term B2B contracts makes this a reliable cash-flow machine. It's dirty, labor-intensive work that often happens overnight—not for everyone, but the clients can be highly valuable and loyal.</p>
+
+                <h3>Bottom Line</h3>
+                <p><strong>If you don't mind grease and night work, this is a compliance-mandated, recession-resistant business with high-ticket contracts and strong long-term upside.</strong> Routes with 20-30 accounts can generate $150K-$300K annually and sell for 2-3x earnings when you're ready to exit.</p>
+
+                <h3>Who Should Start This Business?</h3>
+                <ul>
+                    <li>Operators who want predictable B2B recurring revenue</li>
+                    <li>People comfortable with physically demanding, overnight work</li>
+                    <li>Detail-oriented founders who can manage compliance and crew operations</li>
+                    <li>Former restaurant industry workers with existing relationships</li>
+                </ul>
+
+                <h3>Who Should Skip This?</h3>
+                <ul>
+                    <li>Anyone seeking flexible daytime hours or passive income</li>
+                    <li>Founders uncomfortable with dirty, hands-on labor</li>
+                    <li>People who prefer consumer-facing businesses over B2B sales</li>
+                </ul>
+
+                <div class="cta-box">
+                    <h3>Ready to Explore More Business Ideas?</h3>
+                    <p>This is business #20 in our collection of 30 businesses for first-time entrepreneurs. Each plan includes detailed financials, operations guides, and honest assessments.</p>
+                    <p><a href="../../index.html" style="color: white; text-decoration: underline;">← Back to All Business Plans</a></p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

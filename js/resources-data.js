@@ -213,7 +213,18 @@ const resources = {
       score: '39/45',
       rookieFriendly: true
     },
-    // This section will be populated as you add the remaining 11 business plans
+    {
+      title: 'Commercial Kitchen Hood Cleaning',
+      description: '40-60% margins with $10K-$30K monthly revenue: Compliance-driven B2B service with $20K-$50K startup and 6-12 month breakeven',
+      url: '/resources/hood-cleaning-business/',
+      category: 'First-Time Entrepreneur',
+      type: '📄 Business Plan',
+      time: '30 min read',
+      featured: false,
+      score: '31/45',
+      rookieFriendly: true
+    },
+    // This section will be populated as you add the remaining 10 business plans
   ],
   'seasonal-businesses': [
     {
