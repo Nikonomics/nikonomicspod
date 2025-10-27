@@ -114,7 +114,18 @@ const resources = {
       score: '36/45',
       rookieFriendly: true
     },
-    // This section will be populated as you add the remaining 20 business plans
+    {
+      title: 'Car Wash Business',
+      description: '15-40% margins with $8K-$75K monthly revenue: Transaction-based with $50K-$500K startup and 6-18 month breakeven',
+      url: '/resources/car-wash/',
+      category: 'First-Time Entrepreneur',
+      type: '📄 Business Plan',
+      time: '30 min read',
+      featured: false,
+      score: '33/45',
+      rookieFriendly: true
+    },
+    // This section will be populated as you add the remaining 19 business plans
   ],
   'seasonal-businesses': [
     {
