@@ -235,7 +235,18 @@ const resources = {
       score: '38/45',
       rookieFriendly: true
     },
-    // This section will be populated as you add the remaining 9 business plans
+    {
+      title: 'Non-Medical Home Care Business',
+      description: '15-25% margins with $15K-$50K monthly revenue: Staffing-heavy model with $50K-$150K startup and 6-18 month breakeven',
+      url: '/resources/non-medical-home-care-business/',
+      category: 'First-Time Entrepreneur',
+      type: '📄 Business Plan',
+      time: '30 min read',
+      featured: false,
+      score: '22/45',
+      rookieFriendly: false
+    },
+    // This section will be populated as you add the remaining 8 business plans
   ],
   'seasonal-businesses': [
     {
