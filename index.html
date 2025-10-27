@@ -104,6 +104,137 @@
             </div>
         </section>
 
+        <!-- sticky nav: Navigation bar that sticks on scroll -->
+        <nav id="sticky-nav" style="position: sticky; top: 0; z-index: 50; background: white; border-bottom: 1px solid #e2e8f0; transition: box-shadow 0.3s;">
+            <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+                <!-- sticky nav: Desktop navigation - horizontal list -->
+                <ul style="display: flex; gap: 2rem; list-style: none; margin: 0; padding: 1rem 0; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none;">
+                    <!-- sticky nav: Hide scrollbar on webkit browsers -->
+                    <style>
+                        #sticky-nav ul::-webkit-scrollbar {
+                            display: none;
+                        }
+                        /* sticky nav: Active link styling */
+                        .nav-link.active {
+                            color: #0098EE !important;
+                            border-bottom-color: #0098EE !important;
+                        }
+                        /* sticky nav: Add shadow when scrolled */
+                        #sticky-nav.scrolled {
+                            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                        }
+                        /* sticky nav: Mobile scrollable chips styling */
+                        @media (max-width: 768px) {
+                            #sticky-nav ul {
+                                gap: 0.75rem;
+                                padding: 0.75rem 0;
+                            }
+                            #sticky-nav .nav-link {
+                                white-space: nowrap;
+                                background: #f8f9fa;
+                                padding: 0.5rem 1rem !important;
+                                border-radius: 20px;
+                                border-bottom: none !important;
+                                font-size: 0.875rem !important;
+                            }
+                            #sticky-nav .nav-link.active {
+                                background: #0098EE;
+                                color: white !important;
+                            }
+                        }
+                    </style>
+                    <!-- sticky nav: Navigation links with smooth scroll -->
+                    <li style="flex-shrink: 0;">
+                        <a href="#first-time-entrepreneurs" class="nav-link" style="display: block; padding: 0.5rem 0; color: #4a5568; text-decoration: none; font-weight: 600; font-size: 0.95rem; border-bottom: 2px solid transparent; transition: all 0.2s; font-family: 'Inter', sans-serif;">Business Plans</a>
+                    </li>
+                    <li style="flex-shrink: 0;">
+                        <a href="#seasonal-businesses" class="nav-link" style="display: block; padding: 0.5rem 0; color: #4a5568; text-decoration: none; font-weight: 600; font-size: 0.95rem; border-bottom: 2px solid transparent; transition: all 0.2s; font-family: 'Inter', sans-serif;">Seasonal Businesses</a>
+                    </li>
+                    <li style="flex-shrink: 0;">
+                        <a href="episodes.html" class="nav-link" style="display: block; padding: 0.5rem 0; color: #4a5568; text-decoration: none; font-weight: 600; font-size: 0.95rem; border-bottom: 2px solid transparent; transition: all 0.2s; font-family: 'Inter', sans-serif;">Podcast Episodes</a>
+                    </li>
+                    <li style="flex-shrink: 0;">
+                        <a href="resources/off-market-playbook/index.html" class="nav-link" style="display: block; padding: 0.5rem 0; color: #4a5568; text-decoration: none; font-weight: 600; font-size: 0.95rem; border-bottom: 2px solid transparent; transition: all 0.2s; font-family: 'Inter', sans-serif;">Frameworks & Playbooks</a>
+                    </li>
+                    <li style="flex-shrink: 0;">
+                        <a href="#calculators" class="nav-link" style="display: block; padding: 0.5rem 0; color: #4a5568; text-decoration: none; font-weight: 600; font-size: 0.95rem; border-bottom: 2px solid transparent; transition: all 0.2s; font-family: 'Inter', sans-serif;">Tools & Calculators</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- sticky nav: JavaScript for scroll behavior and active section highlighting -->
+        <script>
+            // sticky nav: Add shadow on scroll
+            const stickyNav = document.getElementById('sticky-nav');
+            let lastScrollTop = 0;
+
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                // sticky nav: Add/remove scrolled class for shadow effect
+                if (scrollTop > 0) {
+                    stickyNav.classList.add('scrolled');
+                } else {
+                    stickyNav.classList.remove('scrolled');
+                }
+
+                lastScrollTop = scrollTop;
+            });
+
+            // sticky nav: Smooth scroll to anchors
+            document.querySelectorAll('.nav-link[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        // sticky nav: Offset for sticky nav height
+                        const navHeight = stickyNav.offsetHeight;
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // sticky nav: Highlight active section based on scroll position
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+
+            function highlightActiveSection() {
+                const scrollPos = window.pageYOffset + stickyNav.offsetHeight + 100;
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute('id');
+
+                    if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                        // sticky nav: Remove active class from all links
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                        });
+
+                        // sticky nav: Add active class to current section link
+                        const activeLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+                        if (activeLink) {
+                            activeLink.classList.add('active');
+                        }
+                    }
+                });
+            }
+
+            // sticky nav: Listen for scroll events to update active section
+            window.addEventListener('scroll', highlightActiveSection);
+            // sticky nav: Initial check on page load
+            highlightActiveSection();
+        </script>
+
         <!-- Featured Resources Grid -->
         <!-- global layout improvement: consistent section padding -->
         <section class="featured-resources-grid" style="padding: 4rem 0 5rem;">
