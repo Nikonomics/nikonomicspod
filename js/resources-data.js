@@ -147,7 +147,18 @@ const resources = {
       score: '32/45',
       rookieFriendly: true
     },
-    // This section will be populated as you add the remaining 17 business plans
+    {
+      title: 'Apartment Turnover Services',
+      description: '35-50% margins with $8K-$25K monthly revenue: B2B service with $5K-$15K startup and 3-6 month breakeven',
+      url: '/resources/apartment-turnover-services/',
+      category: 'First-Time Entrepreneur',
+      type: '📄 Business Plan',
+      time: '30 min read',
+      featured: false,
+      score: '37/45',
+      rookieFriendly: true
+    },
+    // This section will be populated as you add the remaining 16 business plans
   ],
   'seasonal-businesses': [
     {
