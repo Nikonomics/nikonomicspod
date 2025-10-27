@@ -158,7 +158,18 @@ const resources = {
       score: '37/45',
       rookieFriendly: true
     },
-    // This section will be populated as you add the remaining 16 business plans
+    {
+      title: 'Gutter Cleaning Business',
+      description: '65-80% margins with $3K-$8K monthly revenue: Seasonal service with $2K-$8K startup and 2-4 month breakeven',
+      url: '/resources/gutter-cleaning-business/',
+      category: 'First-Time Entrepreneur',
+      type: '📄 Business Plan',
+      time: '30 min read',
+      featured: false,
+      score: '39/45',
+      rookieFriendly: true
+    },
+    // This section will be populated as you add the remaining 15 business plans
   ],
   'seasonal-businesses': [
     {
