@@ -224,7 +224,18 @@ const resources = {
       score: '31/45',
       rookieFriendly: true
     },
-    // This section will be populated as you add the remaining 10 business plans
+    {
+      title: 'Landscaping / Lawn Care Business',
+      description: '15-35% margins with $8K-$15K monthly revenue: Recurring revenue model with $15K-$50K startup and 6-18 month breakeven',
+      url: '/resources/landscaping-lawn-care-business/',
+      category: 'First-Time Entrepreneur',
+      type: '📄 Business Plan',
+      time: '30 min read',
+      featured: false,
+      score: '38/45',
+      rookieFriendly: true
+    },
+    // This section will be populated as you add the remaining 9 business plans
   ],
   'seasonal-businesses': [
     {
