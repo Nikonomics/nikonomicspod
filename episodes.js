@@ -87,6 +87,7 @@ function openModal(episode) {
     const episodeNum = episode['Episode #'] || 'N/A';
     const title = episode['Episode Title'] || 'Untitled Episode';
     const guest = episode['Guest Name'] || 'Unknown Guest';
+    const summary = episode['Episode Summary'] || '';
     const business = episode['Business Name'] || 'N/A';
     const industry = episode['Industry'] || 'N/A';
     const revenue = episode['Revenue'] || 'N/A';
@@ -130,6 +131,7 @@ function openModal(episode) {
             <span class="modal-episode-number">Episode ${episodeNum}</span>
             <h2 class="modal-title">${title}</h2>
             <p class="modal-guest">${guest}</p>
+            ${summary ? `<p class="modal-summary">${summary}</p>` : ''}
 
             <div class="modal-meta">
                 ${business !== 'N/A' ? `

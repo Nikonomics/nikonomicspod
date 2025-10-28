@@ -262,6 +262,17 @@
     margin-bottom: 1rem;
 }
 
+.modal-summary {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: #F8F9FA;
+    border-left: 3px solid #0098EE;
+    border-radius: 5px;
+}
+
 .modal-meta {
     display: flex;
     gap: 1.5rem;
