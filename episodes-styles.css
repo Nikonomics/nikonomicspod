@@ -107,6 +107,13 @@
     flex-grow: 1;
 }
 
+.episode-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
 .episode-number {
     display: inline-block;
     background: #0098EE;
@@ -115,23 +122,23 @@
     border-radius: 12px;
     font-size: 0.65rem;
     font-weight: 600;
-    margin-bottom: 0.45rem;
-    align-self: flex-start;
-}
-
-.episode-title {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: #003452;
-    margin-bottom: 0.3rem;
-    line-height: 1.3;
+    flex-shrink: 0;
 }
 
 .episode-guest {
     font-size: 0.75rem;
     color: #0098EE;
     font-weight: 500;
-    margin-bottom: 0.45rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.episode-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #003452;
+    line-height: 1.3;
 }
 
 .episode-summary {

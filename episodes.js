@@ -63,9 +63,11 @@ function createEpisodeCard(episode) {
         <div class="episode-card" data-episode="${episodeNum}">
             <img src="${thumbnail}" alt="${title}" class="episode-thumbnail" onerror="this.src='resources/episodes/thumbnails/default.jpg'">
             <div class="episode-content">
-                <span class="episode-number">Episode ${episodeNum}</span>
+                <div class="episode-header">
+                    <span class="episode-number">Episode ${episodeNum}</span>
+                    <p class="episode-guest">${guest}</p>
+                </div>
                 <h3 class="episode-title">${title}</h3>
-                <p class="episode-guest">${guest}</p>
                 <p class="episode-summary">${summary}</p>
                 <div class="episode-meta">
                     <span class="episode-date">${formatDate(date)}</span>
