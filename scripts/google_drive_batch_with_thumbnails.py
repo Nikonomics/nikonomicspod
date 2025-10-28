@@ -40,17 +40,29 @@ def authenticate_google_drive():
         return None
 
 def get_episode_folders(service, folder_id):
-    """Get all episode folders from Google Drive"""
+    """Get ALL episode folders from Google Drive (with pagination)"""
     print(f"\n📁 Fetching episode folders from Google Drive...")
 
-    query = f"'{folder_id}' in parents and mimeType='application/vnd.google-apps.folder' and trashed=false"
-    results = service.files().list(
-        q=query,
-        fields="files(id, name)",
-        orderBy="name"
-    ).execute()
+    folders = []
+    page_token = None
 
-    folders = results.get('files', [])
+    query = f"'{folder_id}' in parents and mimeType='application/vnd.google-apps.folder' and trashed=false"
+
+    while True:
+        results = service.files().list(
+            q=query,
+            fields="nextPageToken, files(id, name)",
+            orderBy="name",
+            pageSize=1000,  # Max allowed by API
+            pageToken=page_token
+        ).execute()
+
+        folders.extend(results.get('files', []))
+        page_token = results.get('nextPageToken')
+
+        if not page_token:
+            break
+
     print(f"✓ Found {len(folders)} episode folders")
     return folders
 
