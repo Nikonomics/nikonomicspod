@@ -1,15 +1,29 @@
 // Episodes Page JavaScript
 let allEpisodes = [];
 let filteredEpisodes = [];
-let currentTag = 'all';
+let currentIndustry = '';
+let currentSubcategory = '';
+let currentGuest = '';
+let currentDateFrom = '';
+let currentDateTo = '';
+let currentMaxDuration = 150; // minutes
+let currentHasVideo = false;
+let searchEngine = null;
 
-// Load episodes data
+// Load episodes data and initialize search
 async function loadEpisodes() {
     try {
-        const response = await fetch('scripts/episodes_batch.json');
-        allEpisodes = await response.json();
+        // Initialize search engine
+        searchEngine = new EpisodeSearch();
+        await searchEngine.loadIndex('resources/episodes/search-index.json');
+
+        // Get all episodes from search index
+        allEpisodes = searchEngine.episodes;
         filteredEpisodes = allEpisodes;
 
+        console.log(`✓ Loaded ${allEpisodes.length} episodes with search`);
+
+        populateFilters();
         updateResultsCount();
         renderEpisodes();
 
@@ -18,10 +32,84 @@ async function loadEpisodes() {
         document.getElementById('episodes-grid').innerHTML = `
             <div class="no-results">
                 <h3>Error loading episodes</h3>
-                <p>Please make sure episodes_batch.json exists in the scripts folder.</p>
+                <p>Please make sure search index is available.</p>
             </div>
         `;
     }
+}
+
+// Populate industry, subcategory, and guest filters with counts
+function populateFilters() {
+    if (!searchEngine) return;
+
+    const industries = searchEngine.getIndustries();
+    const subcategories = searchEngine.getSubcategories();
+
+    // Count episodes per industry
+    const industryCounts = {};
+    allEpisodes.forEach(ep => {
+        const industry = ep.industry_category || ep['Industry Category'] || '';
+        if (industry && industry !== 'N/A') {
+            // Handle comma-separated industries
+            industry.split(',').forEach(ind => {
+                const trimmed = ind.trim();
+                industryCounts[trimmed] = (industryCounts[trimmed] || 0) + 1;
+            });
+        }
+    });
+
+    // Populate industry dropdown with counts
+    const industrySelect = document.getElementById('industry-filter');
+    industries.forEach(industry => {
+        const count = industryCounts[industry] || 0;
+        const option = document.createElement('option');
+        option.value = industry;
+        option.textContent = `${industry} (${count})`;
+        industrySelect.appendChild(option);
+    });
+
+    // Count episodes per subcategory
+    const subcategoryCounts = {};
+    allEpisodes.forEach(ep => {
+        const subcategory = ep.industry_subcategory || ep['Industry Subcategory'] || '';
+        if (subcategory && subcategory !== 'N/A') {
+            // Handle comma-separated subcategories
+            subcategory.split(',').forEach(sub => {
+                const trimmed = sub.trim();
+                subcategoryCounts[trimmed] = (subcategoryCounts[trimmed] || 0) + 1;
+            });
+        }
+    });
+
+    // Populate subcategory dropdown with counts
+    const subcategorySelect = document.getElementById('subcategory-filter');
+    subcategories.forEach(subcategory => {
+        const count = subcategoryCounts[subcategory] || 0;
+        const option = document.createElement('option');
+        option.value = subcategory;
+        option.textContent = `${subcategory} (${count})`;
+        subcategorySelect.appendChild(option);
+    });
+
+    // Count episodes per guest
+    const guestCounts = {};
+    allEpisodes.forEach(ep => {
+        const guest = ep.guest || ep['Guest Name'];
+        if (guest && guest !== 'N/A' && guest !== 'Unknown Guest') {
+            guestCounts[guest] = (guestCounts[guest] || 0) + 1;
+        }
+    });
+
+    // Populate guest dropdown with counts
+    const guestSelect = document.getElementById('guest-filter');
+    const sortedGuests = Object.keys(guestCounts).sort();
+    sortedGuests.forEach(guest => {
+        const count = guestCounts[guest];
+        const option = document.createElement('option');
+        option.value = guest;
+        option.textContent = `${guest} (${count})`;
+        guestSelect.appendChild(option);
+    });
 }
 
 // Render episode cards
@@ -48,16 +136,16 @@ function renderEpisodes() {
 
 // Create episode card HTML
 function createEpisodeCard(episode) {
-    const episodeNum = episode['Episode #'] || 'N/A';
-    const title = episode['Episode Title'] || 'Untitled Episode';
-    const guest = episode['Guest Name'] || 'Unknown Guest';
-    const summary = episode['Episode Summary'] || 'No summary available';
-    const date = episode['Episode Date'] || '';
+    // Handle both old and new data formats
+    const episodeNum = episode.id || episode['Episode #'] || 'N/A';
+    const title = episode.title || episode['Episode Title'] || 'Untitled Episode';
+    const guest = episode.guest || episode['Guest Name'] || 'Unknown Guest';
+    const summary = episode.summary || episode['Episode Summary'] || 'No summary available';
+    const date = episode.date || episode['Episode Date'] || '';
 
-    // Use default thumbnail (cover.png) if none exists
-    const thumbnail = episode['thumbnail_path']
-        ? episode['thumbnail_path'].replace('../', '')
-        : 'resources/episodes/thumbnails/default.jpg';
+    // Build thumbnail path - use episode number for filename (format: 07.jpg, 100.jpg, etc.)
+    const thumbnailFilename = `${episodeNum}.jpg`;
+    const thumbnail = `resources/episodes/thumbnails/${thumbnailFilename}`;
 
     return `
         <div class="episode-card" data-episode="${episodeNum}">
@@ -83,20 +171,20 @@ function openModal(episode) {
     const modal = document.getElementById('episode-modal');
     const modalBody = document.getElementById('modal-body');
 
-    // Get episode data
-    const episodeNum = episode['Episode #'] || 'N/A';
-    const title = episode['Episode Title'] || 'Untitled Episode';
-    const guest = episode['Guest Name'] || 'Unknown Guest';
-    const summary = episode['Episode Summary'] || '';
-    const business = episode['Business Name'] || 'N/A';
-    const industry = episode['Industry'] || 'N/A';
+    // Get episode data - handle both formats
+    const episodeNum = episode.id || episode['Episode #'] || 'N/A';
+    const title = episode.title || episode['Episode Title'] || 'Untitled Episode';
+    const guest = episode.guest || episode['Guest Name'] || 'Unknown Guest';
+    const summary = episode.summary || episode['Episode Summary'] || '';
+    const business = episode.business_name || episode['Business Name'] || 'N/A';
+    const industry = episode.industry_category || episode['Industry'] || 'N/A';
     const revenue = episode['Revenue'] || 'N/A';
-    const date = episode['Episode Date'] || '';
-    const tags = episode['Tags'] ? episode['Tags'].split(',').map(t => t.trim()) : [];
+    const date = episode.date || episode['Episode Date'] || '';
+    const tags = episode.tags || (episode['Tags'] ? episode['Tags'].split(',').map(t => t.trim()) : []);
     const takeaways = episode['Key Takeaways'] || 'No takeaways available';
-    const youtubeUrl = episode['youtube_url'] || '';
-    const spotifyUrl = episode['spotify_url'] || '';
-    const appleUrl = episode['apple_url'] || '';
+    const youtubeUrl = episode.youtube || episode['youtube_url'] || '';
+    const spotifyUrl = episode.spotify || episode['spotify_url'] || '';
+    const appleUrl = episode.apple || episode['apple_url'] || '';
 
     // Parse takeaways into list - handle multiple formats
     let takeawaysList = [];
@@ -213,55 +301,95 @@ function formatDate(dateString) {
 
 // Search episodes
 function searchEpisodes(query) {
-    const searchTerm = query.toLowerCase();
+    if (!searchEngine) {
+        console.warn('Search engine not initialized');
+        return;
+    }
 
-    filteredEpisodes = allEpisodes.filter(episode => {
-        const searchableText = [
-            episode['Episode Title'],
-            episode['Guest Name'],
-            episode['Business Name'],
-            episode['Topics'],
-            episode['Tags'],
-            episode['Industry'],
-            episode['Episode Summary']
-        ].join(' ').toLowerCase();
+    const searchTerm = query.trim();
 
-        return searchableText.includes(searchTerm);
-    });
+    // Build search options with filters
+    const searchOptions = {
+        limit: 1000
+    };
 
-    // Apply tag filter if active
-    if (currentTag !== 'all') {
+    if (currentIndustry) {
+        searchOptions.industry = currentIndustry;
+    }
+
+    if (currentSubcategory) {
+        searchOptions.subcategory = currentSubcategory;
+    }
+
+    // Use search engine with filters
+    if (searchTerm) {
+        filteredEpisodes = searchEngine.search(searchTerm, searchOptions);
+    } else if (currentIndustry || currentSubcategory) {
+        // Apply filters even without search query
+        filteredEpisodes = searchEngine.search('', searchOptions);
+    } else {
+        // No query or filters - show all
+        filteredEpisodes = allEpisodes;
+    }
+
+    // Apply guest filter
+    if (currentGuest) {
         filteredEpisodes = filteredEpisodes.filter(episode => {
-            const tags = episode['Tags'] ? episode['Tags'].toLowerCase() : '';
-            return tags.includes(currentTag);
+            const guest = episode.guest || episode['Guest Name'] || '';
+            return guest === currentGuest;
+        });
+    }
+
+    // Apply date range filter
+    if (currentDateFrom || currentDateTo) {
+        filteredEpisodes = filteredEpisodes.filter(episode => {
+            const episodeDate = episode.date || episode['Episode Date'];
+            if (!episodeDate) return false;
+
+            const epDate = new Date(episodeDate);
+            if (isNaN(epDate)) return false;
+
+            if (currentDateFrom) {
+                const fromDate = new Date(currentDateFrom);
+                if (epDate < fromDate) return false;
+            }
+
+            if (currentDateTo) {
+                const toDate = new Date(currentDateTo);
+                if (epDate > toDate) return false;
+            }
+
+            return true;
+        });
+    }
+
+    // Apply duration filter (only if not at max)
+    if (currentMaxDuration < 150) {
+        filteredEpisodes = filteredEpisodes.filter(episode => {
+            const duration = episode.duration || episode['Episode Duration'];
+            if (!duration) return true; // Include episodes without duration data
+
+            // Parse duration (format: "XX mins" or "XX minutes")
+            const match = duration.match(/(\d+)/);
+            if (match) {
+                const mins = parseInt(match[1]);
+                return mins <= currentMaxDuration;
+            }
+
+            return true;
+        });
+    }
+
+    // Apply video filter
+    if (currentHasVideo) {
+        filteredEpisodes = filteredEpisodes.filter(episode => {
+            const youtubeUrl = episode.youtube || episode['youtube_url'];
+            return youtubeUrl && youtubeUrl.trim() !== '';
         });
     }
 
     updateResultsCount();
     renderEpisodes();
-}
-
-// Filter by tag
-function filterByTag(tag) {
-    currentTag = tag.toLowerCase();
-
-    if (tag === 'all') {
-        filteredEpisodes = allEpisodes;
-    } else {
-        filteredEpisodes = allEpisodes.filter(episode => {
-            const tags = episode['Tags'] ? episode['Tags'].toLowerCase() : '';
-            return tags.includes(currentTag);
-        });
-    }
-
-    // Reapply search if active
-    const searchInput = document.getElementById('search-input');
-    if (searchInput.value.trim()) {
-        searchEpisodes(searchInput.value);
-    } else {
-        updateResultsCount();
-        renderEpisodes();
-    }
 }
 
 // Update results count
@@ -293,17 +421,100 @@ document.addEventListener('DOMContentLoaded', () => {
         searchEpisodes(e.target.value);
     });
 
-    // Filter tags
-    document.querySelectorAll('.filter-tag').forEach(tag => {
-        tag.addEventListener('click', (e) => {
-            // Update active state
-            document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
-            e.target.classList.add('active');
+    // Industry filter
+    const industryFilter = document.getElementById('industry-filter');
+    industryFilter.addEventListener('change', (e) => {
+        currentIndustry = e.target.value;
+        searchEpisodes(searchInput.value);
+    });
 
-            // Filter episodes
-            const tagValue = e.target.dataset.tag;
-            filterByTag(tagValue);
-        });
+    // Subcategory filter
+    const subcategoryFilter = document.getElementById('subcategory-filter');
+    subcategoryFilter.addEventListener('change', (e) => {
+        currentSubcategory = e.target.value;
+        searchEpisodes(searchInput.value);
+    });
+
+    // Guest filter
+    const guestFilter = document.getElementById('guest-filter');
+    guestFilter.addEventListener('change', (e) => {
+        currentGuest = e.target.value;
+        searchEpisodes(searchInput.value);
+    });
+
+    // Date from filter
+    const dateFromFilter = document.getElementById('date-from-filter');
+    dateFromFilter.addEventListener('change', (e) => {
+        currentDateFrom = e.target.value;
+        searchEpisodes(searchInput.value);
+    });
+
+    // Date to filter
+    const dateToFilter = document.getElementById('date-to-filter');
+    dateToFilter.addEventListener('change', (e) => {
+        currentDateTo = e.target.value;
+        searchEpisodes(searchInput.value);
+    });
+
+    // Duration filter
+    const durationFilter = document.getElementById('duration-filter');
+    const durationDisplay = document.getElementById('duration-display');
+    durationFilter.addEventListener('input', (e) => {
+        const value = parseInt(e.target.value);
+        currentMaxDuration = value;
+
+        // Update display text
+        if (value >= 150) {
+            durationDisplay.textContent = 'Any';
+        } else {
+            durationDisplay.textContent = `${value} mins`;
+        }
+
+        // Update slider gradient to show selected portion
+        const percentage = (value / 150) * 100;
+        durationFilter.style.background = `linear-gradient(to right, #0098EE ${percentage}%, #E5E7EB ${percentage}%)`;
+
+        searchEpisodes(searchInput.value);
+    });
+
+    // Video filter
+    const videoFilter = document.getElementById('video-filter');
+    videoFilter.addEventListener('change', (e) => {
+        currentHasVideo = e.target.checked;
+        searchEpisodes(searchInput.value);
+    });
+
+    // Reset filters button
+    const resetBtn = document.getElementById('reset-filters');
+    resetBtn.addEventListener('click', () => {
+        // Reset all filter values
+        currentIndustry = '';
+        currentSubcategory = '';
+        currentGuest = '';
+        currentDateFrom = '';
+        currentDateTo = '';
+        currentMaxDuration = 150;
+        currentHasVideo = false;
+
+        // Reset all UI elements
+        document.getElementById('search-input').value = '';
+        document.getElementById('industry-filter').value = '';
+        document.getElementById('subcategory-filter').value = '';
+        document.getElementById('guest-filter').value = '';
+        document.getElementById('date-from-filter').value = '';
+        document.getElementById('date-to-filter').value = '';
+        document.getElementById('duration-filter').value = 150;
+        document.getElementById('duration-display').textContent = 'Any';
+        document.getElementById('video-filter').checked = false;
+
+        // Reset slider gradient
+        const durationFilter = document.getElementById('duration-filter');
+        durationFilter.style.background = 'linear-gradient(to right, #0098EE 100%, #E5E7EB 100%)';
+
+        // Show all episodes
+        filteredEpisodes = allEpisodes;
+        updateResultsCount();
+        renderEpisodes();
     });
 
     // Modal close

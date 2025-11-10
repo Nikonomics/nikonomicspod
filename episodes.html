@@ -51,36 +51,88 @@
     <!-- Search and Filter Section -->
     <section class="episodes-section">
         <div class="container">
-            <!-- Search Bar -->
-            <div class="search-container">
-                <input
-                    type="text"
-                    id="search-input"
-                    class="search-input"
-                    placeholder="Search episodes by guest, business, topic, or keyword..."
-                >
-            </div>
+            <div class="episodes-layout">
+                <!-- Left Sidebar - Filters -->
+                <aside class="filters-sidebar">
+                    <h3 class="filters-title">Filters</h3>
 
-            <!-- Quick Filters -->
-            <div class="quick-filters">
-                <button class="filter-tag active" data-tag="all">All Episodes</button>
-                <button class="filter-tag" data-tag="acquisitions">Acquisitions</button>
-                <button class="filter-tag" data-tag="scaling">Scaling</button>
-                <button class="filter-tag" data-tag="bootstrapped">Bootstrapped</button>
-                <button class="filter-tag" data-tag="saas">SaaS</button>
-                <button class="filter-tag" data-tag="e-commerce">E-commerce</button>
-                <button class="filter-tag" data-tag="exit-strategy">Exit Strategy</button>
-                <button class="filter-tag" data-tag="fundraising">Fundraising</button>
-            </div>
+                    <!-- Search Bar -->
+                    <div class="filter-group">
+                        <label for="search-input">Search</label>
+                        <input
+                            type="text"
+                            id="search-input"
+                            class="filter-input"
+                            placeholder="Search episodes..."
+                        >
+                    </div>
 
-            <!-- Results Count -->
-            <div class="results-info">
-                <span id="results-count">Loading episodes...</span>
-            </div>
+                    <!-- Industry Filter -->
+                    <div class="filter-group">
+                        <label for="industry-filter">Industry</label>
+                        <select id="industry-filter" class="filter-select">
+                            <option value="">All Industries</option>
+                        </select>
+                    </div>
 
-            <!-- Episodes Grid -->
-            <div class="episodes-grid" id="episodes-grid">
-                <!-- Episodes will be loaded here dynamically -->
+                    <!-- Subcategory Filter -->
+                    <div class="filter-group">
+                        <label for="subcategory-filter">Subcategory</label>
+                        <select id="subcategory-filter" class="filter-select">
+                            <option value="">All Subcategories</option>
+                        </select>
+                    </div>
+
+                    <!-- Guest Filter -->
+                    <div class="filter-group">
+                        <label for="guest-filter">Guest</label>
+                        <select id="guest-filter" class="filter-select">
+                            <option value="">All Guests</option>
+                        </select>
+                    </div>
+
+                    <!-- Date From Filter -->
+                    <div class="filter-group">
+                        <label for="date-from-filter">From Date</label>
+                        <input type="date" id="date-from-filter" class="filter-input">
+                    </div>
+
+                    <!-- Date To Filter -->
+                    <div class="filter-group">
+                        <label for="date-to-filter">To Date</label>
+                        <input type="date" id="date-to-filter" class="filter-input">
+                    </div>
+
+                    <!-- Duration Filter -->
+                    <div class="filter-group">
+                        <label for="duration-filter">Max Duration: <span id="duration-display">Any</span></label>
+                        <input type="range" id="duration-filter" class="filter-slider" min="0" max="150" value="150" step="5">
+                    </div>
+
+                    <!-- Has Video Filter -->
+                    <div class="filter-group">
+                        <label class="filter-checkbox-container">
+                            <input type="checkbox" id="video-filter" class="filter-checkbox">
+                            <span>Has Video</span>
+                        </label>
+                    </div>
+
+                    <!-- Reset Button -->
+                    <button id="reset-filters" class="reset-filters-btn">Reset All Filters</button>
+                </aside>
+
+                <!-- Main Content Area -->
+                <main class="episodes-content">
+                    <!-- Results Count -->
+                    <div class="results-info">
+                        <span id="results-count">Loading episodes...</span>
+                    </div>
+
+                    <!-- Episodes Grid -->
+                    <div class="episodes-grid" id="episodes-grid">
+                        <!-- Episodes will be loaded here dynamically -->
+                    </div>
+                </main>
             </div>
         </div>
     </section>
@@ -102,6 +154,7 @@
         </div>
     </footer>
 
-    <script src="episodes.js"></script>
+    <script src="resources/episodes/episode-search.js?v=2"></script>
+    <script src="episodes.js?v=2"></script>
 </body>
 </html>

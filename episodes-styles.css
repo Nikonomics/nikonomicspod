@@ -6,26 +6,172 @@
     min-height: 100vh;
 }
 
-/* Search Container */
-.search-container {
-    max-width: 800px;
-    margin: 0 auto 2rem;
+/* Episodes Layout */
+.episodes-layout {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
 }
 
-.search-input {
-    width: 100%;
-    padding: 1rem 1.5rem;
-    font-size: 1.1rem;
-    border: 2px solid #E5E7EB;
-    border-radius: 50px;
+/* Filters Sidebar */
+.filters-sidebar {
+    width: 280px;
     background: white;
-    transition: all 0.3s ease;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 2rem;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
 }
 
-.search-input:focus {
+.filters-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #003452;
+    margin: 0 0 1.5rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #E5E7EB;
+}
+
+/* Filter Groups */
+.filter-group {
+    margin-bottom: 1.5rem;
+}
+
+.filter-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #003452;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filter-select,
+.filter-input {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    background: #F8F9FA;
+    border: 2px solid #E5E7EB;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+.filter-select:hover,
+.filter-input:hover {
+    border-color: #0098EE;
+    background: white;
+}
+
+.filter-select:focus,
+.filter-input:focus {
     outline: none;
     border-color: #0098EE;
-    box-shadow: 0 4px 12px rgba(0, 152, 238, 0.15);
+    background: white;
+    box-shadow: 0 0 0 3px rgba(0, 152, 238, 0.1);
+}
+
+.filter-slider {
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(to right, #0098EE 0%, #E5E7EB 0%);
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: 0.5rem;
+}
+
+.filter-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #0098EE;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.filter-slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: #0098EE;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.filter-checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    cursor: pointer;
+    padding: 0.65rem 0.85rem;
+    background: #F8F9FA;
+    border: 2px solid #E5E7EB;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.filter-checkbox-container:hover {
+    border-color: #0098EE;
+    background: white;
+}
+
+.filter-checkbox {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #0098EE;
+    margin: 0;
+}
+
+.filter-checkbox:checked + span {
+    color: #0098EE;
+    font-weight: 600;
+}
+
+.reset-filters-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background: #FF4444;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.reset-filters-btn:hover {
+    background: #CC0000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 68, 68, 0.3);
+}
+
+.reset-filters-btn:active {
+    transform: translateY(0);
+}
+
+/* Main Content Area */
+.episodes-content {
+    flex: 1;
+    min-width: 0;
 }
 
 /* Quick Filters */
@@ -382,18 +528,20 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .episodes-layout {
+        flex-direction: column;
+    }
+
+    .filters-sidebar {
+        width: 100%;
+        position: static;
+        max-height: none;
+        margin-bottom: 2rem;
+    }
+
     .episodes-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
-    }
-
-    .quick-filters {
-        gap: 0.5rem;
-    }
-
-    .filter-tag {
-        padding: 0.4rem 1rem;
-        font-size: 0.85rem;
     }
 
     .modal-content {
